@@ -42,7 +42,7 @@
     .top-nav {
       display: flex;
       justify-content: center;
-      gap: 140px; /* WIDER */
+      gap: 140px; /* wider spacing */
       margin: 20px 0 40px;
     }
 
@@ -70,7 +70,7 @@
 
     /* Tutor Card */
     .tutor-card {
-      width: 28%;   /* NARROWER FOR MORE BLACK SPACE */
+      width: 28%;   /* narrower for more black space */
       background: #FFFFFF;
       border-radius: 12px;
       padding: 20px;
@@ -109,10 +109,16 @@
       color: black;
     }
 
+    /* REMOVE ALL DEFAULT ARROWS */
     details summary::-webkit-details-marker {
       display: none;
     }
 
+    details summary::marker {
+      display: none;
+    }
+
+    /* Custom arrow */
     details summary::after {
       content: "▼";
       float: right;
@@ -212,7 +218,7 @@
     </details>
 
     <a class="btn" href="../kris/index.html">Read more / Book</a>
-    <a class="btn" href="https://krisenglish.simplybook.me">Student Login</a>
+    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#client/sign-in/">Student Login</a>
   </div>
 
   <!-- Alison -->
