@@ -59,19 +59,22 @@
       padding: 0 20px;
     }
 
-    section.hero h1 {
-      font-size: 70px;
-      margin: 0;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
+section.hero h1 {
+  font-size: 90px;    /* Increased from 70px → now much bigger */
+  margin: 0;
+  letter-spacing: 2px;
+  font-weight: 700;
+  line-height: 1.0;   /* Keeps it tight */
+}
 
-    section.hero .small-org {
-      font-size: 28px;
-      vertical-align: top;
-      margin-left: 4px;
-      opacity: 0.8;
-    }
+section.hero .small-org {
+  font-size: 36px;    /* Bigger, but still clearly smaller */
+  margin-left: 8px;
+  opacity: 0.8;
+  vertical-align: baseline;   /* aligns .org perfectly with main text */
+  position: relative;
+  top: -4px;           /* tiny tweak to make it sit EXACTLY on the line */
+}
 
     /* --- Bottom Section --- */
     section.bottom {
