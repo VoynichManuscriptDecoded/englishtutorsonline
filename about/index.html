@@ -23,7 +23,7 @@
     }
 
     .top-title h1 {
-      font-size: 78px;   /* bigger */
+      font-size: 78px;
       margin: 0;
       font-weight: 700;
       color: black;
@@ -31,7 +31,7 @@
     }
 
     .top-title .small-org {
-      font-size: 34px;   /* scaled with heading */
+      font-size: 34px;
       margin-left: 8px;
       position: relative;
       top: -5px;
@@ -51,12 +51,12 @@
       margin-bottom: 28px;
     }
 
-    /* Bottom Nav */
+    /* Bottom Navigation */
     .bottom-nav {
       margin: 60px 0 80px;
       display: flex;
-      justify-content: space-between;
-      padding: 0 40px;
+      justify-content: center;
+      gap: 80px; /* spacing between links */
     }
 
     .bottom-nav a {
@@ -75,8 +75,8 @@
       .top-title h1 { font-size: 48px; }
       .top-title .small-org { font-size: 22px; top: -2px; }
       .content { font-size: 19px; }
+      .bottom-nav { gap: 40px; }
       .bottom-nav a { font-size: 22px; }
-      .bottom-nav { padding: 0 20px; }
     }
   </style>
 </head>
@@ -108,9 +108,10 @@
   </p>
 </div>
 
+<!-- Bottom Navigation -->
 <div class="bottom-nav">
-  <a href="../index.html">Home</a>
-  <a href="../tutors/index.html">Tutors</a>
+  <a href="../index.html">← Home</a>
+  <a href="../tutors/index.html">Tutors →</a>
 </div>
 
 </body>
