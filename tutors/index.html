@@ -23,14 +23,14 @@
     }
 
     .top-title h1 {
-      font-size: 88px;     /* BIGGER HEADING */
+      font-size: 88px;
       margin: 0;
       color: white;
       font-weight: 700;
     }
 
     .small-org {
-      font-size: 36px;     /* slightly increased */
+      font-size: 36px;
       margin-left: 8px;
       position: relative;
       top: -6px;
@@ -42,7 +42,7 @@
     .top-nav {
       display: flex;
       justify-content: center;
-      gap: 80px;
+      gap: 140px; /* WIDER */
       margin: 20px 0 40px;
     }
 
@@ -68,55 +68,46 @@
       gap: 40px;
     }
 
-/* Tutor Card */
-.tutor-card {
-  width: 31%;
-  background: #FFFFFF;       /* WHITE CARD */
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* darker shadow for white */
-  color: black;              /* CARD TEXT BLACK */
-}
+    /* Tutor Card */
+    .tutor-card {
+      width: 28%;   /* NARROWER FOR MORE BLACK SPACE */
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      color: black;
+    }
 
-.tutor-card img {
-  width: 80%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
+    .tutor-card img {
+      width: 80%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
 
-.tutor-card h2 {
-  margin: 10px 0 8px;
-  font-size: 30px;
-  font-weight: 700;
-  color: black;              /* NAME BLACK */
-}
+    .tutor-card h2 {
+      margin: 10px 0 8px;
+      font-size: 30px;
+      font-weight: 700;
+      color: black;
+    }
 
-/* Dropdown */
-details {
-  margin: 10px 0 15px;
-  font-size: 19px;
-  color: black;              /* DROPDOWN TEXT BLACK */
-}
+    /* Dropdown */
+    details {
+      margin: 10px 0 15px;
+      font-size: 19px;
+      color: black;
+    }
 
-details summary {
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 6px;
-  outline: none;
-  color: black;              /* SUMMARY BLACK */
-}
-
-details summary::after {
-  color: black;              /* ARROW BLACK */
-}
-
-details ul {
-  color: black;              /* BULLET POINTS BLACK */
-}
-
+    details summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 6px;
+      outline: none;
+      color: black;
+    }
 
     details summary::-webkit-details-marker {
       display: none;
@@ -128,7 +119,7 @@ details ul {
       font-size: 16px;
       margin-top: 4px;
       opacity: 0.8;
-      color: white;
+      color: black;
     }
 
     details[open] summary::after {
@@ -139,7 +130,7 @@ details ul {
       padding-left: 18px;
       margin: 10px 0 0;
       text-align: left;
-      color: white;
+      color: black;
     }
 
     details ul li {
@@ -148,20 +139,24 @@ details ul {
 
     /* Buttons */
     .btn {
-      display: block;
-      margin: 10px auto 0;
-      width: 80%;
-      padding: 10px 0;
+      display: inline-block;
+      margin: 12px auto 0;
+      padding: 10px 22px;
       background: white;
       color: black;
-      text-decoration: none;
+      border: 2px solid black;
+      border-radius: 8px;
       font-size: 20px;
       font-weight: 700;
-      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.2s ease;
     }
 
     .btn:hover {
-      opacity: 0.85;
+      background: black;
+      color: white;
+      border-color: white;
+      cursor: pointer;
     }
 
     /* Responsive */
@@ -211,7 +206,7 @@ details ul {
         <li>Business English, interviews & presentations</li>
         <li>Exam prep: Cambridge / IELTS / TOEIC</li>
         <li>Student work auto-saved</li>
-        <li>Experience in business, accountancy, hospitality, recycling, animal welfare</li>
+        <li>Experience: business, accountancy, hospitality, recycling, animal welfare</li>
         <li>25,000+ lessons taught — 5★ rating</li>
       </ul>
     </details>
