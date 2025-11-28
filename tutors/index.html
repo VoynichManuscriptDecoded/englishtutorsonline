@@ -19,7 +19,7 @@
     /* Big Title */
     .top-title {
       text-align: center;
-      padding: 50px 20px 10px;
+      padding: 50px 20px 0;
     }
 
     .top-title h1 {
@@ -37,12 +37,12 @@
       opacity: 0.9;
     }
 
-    /* Top Nav Row */
+    /* Top Nav */
     .top-nav {
       display: flex;
       justify-content: center;
       gap: 80px;
-      margin: 20px 0 40px;
+      margin: 30px 0 50px;
     }
 
     .top-nav a {
@@ -57,48 +57,62 @@
       text-decoration: underline;
     }
 
-    /* Tutor List */
-    .tutor-list {
-      max-width: 900px;
-      margin: 0 auto 40px;
+    /* Tutor Grid */
+    .tutor-grid {
+      max-width: 1100px;
+      margin: 0 auto 60px;
       padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
     }
 
-    .tutor {
-      border-bottom: 1px solid #ccc;
-      padding: 25px 0;
+    .tutor-box {
+      width: 31%;
+      text-align: center;
     }
 
-    .tutor h2 {
-      margin: 0;
-      font-size: 34px;
+    .tutor-box img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .tutor-box h2 {
+      margin: 15px 0 5px;
+      font-size: 30px;
       font-weight: 700;
     }
 
-    .tutor p {
+    .tutor-box p {
+      margin: 4px 0 14px;
       font-size: 20px;
-      margin: 10px 0 16px;
     }
 
-    .tutor a {
+    .tutor-box a {
       text-decoration: none;
-      color: black;
       font-size: 22px;
       font-weight: 700;
+      color: black;
     }
 
-    .tutor a:hover {
+    .tutor-box a:hover {
       text-decoration: underline;
     }
 
     /* Responsive */
-    @media(max-width: 700px) {
+    @media(max-width: 900px) {
+      .tutor-grid {
+        flex-direction: column;
+        gap: 50px;
+      }
+      .tutor-box {
+        width: 100%;
+      }
       .top-title h1 { font-size: 48px; }
-      .small-org { font-size: 22px; top: -2px; }
+      .small-org { font-size: 22px; }
       .top-nav a { font-size: 22px; }
-      .tutor h2 { font-size: 28px; }
-      .tutor p { font-size: 18px; }
-      .tutor a { font-size: 20px; }
     }
   </style>
 </head>
@@ -115,24 +129,27 @@
   <a href="../terms/index.html">Terms & Conditions →</a>
 </div>
 
-<!-- Tutor List -->
-<div class="tutor-list">
+<!-- Tutor Grid -->
+<div class="tutor-grid">
 
-  <div class="tutor">
+  <div class="tutor-box">
+    <img src="Alison.jpg" alt="Alison">
     <h2>Alison</h2>
-    <p>Experienced English tutor specialising in conversation, grammar, and confidence building.</p>
+    <p>A0 → C2</p>
     <a href="../alison/index.html">View Profile →</a>
   </div>
 
-  <div class="tutor">
+  <div class="tutor-box">
+    <img src="Kris2.jpg" alt="Kris">
     <h2>Kris</h2>
-    <p>IELTS and TOEIC specialist with strong focus on writing, structure, and exam technique.</p>
+    <p>A0 → C2</p>
     <a href="../kris/index.html">View Profile →</a>
   </div>
 
-  <div class="tutor">
+  <div class="tutor-box">
+    <img src="Rachel.jpg" alt="Rachel">
     <h2>Rachel</h2>
-    <p>General English tutor skilled in pronunciation, fluency, and real-life speaking improvement.</p>
+    <p>A0 → C2</p>
     <a href="../rachel/index.html">View Profile →</a>
   </div>
 
