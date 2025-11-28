@@ -34,10 +34,10 @@
     header a {
       text-decoration: none;
       color: black;
-      text-transform: none; /* Normal case */
+      text-transform: none; 
       letter-spacing: 2px;
-      font-size: 32px;
-      font-weight: 400; /* NORMAL weight */
+      font-size: 36px;   /* slightly bigger */
+      font-weight: 400;
       transition: opacity 0.2s;
     }
 
@@ -71,11 +71,11 @@
     section.hero .small-org {
       font-size: 42px;
       margin-left: 8px;
-      opacity: 0.8;
       vertical-align: baseline;
       position: relative;
       top: -3px;
-      color: white; /* FIXED colour */
+      color: white;        /* FIXED to pure white */
+      opacity: 1.0 !important; /* override grey */
     }
 
     /* --- Bottom Section --- */
@@ -91,10 +91,10 @@
     section.bottom a {
       text-decoration: none;
       color: black;
-      font-size: 24px;
-      text-transform: none; /* Normal case */
+      font-size: 28px;  /* slightly bigger */
+      text-transform: none;
       letter-spacing: 2px;
-      font-weight: 400; /* NORMAL */
+      font-weight: 400;
     }
 
     section.bottom a:hover {
@@ -108,12 +108,16 @@
         padding: 25px 0;
       }
 
+      header a {
+        font-size: 30px; /* mobile version also bigger */
+      }
+
       section.hero h1 {
-        font-size: 52px;
+        font-size: 68px;
       }
 
       section.hero .small-org {
-        font-size: 22px;
+        font-size: 26px;
       }
 
       section.bottom {
@@ -122,21 +126,21 @@
       }
 
       section.bottom a {
-        font-size: 20px;
+        font-size: 22px;
       }
     }
 
     @media (max-width: 550px) {
       section.hero h1 {
-        font-size: 42px;
+        font-size: 48px;
       }
 
       section.hero .small-org {
-        font-size: 18px;
+        font-size: 20px;
       }
 
       header a {
-        font-size: 22px;
+        font-size: 26px;
       }
     }
   </style>
