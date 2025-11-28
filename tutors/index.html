@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutors – English Tutors Online</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background-color: white;
+      color: black;
+      line-height: 1.7;
+    }
+
+    /* Big Title */
+    .top-title {
+      text-align: center;
+      padding: 50px 20px 10px;
+    }
+
+    .top-title h1 {
+      font-size: 78px;
+      margin: 0;
+      color: black;
+      font-weight: 700;
+    }
+
+    .small-org {
+      font-size: 34px;
+      margin-left: 8px;
+      position: relative;
+      top: -5px;
+      opacity: 0.9;
+    }
+
+    /* Top Nav Row */
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      margin: 20px 0 40px;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      font-size: 26px;
+      font-weight: 700;
+      color: black;
+      letter-spacing: 1px;
+    }
+
+    .top-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Tutor List */
+    .tutor-list {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+
+    .tutor {
+      border-bottom: 1px solid #ccc;
+      padding: 25px 0;
+    }
+
+    .tutor h2 {
+      margin: 0;
+      font-size: 34px;
+      font-weight: 700;
+    }
+
+    .tutor p {
+      font-size: 20px;
+      margin: 10px 0 16px;
+    }
+
+    .tutor a {
+      text-decoration: none;
+      color: black;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .tutor a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media(max-width: 700px) {
+      .top-title h1 { font-size: 48px; }
+      .small-org { font-size: 22px; top: -2px; }
+      .top-nav a { font-size: 22px; }
+      .tutor h2 { font-size: 28px; }
+      .tutor p { font-size: 18px; }
+      .tutor a { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Title -->
+<div class="top-title">
+  <h1>englishtutorsonline<span class="small-org">.org</span></h1>
+</div>
+
+<!-- Top Navigation -->
+<div class="top-nav">
+  <a href="../index.html">← Home</a>
+  <a href="../terms/index.html">Terms & Conditions →</a>
+</div>
+
+<!-- Tutor List -->
+<div class="tutor-list">
+
+  <div class="tutor">
+    <h2>Alison</h2>
+    <p>Experienced English tutor specialising in conversation, grammar, and confidence building.</p>
+    <a href="../alison/index.html">View Profile →</a>
+  </div>
+
+  <div class="tutor">
+    <h2>Kris</h2>
+    <p>IELTS and TOEIC specialist with strong focus on writing, structure, and exam technique.</p>
+    <a href="../kris/index.html">View Profile →</a>
+  </div>
+
+  <div class="tutor">
+    <h2>Rachel</h2>
+    <p>General English tutor skilled in pronunciation, fluency, and real-life speaking improvement.</p>
+    <a href="../rachel/index.html">View Profile →</a>
+  </div>
+
+</div>
+
+</body>
+</html>
