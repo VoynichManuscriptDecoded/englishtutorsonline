@@ -2,10 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Tutors Online</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Professional online English tutoring sessions for all ages and levels. Learn English with qualified tutors.">
+  <meta name="author" content="Christine Blackburn">
+
+  <!-- Google Font: Lora -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      color: black;
+      background-color: white;
+    }
+
+    /* --- Header Navigation --- */
+    header {
+      background-color: white;
+      height: 25vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #ccc;
+      padding: 0 60px;
+      box-sizing: border-box;
+    }
+
+    header a {
+      text-decoration: none;
+      color: black;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 32px;
+      transition: opacity 0.2s;
+    }
+
+    header a:hover {
+      text-decoration: underline;
+      opacity: 0.8;
+    }
+
+    /* --- Hero Section --- */
+    section.hero {
+      background-color: black;
+      color: white;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    section.hero h1 {
+      font-size: 70px;
+      margin: 0;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    section.hero .small-org {
+      font-size: 28px;
+      vertical-align: top;
+      margin-left: 4px;
+      opacity: 0.8;
+    }
+
+    /* --- Bottom Section --- */
+    section.bottom {
+      background-color: white;
+      height: 25vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    section.bottom a {
+      text-decoration: none;
+      color: black;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    section.bottom a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Responsive Adjustments --- */
+    @media (max-width: 900px) {
+      header {
+        height: auto;
+        padding: 25px 0;
+      }
+
+      header a {
+        font-size: 26px;
+      }
+
+      section.hero h1 {
+        font-size: 52px;
+      }
+
+      section.hero .small-org {
+        font-size: 22px;
+      }
+
+      section.bottom {
+        height: auto;
+        padding: 40px 0;
+      }
+
+      section.bottom a {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      section.hero h1 {
+        font-size: 42px;
+      }
+
+      section.hero .small-org {
+        font-size: 18px;
+      }
+
+      header a {
+        font-size: 22px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>English Tutors Online – Site Under Construction</h1>
-  <p>This is a temporary placeholder while we build the full site.</p>
+
+  <!-- Header Navigation -->
+  <header>
+    <a href="tutors/index.html">Tutors</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>englishtutorsonline<span class="small-org">.org</span></h1>
+  </section>
+
+  <!-- Bottom Section -->
+  <section class="bottom">
+    <a href="about/index.html">About Us</a>
+  </section>
+
 </body>
 </html>
