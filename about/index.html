@@ -16,36 +16,14 @@
       line-height: 1.7;
     }
 
-    /* Header (Return Home) */
-    header {
-      background-color: white;
-      height: 14vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid #ccc;
-    }
-
-    header a {
-      text-decoration: none;
-      color: black;
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    header a:hover {
-      text-decoration: underline;
-    }
-
     /* Big Title */
     .top-title {
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 50px 20px 10px;
     }
 
     .top-title h1 {
-      font-size: 64px;
+      font-size: 78px;   /* bigger */
       margin: 0;
       font-weight: 700;
       color: black;
@@ -53,10 +31,10 @@
     }
 
     .top-title .small-org {
-      font-size: 28px;
-      margin-left: 6px;
+      font-size: 34px;   /* scaled with heading */
+      margin-left: 8px;
       position: relative;
-      top: -4px;
+      top: -5px;
       color: black;
       opacity: 0.9;
     }
@@ -73,39 +51,36 @@
       margin-bottom: 28px;
     }
 
-    /* Bottom Link */
-    .bottom-link {
-      text-align: center;
-      margin: 50px 0 80px;
+    /* Bottom Nav */
+    .bottom-nav {
+      margin: 60px 0 80px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px;
     }
 
-    .bottom-link a {
+    .bottom-nav a {
       text-decoration: none;
+      color: black;
       font-size: 26px;
       font-weight: 700;
-      color: black;
       letter-spacing: 1px;
     }
 
-    .bottom-link a:hover {
+    .bottom-nav a:hover {
       text-decoration: underline;
     }
 
     @media (max-width: 700px) {
-      .top-title h1 { font-size: 42px; }
-      .top-title .small-org { font-size: 20px; top: -2px; }
-      .content { font-size: 19px; margin-top: 20px; }
-      .bottom-link a { font-size: 22px; }
-      header a { font-size: 22px; }
+      .top-title h1 { font-size: 48px; }
+      .top-title .small-org { font-size: 22px; top: -2px; }
+      .content { font-size: 19px; }
+      .bottom-nav a { font-size: 22px; }
+      .bottom-nav { padding: 0 20px; }
     }
-
   </style>
 </head>
 <body>
-
-<header>
-  <a href="../index.html">Home</a>
-</header>
 
 <div class="top-title">
   <h1>englishtutorsonline<span class="small-org">.org</span></h1>
@@ -133,8 +108,9 @@
   </p>
 </div>
 
-<div class="bottom-link">
-  <a href="../tutors/index.html">Go to Tutors →</a>
+<div class="bottom-nav">
+  <a href="../index.html">Home</a>
+  <a href="../tutors/index.html">Tutors</a>
 </div>
 
 </body>
