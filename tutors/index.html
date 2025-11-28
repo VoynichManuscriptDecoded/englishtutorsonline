@@ -42,7 +42,7 @@
     .top-nav {
       display: flex;
       justify-content: center;
-      gap: 140px; /* wider spacing */
+      gap: 140px;
       margin: 20px 0 40px;
     }
 
@@ -70,7 +70,7 @@
 
     /* Tutor Card */
     .tutor-card {
-      width: 28%;   /* narrower for more black space */
+      width: 28%;
       background: #FFFFFF;
       border-radius: 12px;
       padding: 20px;
@@ -100,6 +100,15 @@
       color: black;
     }
 
+    /* REMOVE ALL DEFAULT BROWSER ARROWS */
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details summary::marker {
+      display: none;
+    }
+
     details summary {
       cursor: pointer;
       font-weight: 700;
@@ -107,15 +116,6 @@
       margin-bottom: 6px;
       outline: none;
       color: black;
-    }
-
-    /* REMOVE ALL DEFAULT ARROWS */
-    details summary::-webkit-details-marker {
-      display: none;
-    }
-
-    details summary::marker {
-      display: none;
     }
 
     /* Custom arrow */
@@ -213,7 +213,6 @@
         <li>Exam prep: Cambridge / IELTS / TOEIC</li>
         <li>Student work auto-saved</li>
         <li>Experience: business, accountancy, hospitality, recycling, animal welfare</li>
-        <li>25,000+ lessons taught — 5★ rating</li>
       </ul>
     </details>
 
