@@ -19,11 +19,11 @@
     /* Big Title */
     .top-title {
       text-align: center;
-      padding: 20px 20px 0; /* moved higher */
+      padding: 20px 20px 0;
     }
 
     .top-title h1 {
-      font-size: 74px; /* slightly smaller to fit higher */
+      font-size: 74px;
       margin: 0;
       color: black;
       font-weight: 700;
@@ -60,57 +60,92 @@
     /* Tutor Grid */
     .tutor-grid {
       max-width: 1100px;
-      margin: 0 auto 80px;
+      margin: 0 auto 60px;
       padding: 0 20px;
       display: flex;
       justify-content: center;
       gap: 40px;
     }
 
-    /* Tutor Card Style */
-    .tutor-box {
+    /* Tutor Card */
+    .tutor-card {
       width: 31%;
       background: #f7f7f7;
       border-radius: 12px;
-      padding-bottom: 20px;
+      padding: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-      transition: transform 0.2s ease;
+      text-align: center;
     }
 
-    .tutor-box:hover {
-      transform: translateY(-3px);
-    }
-
-    .tutor-box img {
-      width: 100%;
+    .tutor-card img {
+      width: 80%;
       height: auto;
-      border-radius: 12px 12px 0 0;
+      border-radius: 8px;
+      margin-bottom: 10px;
     }
 
-    .tutor-box h2 {
-      margin: 14px 0 4px;
+    .tutor-card h2 {
+      margin: 10px 0 8px;
       font-size: 30px;
       font-weight: 700;
-      text-align: center;
     }
 
-    .tutor-box p {
-      margin: 4px 0 16px;
-      font-size: 20px;
-      text-align: center;
+    /* Dropdown */
+    details {
+      margin: 10px 0 15px;
+      font-size: 19px;
     }
 
-    .tutor-box a {
-      display: block;
-      text-align: center;
-      text-decoration: none;
-      font-size: 22px;
+    details summary {
+      cursor: pointer;
       font-weight: 700;
-      color: black;
+      font-size: 20px;
+      margin-bottom: 6px;
+      outline: none;
     }
 
-    .tutor-box a:hover {
-      text-decoration: underline;
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details summary::after {
+      content: "▼";
+      float: right;
+      font-size: 16px;
+      margin-top: 4px;
+      opacity: 0.7;
+    }
+
+    details[open] summary::after {
+      content: "▲";
+    }
+
+    details ul {
+      padding-left: 18px;
+      margin: 10px 0 0;
+      text-align: left;
+    }
+
+    details ul li {
+      margin-bottom: 6px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: block;
+      margin: 10px auto 0;
+      width: 80%;
+      padding: 10px 0;
+      background: black;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 6px;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
     }
 
     /* Responsive */
@@ -119,12 +154,12 @@
         flex-direction: column;
         gap: 50px;
       }
-      .tutor-box {
+      .tutor-card {
         width: 100%;
       }
-      .top-title h1 { font-size: 48px; }
-      .small-org { font-size: 22px; }
-      .top-nav a { font-size: 22px; }
+      .tutor-card img {
+        width: 60%;
+      }
     }
   </style>
 </head>
@@ -144,25 +179,65 @@
 <!-- Tutor Grid -->
 <div class="tutor-grid">
 
-  <div class="tutor-box">
-    <img src="Alison.jpg" alt="Alison">
-    <h2>Alison</h2>
-    <p>A0 → C2</p>
-    <a href="../alison/index.html">View Profile →</a>
-  </div>
-
-  <div class="tutor-box">
+  <!-- Kris -->
+  <div class="tutor-card">
     <img src="Kris2.jpg" alt="Kris">
     <h2>Kris</h2>
-    <p>A0 → C2</p>
-    <a href="../kris/index.html">View Profile →</a>
+
+    <details>
+      <summary>More info</summary>
+      <ul>
+        <li>Customised learning plans (Beginner → Proficient)</li>
+        <li>Conversation, grammar & vocabulary troubleshooting</li>
+        <li>Business English, interviews & presentations</li>
+        <li>Exam prep: Cambridge / IELTS / TOEIC</li>
+        <li>Student work auto-saved</li>
+        <li>Experience in business, accountancy, hospitality, recycling, animal welfare</li>
+        <li>25,000+ lessons taught — 5★ rating</li>
+      </ul>
+    </details>
+
+    <a class="btn" href="../kris/index.html">Read more / Book</a>
+    <a class="btn" href="https://krisenglish.simplybook.me">Student Login</a>
   </div>
 
-  <div class="tutor-box">
+  <!-- Alison -->
+  <div class="tutor-card">
+    <img src="Alison.jpg" alt="Alison">
+    <h2>Alison</h2>
+
+    <details>
+      <summary>More info</summary>
+      <ul>
+        <li>IELTS 7+ / CAE specialist</li>
+        <li>Advanced vocabulary refinement</li>
+        <li>Presentations & public speaking</li>
+        <li>Interview preparation</li>
+        <li>Writing improvement & academic document editing</li>
+      </ul>
+    </details>
+
+    <a class="btn" href="../alison/index.html">Read more / Book</a>
+  </div>
+
+  <!-- Rachel -->
+  <div class="tutor-card">
     <img src="Rachel.jpg" alt="Rachel">
     <h2>Rachel</h2>
-    <p>A0 → C2</p>
-    <a href="../rachel/index.html">View Profile →</a>
+
+    <details>
+      <summary>More info</summary>
+      <ul>
+        <li>Tailored lessons for all levels</li>
+        <li>Exam prep: LanguageCert / Cambridge / IELTS</li>
+        <li>Business, construction, medical & legal English</li>
+        <li>Interview & presentation coaching</li>
+        <li>Pronunciation, grammar & vocabulary development</li>
+        <li>16 years experience</li>
+      </ul>
+    </details>
+
+    <a class="btn" href="../rachel/index.html">Read more / Book</a>
   </div>
 
 </div>
