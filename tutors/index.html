@@ -19,21 +19,21 @@
     /* Big Title */
     .top-title {
       text-align: center;
-      padding: 50px 20px 0;
+      padding: 20px 20px 0; /* moved higher */
     }
 
     .top-title h1 {
-      font-size: 78px;
+      font-size: 74px; /* slightly smaller to fit higher */
       margin: 0;
       color: black;
       font-weight: 700;
     }
 
     .small-org {
-      font-size: 34px;
+      font-size: 32px;
       margin-left: 8px;
       position: relative;
-      top: -5px;
+      top: -4px;
       opacity: 0.9;
     }
 
@@ -42,7 +42,7 @@
       display: flex;
       justify-content: center;
       gap: 80px;
-      margin: 30px 0 50px;
+      margin: 20px 0 40px;
     }
 
     .top-nav a {
@@ -60,37 +60,49 @@
     /* Tutor Grid */
     .tutor-grid {
       max-width: 1100px;
-      margin: 0 auto 60px;
+      margin: 0 auto 80px;
       padding: 0 20px;
       display: flex;
       justify-content: center;
       gap: 40px;
     }
 
+    /* Tutor Card Style */
     .tutor-box {
       width: 31%;
-      text-align: center;
+      background: #f7f7f7;
+      border-radius: 12px;
+      padding-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .tutor-box:hover {
+      transform: translateY(-3px);
     }
 
     .tutor-box img {
       width: 100%;
       height: auto;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      border-radius: 12px 12px 0 0;
     }
 
     .tutor-box h2 {
-      margin: 15px 0 5px;
+      margin: 14px 0 4px;
       font-size: 30px;
       font-weight: 700;
+      text-align: center;
     }
 
     .tutor-box p {
-      margin: 4px 0 14px;
+      margin: 4px 0 16px;
       font-size: 20px;
+      text-align: center;
     }
 
     .tutor-box a {
+      display: block;
+      text-align: center;
       text-decoration: none;
       font-size: 22px;
       font-weight: 700;
