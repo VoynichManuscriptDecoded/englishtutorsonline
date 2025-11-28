@@ -1,1 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kris – English Tutors Online</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background-color: black;
+      color: white;
+      line-height: 1.7;
+    }
+
+    /* PAGE CONTAINER */
+    .content {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* INTRO TEXT */
+    .intro {
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+
+    .intro h1 {
+      font-size: 48px;
+      margin: 0 0 20px;
+      font-weight: 700;
+      color: white;
+    }
+
+    /* LAYOUT: IMAGE LEFT + CONTACT RIGHT */
+    .profile-section {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      margin-bottom: 50px;
+    }
+
+    .profile-section img {
+      width: 320px;
+      border-radius: 10px;
+    }
+
+    /* CONTACT BOX */
+    .contact-box {
+      background: #ffffff;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 360px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      font-size: 20px;
+    }
+
+    .contact-box h2 {
+      margin-top: 0;
+      font-size: 28px;
+      font-weight: 700;
+      color: black;
+    }
+
+    .contact-label {
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .contact-value {
+      margin-bottom: 18px;
+      font-size: 20px;
+      word-wrap: break-word;
+    }
+
+    /* BUTTONS UNDER PHOTO */
+    .buttons-under-photo {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px;
+      background: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: black;
+      color: white;
+      border-color: white;
+    }
+
+    /* DROPDOWNS */
+    details {
+      margin-bottom: 25px;
+      background: #ffffff;
+      color: black;
+      padding: 15px 20px;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 22px;
+      outline: none;
+      color: black;
+    }
+
+    /* REMOVE DEFAULT ARROWS */
+    details summary::-webkit-details-marker { display: none; }
+    details summary::marker { display: none; }
+
+    /* CUSTOM ARROW */
+    details summary::after {
+      content: "▼";
+      float: right;
+      font-size: 18px;
+      opacity: 0.7;
+      color: black;
+    }
+
+    details[open] summary::after {
+      content: "▲";
+    }
+
+    details p {
+      margin-top: 15px;
+      font-size: 20px;
+    }
+
+    details ul {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    details ul li {
+      margin-bottom: 6px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 900px) {
+      .profile-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .contact-box {
+        max-width: 100%;
+      }
+      .profile-section img {
+        width: 70%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="content">
+
+  <!-- INTRO -->
+  <div class="intro">
+    <h1>Kris</h1>
+    <p>
+      Hello and welcome! If you’ve made it here, you’re probably looking for help improving your English — and you’re in the right place.
+      I’m Kristine, an experienced English teacher with a practical, no-nonsense approach and a genuine passion for helping students progress with clarity and confidence.
+      I’m originally from Wales in the UK, and now live in Portugal, where my husband and I run an animal rescue project and sanctuary on our off-grid farm.
+      Before becoming a teacher, I worked for over 25 years as an accountant, business owner and troubleshooter across a range of industries.
+    </p>
+  </div>
+
+  <!-- IMAGE LEFT + CONTACT RIGHT -->
+  <div class="profile-section">
+
+    <!-- LEFT: IMAGE + BUTTONS -->
+    <div>
+      <img src="../Kris2.jpg" alt="Kris">
+
+      <div class="buttons-under-photo">
+        <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#book">Book 1 × 30 min Lesson (€15)</a>
+        <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#packages">Book a Package of Lessons</a>
+        <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#client/sign-in/">Student Login</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: CONTACT BOX -->
+    <div class="contact-box">
+      <h2>Contact Me</h2>
+
+      <div class="contact-label">EMAIL</div>
+      <div class="contact-value">kris@englishtutorsonline.org</div>
+
+      <div class="contact-label">WHATSAPP</div>
+      <div class="contact-value">00351 969 386 072</div>
+    </div>
+
+  </div>
+
+  <!-- DROPDOWN 1 -->
+  <details>
+    <summary>My Teaching Approach</summary>
+    <p>
+      My teaching philosophy is built on flexibility, clarity, and genuinely personalised learning. I hold a 120-hour TEFL certification
+      and have taught students from all over the world, adapting each lesson to their individual goals, level, and learning style.
+      My aim is always to make learning efficient, practical, and directly useful to your real-life needs.
+    </p>
+  </details>
+
+  <!-- DROPDOWN 2 -->
+  <details>
+    <summary>Personalised Learning Experience</summary>
+    <p>
+      I create lessons specifically for each individual student. I identify where you struggle, what your goals are, and how you learn best, 
+      then adapt each session so it matches your level and the areas you want to improve. Whether you're working on general English, 
+      advanced skills, fluency, accuracy, exam preparation or professional communication, your lessons are shaped around your needs.
+    </p>
+    <ul>
+      <li>Accountancy, Finance & Book-Keeping</li>
+      <li>Recycling & Waste Management</li>
+      <li>Hospitality Industry</li>
+      <li>Project Management</li>
+      <li>Sustainable Living & Permaculture</li>
+      <li>Lifestyle Coaching</li>
+      <li>Animal Welfare & Rescue</li>
+    </ul>
+  </details>
+
+  <!-- DROPDOWN 3 -->
+  <details>
+    <summary>What to Expect</summary>
+    <p>
+      Once you start lessons with me, I make sure your learning journey is clear, structured and easy to follow. Every student receives 
+      a personalised Google folder where I record your progress, lesson notes and corrections. This gives you a permanent record of everything we cover,
+      and you can review your development at any time.
+    </p>
+  </details>
+
+  <!-- DROPDOWN 4 -->
+  <details>
+    <summary>Relaxed, Productive Learning</summary>
+    <p>
+      I create a relaxed but highly productive atmosphere in every lesson. We work at a pace that suits you, so you feel comfortable,
+      focused and able to engage fully. My aim is to help you make steady, confident progress in your English without ever feeling pressured or overwhelmed.
+    </p>
+  </details>
+
+</div>
+
+</body>
+</html>
