@@ -68,45 +68,55 @@
       gap: 40px;
     }
 
-    /* Tutor Card */
-    .tutor-card {
-      width: 31%;
-      background: #D50032;    /* LIGHTER GREY */
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(255,255,255,0.05);
-    }
+/* Tutor Card */
+.tutor-card {
+  width: 31%;
+  background: #FFFFFF;       /* WHITE CARD */
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* darker shadow for white */
+  color: black;              /* CARD TEXT BLACK */
+}
 
-    .tutor-card img {
-      width: 80%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
+.tutor-card img {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
 
-    .tutor-card h2 {
-      margin: 10px 0 8px;
-      font-size: 30px;
-      font-weight: 700;
-      color: white;
-    }
+.tutor-card h2 {
+  margin: 10px 0 8px;
+  font-size: 30px;
+  font-weight: 700;
+  color: black;              /* NAME BLACK */
+}
 
-    /* Dropdown */
-    details {
-      margin: 10px 0 15px;
-      font-size: 19px;
-      color: white;
-    }
+/* Dropdown */
+details {
+  margin: 10px 0 15px;
+  font-size: 19px;
+  color: black;              /* DROPDOWN TEXT BLACK */
+}
 
-    details summary {
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 20px;
-      margin-bottom: 6px;
-      outline: none;
-      color: white;
-    }
+details summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 6px;
+  outline: none;
+  color: black;              /* SUMMARY BLACK */
+}
+
+details summary::after {
+  color: black;              /* ARROW BLACK */
+}
+
+details ul {
+  color: black;              /* BULLET POINTS BLACK */
+}
+
 
     details summary::-webkit-details-marker {
       display: none;
