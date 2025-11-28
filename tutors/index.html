@@ -11,8 +11,8 @@
     body {
       margin: 0;
       font-family: 'Lora', serif;
-      background-color: white;
-      color: black;
+      background-color: black;     /* BLACK BACKGROUND */
+      color: white;                /* WHITE TEXT */
       line-height: 1.7;
     }
 
@@ -25,7 +25,7 @@
     .top-title h1 {
       font-size: 74px;
       margin: 0;
-      color: black;
+      color: white;                /* WHITE HEADING */
       font-weight: 700;
     }
 
@@ -35,6 +35,7 @@
       position: relative;
       top: -4px;
       opacity: 0.9;
+      color: white;
     }
 
     /* Top Nav */
@@ -49,12 +50,12 @@
       text-decoration: none;
       font-size: 26px;
       font-weight: 700;
-      color: black;
+      color: white;                 /* WHITE TEXT */
       letter-spacing: 1px;
     }
 
     .top-nav a:hover {
-      text-decoration: underline;
+      opacity: 0.7;
     }
 
     /* Tutor Grid */
@@ -70,11 +71,11 @@
     /* Tutor Card */
     .tutor-card {
       width: 31%;
-      background: #f7f7f7;
+      background: #1a1a1a;         /* DARK GREY CARD */
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
       text-align: center;
+      box-shadow: 0 2px 6px rgba(255,255,255,0.07); /* Subtle white shadow */
     }
 
     .tutor-card img {
@@ -88,12 +89,14 @@
       margin: 10px 0 8px;
       font-size: 30px;
       font-weight: 700;
+      color: white;                 /* WHITE NAME */
     }
 
     /* Dropdown */
     details {
       margin: 10px 0 15px;
       font-size: 19px;
+      color: white;
     }
 
     details summary {
@@ -102,6 +105,7 @@
       font-size: 20px;
       margin-bottom: 6px;
       outline: none;
+      color: white;
     }
 
     details summary::-webkit-details-marker {
@@ -113,7 +117,8 @@
       float: right;
       font-size: 16px;
       margin-top: 4px;
-      opacity: 0.7;
+      opacity: 0.8;
+      color: white;
     }
 
     details[open] summary::after {
@@ -124,6 +129,7 @@
       padding-left: 18px;
       margin: 10px 0 0;
       text-align: left;
+      color: white;
     }
 
     details ul li {
@@ -136,8 +142,8 @@
       margin: 10px auto 0;
       width: 80%;
       padding: 10px 0;
-      background: black;
-      color: white;
+      background: white;              /* WHITE BUTTON */
+      color: black;                  /* BLACK TEXT */
       text-decoration: none;
       font-size: 20px;
       font-weight: 700;
@@ -213,7 +219,7 @@
         <li>Advanced vocabulary refinement</li>
         <li>Presentations & public speaking</li>
         <li>Interview preparation</li>
-        <li>Writing improvement & academic document editing</li>
+        <li>Writing improvement & academic editing</li>
       </ul>
     </details>
 
