@@ -1,1 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kris – English Tutors Online</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background-color: black;
+      color: white;
+      line-height: 1.8;
+      padding-bottom: 60px;
+    }
+
+    /* Big Title */
+    .top-title {
+      text-align: center;
+      padding: 20px 20px 0;
+    }
+
+    .top-title h1 {
+      font-size: 84px;
+      margin: 0;
+      font-weight: 700;
+      color: white;
+    }
+
+    .small-org {
+      font-size: 34px;
+      margin-left: 8px;
+      position: relative;
+      top: -6px;
+      opacity: 0.9;
+    }
+
+    /* Top Nav */
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 140px;
+      margin: 20px 0 40px;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .top-nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* Layout */
+    .profile-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .profile-left {
+      width: 40%;
+    }
+
+    .profile-left img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .profile-right {
+      width: 60%;
+      color: white;
+    }
+
+    .profile-right h2 {
+      font-size: 32px;
+      margin-top: 0;
+      font-weight: 700;
+    }
+
+    .contact-box {
+      margin-top: 15px;
+      line-height: 1.5;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .contact-box div {
+      margin-bottom: 10px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      margin: 12px 10px 0 0;
+      padding: 12px 22px;
+      background: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: black;
+      color: white;
+      border-color: white;
+      cursor: pointer;
+    }
+
+    /* Dropdowns */
+    details {
+      background: #222;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      font-size: 20px;
+    }
+
+    details summary {
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 22px;
+      outline: none;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    details summary::marker {
+      display: none;
+    }
+
+    details summary::after {
+      content: "▼";
+      float: right;
+      opacity: 0.8;
+    }
+
+    details[open] summary::after {
+      content: "▲";
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .profile-container {
+        flex-direction: column;
+      }
+      .profile-left, .profile-right {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Title -->
+<div class="top-title">
+  <h1>englishtutorsonline<span class="small-org">.org</span></h1>
+</div>
+
+<!-- Nav -->
+<div class="top-nav">
+  <a href="../index.html">← Back to Tutors</a>
+  <a href="../../index.html">Back to Home →</a>
+</div>
+
+<!-- Profile Layout -->
+<div class="profile-container">
+
+  <!-- Left: Image + Buttons -->
+  <div class="profile-left">
+    <img src="../Kris2.jpg" alt="Kris">
+
+    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#book">Book 1 × 30 min (€15)</a>
+    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#packages">Book a Package</a>
+    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#client/sign-in/">Student Login</a>
+
+    <div class="contact-box">
+      <div>EMAIL: kris@englishtutorsonline.org</div>
+      <div>WHATSAPP: 00351 969 386 072</div>
+    </div>
+  </div>
+
+  <!-- Right: Text + Dropdowns -->
+  <div class="profile-right">
+
+    <h2>Hello and welcome!</h2>
+    <p>
+      If you’ve found your way here, you’re probably looking for some help with your English.
+      I’m Kristine — an English teacher with a unique background, a structured approach, and a strong focus on fixing
+      exactly what’s blocking your progress.
+      I’m originally from Wales in the UK and now live in Portugal, where my husband and I run
+      an animal rescue project on a farm.
+      Before teaching, I spent 25+ years as an accountant and business troubleshooter, owning and managing several
+      companies across different industries.
+    </p>
+
+    <!-- Dropdown 1 -->
+    <details>
+      <summary>My Teaching Approach</summary>
+      <p>
+        I specialise in troubleshooting English — identifying the exact issues in your grammar, vocabulary,
+        structure, pronunciation or exam technique, and fixing them in a simple, logical way.
+        Whether you need exam preparation, interview coaching, presentation training, or general English,
+        I adapt everything to your specific goals.
+      </p>
+    </details>
+
+    <!-- Dropdown 2 -->
+    <details>
+      <summary>Personalised Learning Experience</summary>
+      <p>
+        Every student receives fully customised lessons based on their goals.
+        My experience spans a wide range of fields including:
+      </p>
+      <ul>
+        <li>Accountancy & Finance</li>
+        <li>Recycling & Waste Management</li>
+        <li>Hospitality & Food Industry</li>
+        <li>Project Management</li>
+        <li>Art & Design</li>
+        <li>Permaculture & Sustainable Living</li>
+        <li>Animal Welfare & Rescue</li>
+      </ul>
+    </details>
+
+    <!-- Dropdown 3 -->
+    <details>
+      <summary>What to Expect</summary>
+      <p>
+        Every student receives a private Google folder where lesson notes and progress are
+        recorded automatically.
+        This allows you to review your work anytime and track your improvement clearly and easily.
+      </p>
+    </details>
+
+    <!-- Dropdown 4 -->
+    <details>
+      <summary>Relaxed, Productive Learning</summary>
+      <p>
+        I create a relaxed but focused atmosphere during lessons.
+        You learn at a pace that suits you, without pressure — while still making consistent, real progress.
+      </p>
+    </details>
+
+  </div>
+</div>
+
+</body>
+</html>
 
