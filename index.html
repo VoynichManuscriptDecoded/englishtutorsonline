@@ -12,30 +12,33 @@
     body {
       margin: 0;
       font-family: 'Lora', serif;
-      background-color: black;
-      color: white;
+      color: black;
+      background-color: white;
       text-align: center;
     }
 
-    /* Top Navigation */
+    /* --- TOP NAV (WHITE) --- */
     header {
-      height: 22vh;
+      background-color: white;
+      height: 25vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 40px;
-      border-bottom: 1px solid #444;
+      padding: 0 60px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #ccc;
     }
 
     .nav {
       display: flex;
-      gap: 120px; /* nice spacing */
+      justify-content: center;
+      gap: 80px;
     }
 
     .nav a {
       text-decoration: none;
-      color: white;
-      font-size: 30px;
+      color: black;
+      font-size: 32px;
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -45,49 +48,50 @@
       opacity: 0.7;
     }
 
-    /* Hero Section */
+    /* --- HERO SECTION (BLACK) --- */
     section.hero {
-      height: 56vh;
+      background-color: black;
+      color: white;
+      height: 50vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      background: black;
-      color: white;
       padding: 0 20px;
     }
 
     .hero h1 {
       font-size: 96px;
       margin: 0;
-      line-height: 1.0;
       font-weight: 700;
       letter-spacing: 2px;
     }
 
     .red-org {
-      color: #D50032; /* Post Box Red */
+      color: #D50032; /* POST BOX RED */
       margin-left: 8px;
       font-size: 40px;
+      font-weight: 700;
       position: relative;
       top: -4px;
-      font-weight: 700;
     }
 
-    /* Bottom */
+    /* --- BOTTOM SECTION (WHITE) --- */
     section.bottom {
-      height: 22vh;
+      background-color: white;
+      height: 25vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      border-top: 1px solid #ccc;
     }
 
     section.bottom a {
       text-decoration: none;
-      color: white;
+      color: black;
       font-size: 28px;
-      text-transform: uppercase;
       font-weight: 700;
+      text-transform: uppercase;
       letter-spacing: 1px;
     }
 
@@ -95,53 +99,49 @@
       opacity: 0.7;
     }
 
-    /* Responsive */
+    /* --- RESPONSIVE --- */
     @media(max-width: 900px) {
+      .nav a {
+        font-size: 24px;
+      }
       .hero h1 {
         font-size: 58px;
       }
       .red-org {
         font-size: 26px;
       }
-      .nav a {
-        font-size: 22px;
-      }
     }
 
     @media(max-width: 550px) {
+      .nav a {
+        font-size: 22px;
+      }
       .hero h1 {
         font-size: 46px;
       }
       .red-org {
         font-size: 22px;
       }
-      .nav {
-        gap: 60px;
-      }
     }
-
   </style>
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- TOP NAV (WHITE) -->
 <header>
   <div class="nav">
     <a href="tutors/index.html">Tutors</a>
-    <a href="about/index.html">About Us</a>
   </div>
 </header>
 
-<!-- Hero Title -->
+<!-- HERO (BLACK) -->
 <section class="hero">
-  <h1>
-    englishtutorsonline<span class="red-org">.org</span>
-  </h1>
+  <h1>englishtutorsonline<span class="red-org">.org</span></h1>
 </section>
 
-<!-- Bottom (optional future links here) -->
+<!-- BOTTOM (WHITE) -->
 <section class="bottom">
-  <!-- empty for now, clean minimalist look -->
+  <a href="about/index.html">About Us</a>
 </section>
 
 </body>
