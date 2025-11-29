@@ -1,1 +1,285 @@
-test page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kris – English Tutors Online</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background: black;
+      color: white;
+      line-height: 1.7;
+      padding-bottom: 60px;
+    }
+
+    /* Header Title */
+    .title {
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
+
+    .title h1 {
+      font-size: 72px;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .small-org {
+      font-size: 34px;
+      margin-left: 6px;
+      position: relative;
+      top: -5px;
+      opacity: 0.9;
+    }
+
+    /* Navigation Links */
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 180px;
+      margin-bottom: 40px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* Profile Layout */
+    .profile-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+    }
+
+    /* Left side */
+    .profile-left {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+
+    .profile-left img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .btn {
+      display: block;
+      margin: 18px auto;
+      padding: 10px 22px;
+      background: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+      width: 80%;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: black;
+      color: white;
+      border-color: white;
+    }
+
+    /* Right side */
+    .profile-right {
+      flex: 1.5;
+      min-width: 300px;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Dropdowns */
+    details {
+      margin: 18px 0;
+      font-size: 20px;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 22px;
+      outline: none;
+    }
+
+    /* Remove default arrows */
+    details summary::-webkit-details-marker,
+    details summary::marker {
+      display: none;
+    }
+
+    /* Custom arrow */
+    details summary::after {
+      content: "▼";
+      float: right;
+      font-size: 16px;
+      margin-top: 4px;
+      opacity: 0.8;
+    }
+
+    details[open] summary::after {
+      content: "▲";
+    }
+
+    /* Contact block */
+    .contact-block {
+      margin-top: 30px;
+      font-size: 20px;
+      border-top: 1px solid white;
+      padding-top: 20px;
+    }
+
+    .contact-block strong {
+      font-size: 22px;
+    }
+
+    /* Mobile Fix */
+    @media (max-width: 900px) {
+      .profile-container {
+        flex-wrap: wrap;
+        text-align: center;
+      }
+
+      .profile-right {
+        margin-top: 40px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- Title -->
+<div class="title">
+  <h1>englishtutorsonline<span class="small-org">.org</span></h1>
+</div>
+
+<!-- Nav -->
+<div class="nav">
+  <a href="../../index.html">← Home</a>
+  <a href="../index.html">← Tutors</a>
+</div>
+
+<!-- Profile Content -->
+<div class="profile-container">
+
+  <!-- LEFT SIDE -->
+  <div class="profile-left">
+    <img src="../Kris2.jpg" alt="Kris">
+
+    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#book">
+      Book 1 × 30 min Lesson (€15)
+    </a>
+
+    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#packages">
+      Book a Package of Lessons
+    </a>
+
+    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#client/sign-in/">
+      Student Login
+    </a>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="profile-right">
+
+    <h2>Hello and welcome!</h2>
+
+    <p>
+      If you’ve found your way here, you’re probably looking for some help with your English.
+      I’m Kristine, an experienced English teacher with a unique background and a passion for
+      practical, structured learning. Originally from Wales in the UK, I now live off-grid in
+      Portugal with my husband, where we run an animal rescue sanctuary. Before teaching, I
+      worked for over 25 years as an accountant and troubleshooter, managing multiple businesses
+      across various sectors.
+    </p>
+
+    <!-- DROPDOWN 1 -->
+    <details>
+      <summary>My Teaching Approach</summary>
+      <p>
+        My teaching style focuses on flexibility and personalised learning. I troubleshoot your
+        English, identify the issues, and fix them in a structured and simple way—whether it’s
+        exam preparation, speaking confidence, grammar gaps, or interview work.
+      </p>
+    </details>
+
+    <!-- DROPDOWN 2 -->
+    <details>
+      <summary>Personalised Learning Experience</summary>
+      <p>
+        Every lesson plan is tailored to the individual. I adapt our work to your goals, your
+        interests and your needs. My background covers a wide range of fields including:
+      </p>
+      <ul>
+        <li>Accountancy, Finance & Book-Keeping</li>
+        <li>Recycling & Waste Management</li>
+        <li>Hospitality Industry</li>
+        <li>Project Management</li>
+        <li>Art & Design</li>
+        <li>Sustainable Living & Permaculture</li>
+        <li>Animal Welfare & Rescue</li>
+      </ul>
+    </details>
+
+    <!-- DROPDOWN 3 -->
+    <details>
+      <summary>What to Expect</summary>
+      <p>
+        I create personalised Google folders and documents for each student so your progress,
+        corrections, new vocabulary, and lesson notes are always saved and accessible. You can
+        track your improvements at any time.
+      </p>
+    </details>
+
+    <!-- DROPDOWN 4 -->
+    <details>
+      <summary>Relaxed, Productive Learning</summary>
+      <p>
+        Lessons are relaxed but highly productive. We work at your pace—comfortable,
+        structured, and with clear, achievable goals.
+      </p>
+    </details>
+
+    <!-- CONTACT -->
+    <div class="contact-block">
+      <strong>EMAIL</strong><br>
+      kris@englishtutorsonline.org<br><br>
+
+      <strong>WHATSAPP</strong><br>
+      00351 969 386 072
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
