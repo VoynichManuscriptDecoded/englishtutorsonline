@@ -67,7 +67,7 @@
       box-sizing: border-box;
     }
 
-    /* LEFT */
+    /* LEFT COLUMN */
     .left {
       flex: 1;
       text-align: center;
@@ -79,28 +79,22 @@
       margin-left: -10px;
     }
 
-    .btn {
+    .contact-block {
+      margin-top: 18px;
+      font-size: 19px;
+      text-align: center;
+    }
+
+    .contact-block div {
+      margin-bottom: 14px;
+    }
+
+    .contact-block span {
       display: block;
-      margin: 14px auto;
-      padding: 10px 18px;
-      font-size: 18px;
       font-weight: 700;
-      background: white;
-      color: black;
-      border: 2px solid black;
-      border-radius: 8px;
-      text-decoration: none;
-      width: 70%;
-      transition: 0.2s;
     }
 
-    .btn:hover {
-      background: black;
-      color: white;
-      border-color: black;
-    }
-
-    /* RIGHT SIDE */
+    /* RIGHT COLUMN */
     .right {
       flex: 1.8;
       min-width: 380px;
@@ -151,20 +145,6 @@
       margin-top: 10px;
       font-size: 17px;
     }
-
-    /* CONTACT ROW */
-    .contact-row {
-      margin-top: 10px;
-      font-size: 20px;
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .contact-row span {
-      font-weight: 700;
-    }
   </style>
 </head>
 
@@ -185,76 +165,121 @@
 <!-- MAIN CONTENT -->
 <div class="main-container">
 
-  <!-- LEFT -->
+  <!-- LEFT COLUMN -->
   <div class="left">
     <img src="../Alison.jpg" alt="Alison">
 
-    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#book">
-      Book 1 × 30 min Lesson (€15)
-    </a>
-
-    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#packages">
-      Book a Package of Lessons
-    </a>
+    <div class="contact-block">
+      <div>
+        <span>EMAIL:</span>
+        alison@englishtutorsonline.org
+      </div>
+      <div>
+        <span>WHATSAPP:</span>
+        0034 650 751592
+      </div>
+    </div>
   </div>
 
-  <!-- RIGHT -->
+  <!-- RIGHT COLUMN -->
   <div class="right">
 
+    <!-- INTRO -->
     <h2>Hello and welcome!</h2>
 
     <p>
-      I’m Alison, an English teacher with over 20 years of experience helping students achieve 
-      academic and professional goals. I specialise in exam preparation (IELTS & CAE), advanced 
-      vocabulary development, presentation coaching, and refining already strong English skills.
+      If you’ve found your way here, you’ve probably got some specific English language needs.
+      If you think I can help (and I probably can), feel free to get in touch.
+      I offer a free, no-obligation session where I can evaluate your English level and discuss how I can help you.
     </p>
 
-    <!-- DROPDOWN 1 -->
+    <p>
+      What I love most about being an English teacher is helping people achieve their dreams — whether that's gaining
+      a place at university, securing an international job, or simply enjoying the pleasure of engaging with English:
+      one of the most wonderful and challenging languages in the world.
+    </p>
+
+    <!-- TEACHING EXPERIENCE (FULL BIO) -->
     <details>
-      <summary>My Teaching Approach</summary>
+      <summary>Teaching Experience & Background</summary>
       <p>
-        Every student is different, and I adapt my lessons to your needs and learning style. 
-        Whether you’re preparing for an exam, improving your conversation, or developing academic 
-        English, lessons will be clear, structured and personalised.
+        I have been teaching English for over 20 years, following earlier careers in publishing,
+        politics and international finance. These roles exposed me to many people and subjects,
+        giving me a broad base of knowledge across multiple fields.
+      </p>
+
+      <p>
+        After qualifying as an English teacher at IH London, I lived and worked in Russia, Malaysia, China,
+        Kazakhstan, Saudi Arabia and Spain, where I now live. I hold the CELTA, DELTA and an MA (TESOL),
+        was an IELTS examiner (IDP Certification), and have additional qualifications in Business English,
+        online tutoring and translation.
+      </p>
+
+      <p>
+        I have written English language teaching materials for Cambridge University Press, Kaplan (IELTS preparation
+        book), and various private language courses (mainly for the Middle East), as well as a series of Collins
+        Checkpoint books used by English-medium schools outside the UK to prepare students for GCSE-level English.
+      </p>
+
+      <p>
+        For the last five years I have been working exclusively online as both a teacher and a teacher trainer
+        (International House).
       </p>
     </details>
 
-    <!-- DROPDOWN 2 -->
+    <!-- DROPDOWN: EXPECTATIONS -->
     <details>
-      <summary>IELTS & CAE Expertise</summary>
+      <summary>What to Expect in Your Classes</summary>
       <p>
-        I have completed around 4,000 IELTS Speaking interviews and marked a similar number of 
-        Writing scripts. I specialise in helping students move from 6/6.5 to 7 or higher. 
-        I have authored IELTS preparation materials for Kaplan and delivered courses for 
-        the British Council.
+        Every student is different, and I can easily adapt my teaching to your learning style or meet a specific set
+        of language needs. If you're preparing for an exam such as IELTS, we will work solidly on test practice so
+        you feel confident and prepared. If your goal is to improve your conversation, we will focus on speaking,
+        guided practice and relevant correction.
+      </p>
+
+      <p>
+        In our initial (free) meeting, we will discuss how you like to learn and I will offer suggestions on how to
+        structure your lessons for the best results.
       </p>
     </details>
 
-    <!-- DROPDOWN 3 -->
+    <!-- DROPDOWN: IELTS / CAE -->
+    <details>
+      <summary>IELTS 7 / CAE Expertise</summary>
+      <p>
+        As an examiner I have completed around 4,000 IELTS Speaking interviews and marked a similar number of Writing
+        scripts. I specialise in helping students move from 6/6.5 to 7 or above. I have authored IELTS preparation
+        materials for Kaplan and designed and facilitated IELTS prep courses for the British Council.
+      </p>
+    </details>
+
+    <!-- DROPDOWN: VOCABULARY -->
     <details>
       <summary>Vocabulary, Grammar & Expression</summary>
       <p>
-        I am passionate about words and their use. If you want to refine your English, strengthen 
-        your grammar, or understand subtle meanings and expressions, I will guide you clearly and 
-        confidently.
+        I am passionate about words — their meanings, subtleties and use. If you already know most of the grammar and
+        want to refine your vocabulary, expression and precision, I can help you develop your English with clarity and
+        confidence.
       </p>
     </details>
 
-    <!-- DROPDOWN 4 -->
+    <!-- DROPDOWN: INTERVIEWS / PRESENTATIONS -->
     <details>
-      <summary>About Me</summary>
+      <summary>Job Interviews & Presentations</summary>
       <p>
-        I have taught English in Russia, Malaysia, China, Kazakhstan, Saudi Arabia and now Spain. 
-        I hold the CELTA, DELTA and an MA in TESOL, with additional training in Business English, 
-        online tutoring and translation. I have also written English learning materials for CUP, 
-        Kaplan and Collins.
+        I have helped many students prepare for job interviews with great success. I also enjoy working with students
+        on presentations — both improving the text and coaching delivery and performance.
       </p>
     </details>
 
-    <div class="contact-row">
-      <span>EMAIL: alison@englishtutorsonline.org</span>
-      <span>WHATSAPP: 0034 650 751592</span>
-    </div>
+    <!-- DROPDOWN: REFRESHING ENGLISH -->
+    <details>
+      <summary>Refreshing Rusty English</summary>
+      <p>
+        Many students come to me feeling that their English has become a little rusty after years without practice.
+        Together we rebuild fluency and confidence so you can return to your previous level quickly.
+      </p>
+    </details>
 
   </div>
 </div>
