@@ -14,83 +14,80 @@
     body {
       margin: 0;
       font-family: 'Lora', serif;
+      background: white;
+      color: black;
+      line-height: 1.6;
+    }
+
+    /* HEADER BAR */
+    .header-bar {
+      width: 100%;
       background: black;
       color: white;
-      line-height: 1.6;
-      overflow: hidden; /* Prevent scrolling */
-    }
-
-    /* Header Title */
-    .title {
-      text-align: center;
-      padding: 20px 20px 0;
-    }
-
-    .title h1 {
-      font-size: 64px;
-      margin: 0;
-      font-weight: 700;
-    }
-
-    .small-org {
-      font-size: 30px;
-      margin-left: 6px;
-      position: relative;
-      top: -5px;
-      opacity: 0.9;
-    }
-
-    /* Nav */
-    .nav {
+      padding: 18px 40px;
       display: flex;
       justify-content: space-between;
-      padding: 0 80px;
-      margin: 10px 0 20px;
+      align-items: center;
+      box-sizing: border-box;
     }
 
-    .nav a {
-      text-decoration: none;
-      font-size: 22px;
+    .header-title {
+      font-size: 36px;
       font-weight: 700;
-      color: white;
     }
 
-    .nav a:hover {
+    .header-title .small-org {
+      font-size: 24px;
+      opacity: 0.9;
+      position: relative;
+      top: -2px;
+      margin-left: 4px;
+    }
+
+    .header-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      margin-left: 30px;
+    }
+
+    .header-nav a:hover {
       opacity: 0.7;
     }
 
-    /* Layout container */
-    .profile-container {
+    /* MAIN LAYOUT */
+    .main-container {
       max-width: 1300px;
-      margin: 0 auto;
+      margin: 40px auto;
       padding: 0 40px;
       display: flex;
-      gap: 50px;
+      gap: 60px;
       align-items: flex-start;
-      height: 72vh; /* Forces everything onto one screen */
+      box-sizing: border-box;
     }
 
-    /* Left side */
-    .profile-left {
+    /* LEFT SIDE IMAGE + BUTTONS */
+    .left {
       flex: 1;
       text-align: center;
     }
 
-    .profile-left img {
-      width: 75%;              /* Reduced to fit better */
+    .left img {
+      width: 80%;
       border-radius: 12px;
     }
 
     .btn {
       display: block;
       margin: 14px auto;
-      padding: 8px 20px;
+      padding: 10px 18px;
+      font-size: 18px;
+      font-weight: 700;
       background: white;
       color: black;
       border: 2px solid black;
       border-radius: 8px;
-      font-size: 18px;
-      font-weight: 700;
       text-decoration: none;
       width: 70%;
       transition: 0.2s;
@@ -99,93 +96,100 @@
     .btn:hover {
       background: black;
       color: white;
-      border-color: white;
+      border-color: black;
     }
 
-    /* Right side */
-    .profile-right {
-      flex: 1.6;
+    /* RIGHT SIDE TEXT */
+    .right {
+      flex: 1.5;
       min-width: 360px;
-      max-height: 70vh;
-      overflow-y: auto; /* Only this section scrolls if needed */
-      padding-right: 10px;
     }
 
     h2 {
-      font-size: 30px;
+      font-size: 32px;
       margin-top: 0;
-      margin-bottom: 10px;
     }
 
     p {
-      font-size: 18px;
-      margin-bottom: 16px;
+      font-size: 20px;
+      margin-bottom: 20px;
     }
 
-    /* Dropdowns */
+    /* DROPDOWNS */
     details {
-      margin: 12px 0;
-      font-size: 18px;
+      margin: 20px 0;
+      font-size: 20px;
     }
 
     details summary {
       cursor: pointer;
       font-weight: 700;
-      font-size: 20px;
-      outline: none;
+      font-size: 22px;
+      padding: 8px;
+      border-bottom: 1px solid black;
     }
 
-    /* Remove arrows */
+    /* REMOVE DEFAULT ARROWS */
     details summary::-webkit-details-marker,
     details summary::marker {
       display: none;
     }
 
-    /* Custom arrow */
+    /* CUSTOM ARROW */
     details summary::after {
       content: "▼";
       float: right;
-      font-size: 14px;
-      opacity: 0.8;
+      font-size: 16px;
+      opacity: 0.7;
     }
 
     details[open] summary::after {
       content: "▲";
     }
 
-    /* Contact Block */
-    .contact-block {
-      margin-top: 20px;
+    details p, details ul {
+      padding-left: 10px;
+      margin-top: 10px;
       font-size: 18px;
-      padding-top: 10px;
-      border-top: 1px solid white;
     }
 
-    .contact-block strong {
+    /* CONTACT ROW */
+    .contact-row {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid black;
       font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      max-width: 600px;
+    }
+
+    .contact-row div {
+      font-size: 20px;
+      font-weight: 700;
     }
 
   </style>
-
 </head>
 <body>
 
-<!-- Title -->
-<div class="title">
-  <h1>englishtutorsonline<span class="small-org">.org</span></h1>
+<!-- HEADER -->
+<div class="header-bar">
+  <div class="header-title">
+    englishtutorsonline<span class="small-org">.org</span>
+  </div>
+
+  <div class="header-nav">
+    <a href="../../index.html">Home</a>
+    <a href="../index.html">Tutors</a>
+  </div>
 </div>
 
-<!-- Nav -->
-<div class="nav">
-  <a href="../../index.html">← Home</a>
-  <a href="../index.html">Tutors →</a>
-</div>
-
-<!-- Main Content -->
-<div class="profile-container">
+<!-- MAIN CONTENT -->
+<div class="main-container">
 
   <!-- LEFT -->
-  <div class="profile-left">
+  <div class="left">
     <img src="../Kris2.jpg" alt="Kris">
 
     <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#book">
@@ -202,30 +206,38 @@
   </div>
 
   <!-- RIGHT -->
-  <div class="profile-right">
+  <div class="right">
 
     <h2>Hello and welcome!</h2>
 
     <p>
       If you’ve found your way here, you’re probably looking for some help with your English.
-      I’m Kristine, an experienced English teacher with a strong background in accounting,
-      troubleshooting, business management and sustainable off-grid living here in Portugal.
-      My goal is to make English clear, simple and structured for every student.
+      I’m Kristine, an experienced English teacher with a unique background and an inspiring passion for teaching.
+      I’m originally from Wales in the UK, but now reside in Portugal, where my husband and I manage an animal
+      rescue project and sanctuary on a farm. Living “off the grid,” we’ve embraced a sustainable lifestyle,
+      disconnected from conventional electricity and water systems.
     </p>
 
+    <p>
+      Before embarking on my teaching journey, I spent over 25 years as an accountant and troubleshooter, owning
+      and managing several businesses across various industries.
+    </p>
+
+    <!-- DROPDOWN 1 -->
     <details>
       <summary>My Teaching Approach</summary>
       <p>
-        My style focuses on flexibility and personalised learning. I troubleshoot your English,
-        identify the problems, and fix them in a clear, structured way—whether it’s exams,
-        speaking, grammar gaps, interviews or confidence.
+        My teaching philosophy revolves around flexibility and personalised learning. I troubleshoot English,
+        identify the issues and fix them in a simple and structured way, whether exam prep, interview practice,
+        general English or confidence building.
       </p>
     </details>
 
+    <!-- DROPDOWN 2 -->
     <details>
       <summary>Personalised Learning Experience</summary>
       <p>
-        Every lesson plan is tailored to your goals and needs. My background spans:
+        I create lessons for each individual student. My knowledge spans:
       </p>
       <ul>
         <li>Accountancy, Finance & Book-Keeping</li>
@@ -238,27 +250,27 @@
       </ul>
     </details>
 
+    <!-- DROPDOWN 3 -->
     <details>
       <summary>What to Expect</summary>
       <p>
-        Every student has a personalised Google folder where corrections, notes, new vocabulary,
-        homework and progress are automatically saved for easy access.
+        I create a personalised Google folder for every student. All corrections, notes, vocabulary and lesson
+        progress are saved automatically so you can access everything at any time.
       </p>
     </details>
 
+    <!-- DROPDOWN 4 -->
     <details>
       <summary>Relaxed, Productive Learning</summary>
       <p>
-        Lessons are relaxed but structured. You learn at your pace with clear goals and no stress.
+        Lessons are relaxed, structured and paced around your needs—supportive, clear and goal-focused.
       </p>
     </details>
 
-    <div class="contact-block">
-      <strong>EMAIL</strong><br>
-      kris@englishtutorsonline.org<br><br>
-
-      <strong>WHATSAPP</strong><br>
-      00351 969 386 072
+    <!-- CONTACT ROW -->
+    <div class="contact-row">
+      <div>EMAIL: kris@englishtutorsonline.org</div>
+      <div>WHATSAPP: 00351 969 386 072</div>
     </div>
 
   </div>
