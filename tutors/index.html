@@ -5,78 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tutors – English Tutors Online</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../favicon.png">
+
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       font-family: 'Lora', serif;
-      background-color: black;
+      background: white;
+      color: black;
+      line-height: 1.6;
+    }
+
+    /* HEADER BAR - matches Kris page */
+    .header-bar {
+      width: 100%;
+      background: black;
       color: white;
-      line-height: 1.7;
-    }
-
-    /* Big Title */
-    .top-title {
-      text-align: center;
-      padding: 20px 20px 0;
-    }
-
-    .top-title h1 {
-      font-size: 88px;
-      margin: 0;
-      color: white;
-      font-weight: 700;
-    }
-
-    .small-org {
-      font-size: 36px;
-      margin-left: 8px;
-      position: relative;
-      top: -6px;
-      opacity: 0.9;
-      color: white;
-    }
-
-    /* Top Nav */
-    .top-nav {
+      padding: 18px 40px;
       display: flex;
-      justify-content: center;
-      gap: 140px;
-      margin: 20px 0 40px;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
     }
 
-    .top-nav a {
-      text-decoration: none;
-      font-size: 26px;
+    .header-title {
+      font-size: 36px;
       font-weight: 700;
-      color: white;
-      letter-spacing: 1px;
     }
 
-    .top-nav a:hover {
+    .header-title .small-org {
+      font-size: 24px;
+      opacity: 0.9;
+      position: relative;
+      top: -2px;
+      margin-left: 4px;
+    }
+
+    .header-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      margin-left: 30px;
+    }
+
+    .header-nav a:hover {
       opacity: 0.7;
     }
 
-    /* Tutor Grid */
+    /* GRID LAYOUT */
     .tutor-grid {
-      max-width: 1100px;
-      margin: 0 auto 60px;
+      max-width: 1200px;
+      margin: 40px auto;
       padding: 0 20px;
       display: flex;
       justify-content: center;
       gap: 40px;
     }
 
-    /* Tutor Card */
+    /* TUTOR CARDS - black, matching your request */
     .tutor-card {
       width: 28%;
-      background: #FFFFFF;
+      background: black;
       border-radius: 12px;
       padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      color: black;
+      color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
 
     .tutor-card img {
@@ -90,23 +88,12 @@
       margin: 10px 0 8px;
       font-size: 30px;
       font-weight: 700;
-      color: black;
     }
 
-    /* Dropdown */
+    /* DROPDOWNS */
     details {
       margin: 10px 0 15px;
       font-size: 19px;
-      color: black;
-    }
-
-    /* REMOVE ALL DEFAULT BROWSER ARROWS */
-    details summary::-webkit-details-marker {
-      display: none;
-    }
-
-    details summary::marker {
-      display: none;
     }
 
     details summary {
@@ -114,18 +101,21 @@
       font-weight: 700;
       font-size: 20px;
       margin-bottom: 6px;
-      outline: none;
-      color: black;
+      color: white;
+      border-bottom: 1px solid white;
+      padding-bottom: 6px;
     }
 
-    /* Custom arrow */
+    details summary::-webkit-details-marker,
+    details summary::marker {
+      display: none;
+    }
+
     details summary::after {
       content: "▼";
       float: right;
       font-size: 16px;
-      margin-top: 4px;
       opacity: 0.8;
-      color: black;
     }
 
     details[open] summary::after {
@@ -134,23 +124,23 @@
 
     details ul {
       padding-left: 18px;
-      margin: 10px 0 0;
+      margin-top: 10px;
       text-align: left;
-      color: black;
+      color: white;
     }
 
     details ul li {
       margin-bottom: 6px;
     }
 
-    /* Buttons */
+    /* BUTTONS - identical to Kris page */
     .btn {
       display: inline-block;
       margin: 12px auto 0;
       padding: 10px 22px;
       background: white;
       color: black;
-      border: 2px solid black;
+      border: 2px solid white;
       border-radius: 8px;
       font-size: 20px;
       font-weight: 700;
@@ -165,7 +155,7 @@
       cursor: pointer;
     }
 
-    /* Responsive */
+    /* MOBILE */
     @media(max-width: 900px) {
       .tutor-grid {
         flex-direction: column;
@@ -177,29 +167,27 @@
       .tutor-card img {
         width: 60%;
       }
-      .top-title h1 {
-        font-size: 56px;
-      }
     }
   </style>
 </head>
 <body>
 
-<!-- Title -->
-<div class="top-title">
-  <h1>englishtutorsonline<span class="small-org">.org</span></h1>
+<!-- HEADER BAR -->
+<div class="header-bar">
+  <div class="header-title">
+    englishtutorsonline<span class="small-org">.org</span>
+  </div>
+
+  <div class="header-nav">
+    <a href="../index.html">Home</a>
+    <a href="../terms/index.html">Terms & Conditions</a>
+  </div>
 </div>
 
-<!-- Top Navigation -->
-<div class="top-nav">
-  <a href="../index.html">← Home</a>
-  <a href="../terms/index.html">Terms & Conditions →</a>
-</div>
-
-<!-- Tutor Grid -->
+<!-- GRID OF TUTORS -->
 <div class="tutor-grid">
 
-  <!-- Kris -->
+  <!-- KRIS -->
   <div class="tutor-card">
     <img src="Kris2.jpg" alt="Kris">
     <h2>Kris</h2>
@@ -207,11 +195,10 @@
     <details>
       <summary>More info</summary>
       <ul>
-        <li>Customised learning plans (Beginner → Proficient)</li>
+        <li>Customised learning (Beginner → Proficient)</li>
         <li>Conversation, grammar & vocabulary troubleshooting</li>
         <li>Business English, interviews & presentations</li>
         <li>Exam prep: Cambridge / IELTS / TOEIC</li>
-        <li>Student work auto-saved</li>
         <li>Experience: business, accountancy, hospitality, recycling, animal welfare</li>
       </ul>
     </details>
@@ -220,7 +207,7 @@
     <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#client/sign-in/">Student Login</a>
   </div>
 
-  <!-- Alison -->
+  <!-- ALISON -->
   <div class="tutor-card">
     <img src="Alison.jpg" alt="Alison">
     <h2>Alison</h2>
@@ -228,18 +215,18 @@
     <details>
       <summary>More info</summary>
       <ul>
-        <li>IELTS 7+ / CAE specialist</li>
+        <li>IELTS 7+ / CAE expert</li>
         <li>Advanced vocabulary refinement</li>
         <li>Presentations & public speaking</li>
         <li>Interview preparation</li>
-        <li>Writing improvement & academic editing</li>
+        <li>Academic writing support & editing</li>
       </ul>
     </details>
 
     <a class="btn" href="alison/">Read more / Book</a>
   </div>
 
-  <!-- Rachel -->
+  <!-- RACHEL -->
   <div class="tutor-card">
     <img src="Rachel.jpg" alt="Rachel">
     <h2>Rachel</h2>
@@ -247,7 +234,7 @@
     <details>
       <summary>More info</summary>
       <ul>
-        <li>Tailored lessons for all levels</li>
+        <li>Lessons tailored to all levels</li>
         <li>Exam prep: LanguageCert / Cambridge / IELTS</li>
         <li>Business, construction, medical & legal English</li>
         <li>Interview & presentation coaching</li>
