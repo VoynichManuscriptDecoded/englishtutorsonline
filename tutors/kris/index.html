@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kris – English Tutors Online</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../favicon.png">
+
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -13,41 +16,41 @@
       font-family: 'Lora', serif;
       background: black;
       color: white;
-      line-height: 1.7;
-      padding-bottom: 60px;
+      line-height: 1.6;
+      overflow: hidden; /* Prevent scrolling */
     }
 
     /* Header Title */
     .title {
       text-align: center;
-      padding: 30px 20px 10px;
+      padding: 20px 20px 0;
     }
 
     .title h1 {
-      font-size: 72px;
+      font-size: 64px;
       margin: 0;
       font-weight: 700;
     }
 
     .small-org {
-      font-size: 34px;
+      font-size: 30px;
       margin-left: 6px;
       position: relative;
       top: -5px;
       opacity: 0.9;
     }
 
-    /* Navigation Links */
+    /* Nav */
     .nav {
       display: flex;
-      justify-content: center;
-      gap: 180px;
-      margin-bottom: 40px;
+      justify-content: space-between;
+      padding: 0 80px;
+      margin: 10px 0 20px;
     }
 
     .nav a {
       text-decoration: none;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 700;
       color: white;
     }
@@ -56,41 +59,40 @@
       opacity: 0.7;
     }
 
-    /* Profile Layout */
+    /* Layout container */
     .profile-container {
-      max-width: 1100px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 40px;
       display: flex;
-      gap: 40px;
+      gap: 50px;
       align-items: flex-start;
-      flex-wrap: nowrap;
+      height: 72vh; /* Forces everything onto one screen */
     }
 
     /* Left side */
     .profile-left {
       flex: 1;
-      min-width: 280px;
       text-align: center;
     }
 
     .profile-left img {
-      width: 100%;
+      width: 75%;              /* Reduced to fit better */
       border-radius: 12px;
     }
 
     .btn {
       display: block;
-      margin: 18px auto;
-      padding: 10px 22px;
+      margin: 14px auto;
+      padding: 8px 20px;
       background: white;
       color: black;
       border: 2px solid black;
       border-radius: 8px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
       text-decoration: none;
-      width: 80%;
+      width: 70%;
       transition: 0.2s;
     }
 
@@ -102,35 +104,38 @@
 
     /* Right side */
     .profile-right {
-      flex: 1.5;
-      min-width: 300px;
+      flex: 1.6;
+      min-width: 360px;
+      max-height: 70vh;
+      overflow-y: auto; /* Only this section scrolls if needed */
+      padding-right: 10px;
     }
 
     h2 {
-      font-size: 34px;
+      font-size: 30px;
       margin-top: 0;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 20px;
-      margin-bottom: 20px;
+      font-size: 18px;
+      margin-bottom: 16px;
     }
 
     /* Dropdowns */
     details {
-      margin: 18px 0;
-      font-size: 20px;
+      margin: 12px 0;
+      font-size: 18px;
     }
 
     details summary {
       cursor: pointer;
       font-weight: 700;
-      font-size: 22px;
+      font-size: 20px;
       outline: none;
     }
 
-    /* Remove default arrows */
+    /* Remove arrows */
     details summary::-webkit-details-marker,
     details summary::marker {
       display: none;
@@ -140,8 +145,7 @@
     details summary::after {
       content: "▼";
       float: right;
-      font-size: 16px;
-      margin-top: 4px;
+      font-size: 14px;
       opacity: 0.8;
     }
 
@@ -149,29 +153,18 @@
       content: "▲";
     }
 
-    /* Contact block */
+    /* Contact Block */
     .contact-block {
-      margin-top: 30px;
-      font-size: 20px;
+      margin-top: 20px;
+      font-size: 18px;
+      padding-top: 10px;
       border-top: 1px solid white;
-      padding-top: 20px;
     }
 
     .contact-block strong {
-      font-size: 22px;
+      font-size: 20px;
     }
 
-    /* Mobile Fix */
-    @media (max-width: 900px) {
-      .profile-container {
-        flex-wrap: wrap;
-        text-align: center;
-      }
-
-      .profile-right {
-        margin-top: 40px;
-      }
-    }
   </style>
 
 </head>
@@ -185,13 +178,13 @@
 <!-- Nav -->
 <div class="nav">
   <a href="../../index.html">← Home</a>
-  <a href="../index.html">← Tutors</a>
+  <a href="../index.html">Tutors →</a>
 </div>
 
-<!-- Profile Content -->
+<!-- Main Content -->
 <div class="profile-container">
 
-  <!-- LEFT SIDE -->
+  <!-- LEFT -->
   <div class="profile-left">
     <img src="../Kris2.jpg" alt="Kris">
 
@@ -208,36 +201,31 @@
     </a>
   </div>
 
-  <!-- RIGHT SIDE -->
+  <!-- RIGHT -->
   <div class="profile-right">
 
     <h2>Hello and welcome!</h2>
 
     <p>
       If you’ve found your way here, you’re probably looking for some help with your English.
-      I’m Kristine, an experienced English teacher with a unique background and a passion for
-      practical, structured learning. Originally from Wales in the UK, I now live off-grid in
-      Portugal with my husband, where we run an animal rescue sanctuary. Before teaching, I
-      worked for over 25 years as an accountant and troubleshooter, managing multiple businesses
-      across various sectors.
+      I’m Kristine, an experienced English teacher with a strong background in accounting,
+      troubleshooting, business management and sustainable off-grid living here in Portugal.
+      My goal is to make English clear, simple and structured for every student.
     </p>
 
-    <!-- DROPDOWN 1 -->
     <details>
       <summary>My Teaching Approach</summary>
       <p>
-        My teaching style focuses on flexibility and personalised learning. I troubleshoot your
-        English, identify the issues, and fix them in a structured and simple way—whether it’s
-        exam preparation, speaking confidence, grammar gaps, or interview work.
+        My style focuses on flexibility and personalised learning. I troubleshoot your English,
+        identify the problems, and fix them in a clear, structured way—whether it’s exams,
+        speaking, grammar gaps, interviews or confidence.
       </p>
     </details>
 
-    <!-- DROPDOWN 2 -->
     <details>
       <summary>Personalised Learning Experience</summary>
       <p>
-        Every lesson plan is tailored to the individual. I adapt our work to your goals, your
-        interests and your needs. My background covers a wide range of fields including:
+        Every lesson plan is tailored to your goals and needs. My background spans:
       </p>
       <ul>
         <li>Accountancy, Finance & Book-Keeping</li>
@@ -250,26 +238,21 @@
       </ul>
     </details>
 
-    <!-- DROPDOWN 3 -->
     <details>
       <summary>What to Expect</summary>
       <p>
-        I create personalised Google folders and documents for each student so your progress,
-        corrections, new vocabulary, and lesson notes are always saved and accessible. You can
-        track your improvements at any time.
+        Every student has a personalised Google folder where corrections, notes, new vocabulary,
+        homework and progress are automatically saved for easy access.
       </p>
     </details>
 
-    <!-- DROPDOWN 4 -->
     <details>
       <summary>Relaxed, Productive Learning</summary>
       <p>
-        Lessons are relaxed but highly productive. We work at your pace—comfortable,
-        structured, and with clear, achievable goals.
+        Lessons are relaxed but structured. You learn at your pace with clear goals and no stress.
       </p>
     </details>
 
-    <!-- CONTACT -->
     <div class="contact-block">
       <strong>EMAIL</strong><br>
       kris@englishtutorsonline.org<br><br>
