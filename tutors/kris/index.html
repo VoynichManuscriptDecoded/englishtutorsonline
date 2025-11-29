@@ -154,17 +154,20 @@
       font-size: 17px;
     }
 
-    /* CONTACT ROW */
-    .contact-row {
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 1px solid black;
-      font-size: 20px;
-      display: flex;
-      justify-content: space-between;
-      max-width: 600px;
-    }
+/* CONTACT ROW */
+.contact-row {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid black;
+  font-size: 20px;
 
+  white-space: nowrap;  /* stop text wrapping */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 40px;            /* spacing between email + whatsapp */
+}
+    
     .contact-row div {
       font-size: 20px;
       font-weight: 700;
