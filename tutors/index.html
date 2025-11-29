@@ -19,7 +19,7 @@
       line-height: 1.6;
     }
 
-    /* HEADER BAR - matches Kris page */
+    /* HEADER */
     .header-bar {
       width: 100%;
       background: black;
@@ -56,43 +56,37 @@
       opacity: 0.7;
     }
 
-    /* GRID LAYOUT */
+    /* GRID */
     .tutor-grid {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 40px auto;
       padding: 0 20px;
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 50px;
     }
 
-    /* TUTOR CARDS - black, matching your request */
-    .tutor-card {
-      width: 28%;
-      background: black;
-      border-radius: 12px;
-      padding: 20px;
+    /* Each Tutor Column */
+    .tutor-column {
+      width: 30%;
       text-align: center;
-      color: #EDEDED;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
 
-    .tutor-card img {
-      width: 80%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 10px;
+    .tutor-column img {
+      width: 70%;
+      border-radius: 10px;
+      margin-bottom: 12px;
     }
 
-    .tutor-card h2 {
-      margin: 10px 0 8px;
-      font-size: 30px;
+    .tutor-column h2 {
+      font-size: 32px;
+      margin: 10px 0 20px;
       font-weight: 700;
     }
 
     /* DROPDOWNS */
     details {
-      margin: 10px 0 15px;
+      margin: 15px 0;
       font-size: 19px;
     }
 
@@ -100,10 +94,8 @@
       cursor: pointer;
       font-weight: 700;
       font-size: 20px;
-      margin-bottom: 6px;
-      color: white;
-      border-bottom: 1px solid white;
       padding-bottom: 6px;
+      border-bottom: 1px solid black;
     }
 
     details summary::-webkit-details-marker,
@@ -123,53 +115,52 @@
     }
 
     details ul {
-      padding-left: 18px;
-      margin-top: 10px;
       text-align: left;
-      color: white;
+      margin-top: 10px;
+      padding-left: 15px;
     }
 
     details ul li {
       margin-bottom: 6px;
     }
 
-    /* BUTTONS - identical to Kris page */
+    /* BUTTONS */
     .btn {
-      display: inline-block;
-      margin: 12px auto 0;
+      display: block;
+      margin: 15px auto;
       padding: 10px 22px;
       background: white;
       color: black;
-      border: 2px solid white;
+      border: 2px solid black;
       border-radius: 8px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
       text-decoration: none;
+      width: 80%;
       transition: 0.2s ease;
     }
 
     .btn:hover {
       background: black;
       color: white;
-      border-color: white;
-      cursor: pointer;
+      border-color: black;
     }
 
-    /* MOBILE */
+    /* RESPONSIVE */
     @media(max-width: 900px) {
       .tutor-grid {
         flex-direction: column;
-        gap: 50px;
       }
-      .tutor-card {
+      .tutor-column {
         width: 100%;
       }
-      .tutor-card img {
-        width: 60%;
+      .tutor-column img {
+        width: 55%;
       }
     }
   </style>
 </head>
+
 <body>
 
 <!-- HEADER BAR -->
@@ -184,11 +175,11 @@
   </div>
 </div>
 
-<!-- GRID OF TUTORS -->
+<!-- THREE TUTOR COLUMNS -->
 <div class="tutor-grid">
 
   <!-- KRIS -->
-  <div class="tutor-card">
+  <div class="tutor-column">
     <img src="Kris2.jpg" alt="Kris">
     <h2>Kris</h2>
 
@@ -196,10 +187,9 @@
       <summary>More info</summary>
       <ul>
         <li>Customised learning (Beginner → Proficient)</li>
-        <li>Conversation, grammar & vocabulary troubleshooting</li>
+        <li>Grammar & vocabulary troubleshooting</li>
         <li>Business English, interviews & presentations</li>
         <li>Exam prep: Cambridge / IELTS / TOEIC</li>
-        <li>Experience: business, accountancy, hospitality, recycling, animal welfare</li>
       </ul>
     </details>
 
@@ -208,18 +198,17 @@
   </div>
 
   <!-- ALISON -->
-  <div class="tutor-card">
+  <div class="tutor-column">
     <img src="Alison.jpg" alt="Alison">
     <h2>Alison</h2>
 
     <details>
       <summary>More info</summary>
       <ul>
-        <li>IELTS 7+ / CAE expert</li>
-        <li>Advanced vocabulary refinement</li>
+        <li>IELTS 7+ / CAE specialist</li>
+        <li>Vocabulary refinement</li>
         <li>Presentations & public speaking</li>
-        <li>Interview preparation</li>
-        <li>Academic writing support & editing</li>
+        <li>Academic writing editing</li>
       </ul>
     </details>
 
@@ -227,19 +216,17 @@
   </div>
 
   <!-- RACHEL -->
-  <div class="tutor-card">
+  <div class="tutor-column">
     <img src="Rachel.jpg" alt="Rachel">
     <h2>Rachel</h2>
 
     <details>
       <summary>More info</summary>
       <ul>
-        <li>Lessons tailored to all levels</li>
-        <li>Exam prep: LanguageCert / Cambridge / IELTS</li>
-        <li>Business, construction, medical & legal English</li>
-        <li>Interview & presentation coaching</li>
-        <li>Pronunciation, grammar & vocabulary development</li>
-        <li>16 years experience</li>
+        <li>Lessons for all levels</li>
+        <li>LanguageCert / Cambridge / IELTS</li>
+        <li>Business, medical & legal English</li>
+        <li>Pronunciation & vocabulary development</li>
       </ul>
     </details>
 
