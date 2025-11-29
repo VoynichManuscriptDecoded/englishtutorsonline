@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alison – English Tutors Online</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background: white;
+      color: black;
+      line-height: 1.6;
+    }
+
+    /* HEADER BAR */
+    .header-bar {
+      width: 100%;
+      background: black;
+      color: white;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .header-title {
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .header-title .small-org {
+      font-size: 24px;
+      opacity: 0.9;
+      position: relative;
+      top: -2px;
+      margin-left: 4px;
+    }
+
+    .header-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      margin-left: 30px;
+    }
+
+    .header-nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* MAIN LAYOUT */
+    .main-container {
+      max-width: 1500px;
+      margin: 20px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      box-sizing: border-box;
+    }
+
+    /* LEFT */
+    .left {
+      flex: 1;
+      text-align: center;
+    }
+
+    .left img {
+      width: 55%;
+      border-radius: 12px;
+      margin-left: -10px;
+    }
+
+    .btn {
+      display: block;
+      margin: 14px auto;
+      padding: 10px 18px;
+      font-size: 18px;
+      font-weight: 700;
+      background: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 8px;
+      text-decoration: none;
+      width: 70%;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: black;
+      color: white;
+      border-color: black;
+    }
+
+    /* RIGHT SIDE */
+    .right {
+      flex: 1.8;
+      min-width: 380px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    /* DROPDOWNS */
+    details {
+      margin: 20px 0;
+      font-size: 20px;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 20px;
+      padding: 8px;
+      border-bottom: 1px solid black;
+    }
+
+    details summary::-webkit-details-marker,
+    details summary::marker {
+      display: none;
+    }
+
+    details summary::after {
+      content: "▼";
+      float: right;
+      font-size: 16px;
+      opacity: 0.7;
+    }
+
+    details[open] summary::after {
+      content: "▲";
+    }
+
+    details p, details ul {
+      padding-left: 10px;
+      margin-top: 10px;
+      font-size: 17px;
+    }
+
+    /* CONTACT ROW */
+    .contact-row {
+      margin-top: 10px;
+      font-size: 20px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .contact-row span {
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header-bar">
+  <div class="header-title">
+    englishtutorsonline<span class="small-org">.org</span>
+  </div>
+
+  <div class="header-nav">
+    <a href="../../index.html">Home</a>
+    <a href="../index.html">Tutors</a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-container">
+
+  <!-- LEFT -->
+  <div class="left">
+    <img src="../Alison.jpg" alt="Alison">
+
+    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#book">
+      Book 1 × 30 min Lesson (€15)
+    </a>
+
+    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#packages">
+      Book a Package of Lessons
+    </a>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+
+    <h2>Hello and welcome!</h2>
+
+    <p>
+      I’m Alison, an English teacher with over 20 years of experience helping students achieve 
+      academic and professional goals. I specialise in exam preparation (IELTS & CAE), advanced 
+      vocabulary development, presentation coaching, and refining already strong English skills.
+    </p>
+
+    <!-- DROPDOWN 1 -->
+    <details>
+      <summary>My Teaching Approach</summary>
+      <p>
+        Every student is different, and I adapt my lessons to your needs and learning style. 
+        Whether you’re preparing for an exam, improving your conversation, or developing academic 
+        English, lessons will be clear, structured and personalised.
+      </p>
+    </details>
+
+    <!-- DROPDOWN 2 -->
+    <details>
+      <summary>IELTS & CAE Expertise</summary>
+      <p>
+        I have completed around 4,000 IELTS Speaking interviews and marked a similar number of 
+        Writing scripts. I specialise in helping students move from 6/6.5 to 7 or higher. 
+        I have authored IELTS preparation materials for Kaplan and delivered courses for 
+        the British Council.
+      </p>
+    </details>
+
+    <!-- DROPDOWN 3 -->
+    <details>
+      <summary>Vocabulary, Grammar & Expression</summary>
+      <p>
+        I am passionate about words and their use. If you want to refine your English, strengthen 
+        your grammar, or understand subtle meanings and expressions, I will guide you clearly and 
+        confidently.
+      </p>
+    </details>
+
+    <!-- DROPDOWN 4 -->
+    <details>
+      <summary>About Me</summary>
+      <p>
+        I have taught English in Russia, Malaysia, China, Kazakhstan, Saudi Arabia and now Spain. 
+        I hold the CELTA, DELTA and an MA in TESOL, with additional training in Business English, 
+        online tutoring and translation. I have also written English learning materials for CUP, 
+        Kaplan and Collins.
+      </p>
+    </details>
+
+    <div class="contact-row">
+      <span>EMAIL: alison@englishtutorsonline.org</span>
+      <span>WHATSAPP: 0034 650 751592</span>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
