@@ -57,15 +57,15 @@
     }
 
     /* MAIN LAYOUT */
-.main-container {
-  max-width: 1500px;
-  margin: 20px auto;
-  padding: 0 20px;
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
+    .main-container {
+      max-width: 1500px;
+      margin: 20px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      box-sizing: border-box;
+    }
 
     /* LEFT SIDE IMAGE + BUTTONS */
     .left {
@@ -73,11 +73,11 @@
       text-align: center;
     }
 
-.left img {
-  width: 55%;
-  border-radius: 12px;
-  margin-left: -10px;
-}
+    .left img {
+      width: 55%;
+      border-radius: 12px;
+      margin-left: -10px;
+    }
 
     .btn {
       display: block;
@@ -104,11 +104,6 @@
     .right {
       flex: 1.8;
       min-width: 380px;
-    }
-
-    h2 {
-      font-size: 32px;
-      margin-top: 0;
     }
 
     p {
@@ -154,21 +149,134 @@
       font-size: 17px;
     }
 
-/* CONTACT ROW */
-.contact-row {
-  margin-top: 10px;
-  font-size: 20px;
+    /* CONTACT ROW */
+    .contact-row {
+      margin-top: 18px;
+      font-size: 20px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
 
-  white-space: nowrap;   /* keep on one line */
-  display: flex;
-  align-items: center;
-  gap: 60px;             /* move WhatsApp right */
-}
+    .contact-row span {
+      font-weight: 700;
+    }
 
-.contact-row span {
-  font-weight: 700;      /* bold */
-}
+    /* --- NEW TUTOR PROFILE STYLES --- */
+    .tutor-name {
+      font-size: 40px;
+      font-weight: 700;
+      margin: 0 0 6px 0;
+      line-height: 1.15;
+    }
 
+    .tutor-location {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .tutor-timezone {
+      font-size: 18px;
+      margin: 4px 0 16px 0;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      margin: 10px 0 18px 0;
+      flex-wrap: wrap;
+    }
+
+    .info-block {
+      min-width: 260px;
+    }
+
+    .label {
+      font-weight: 700;
+      font-size: 18px;
+      margin: 0 0 4px 0;
+    }
+
+    .value {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .section {
+      margin: 16px 0;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin: 0 0 6px 0;
+    }
+
+    .expertise-line {
+      font-weight: 700; /* BOLD */
+      text-transform: uppercase; /* ALL CAPS */
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .experience-lines p {
+      margin: 4px 0;
+      font-size: 18px;
+    }
+
+    .packages-line {
+      font-size: 18px;
+      margin: 14px 0 6px 0;
+      font-weight: 700;
+    }
+
+    /* --- MOBILE / TABLET --- */
+    @media (max-width: 900px) {
+      .main-container {
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 16px;
+      }
+
+      .left, .right {
+        flex: none;
+        width: 100%;
+      }
+
+      .right {
+        min-width: 0; /* stops forced wide layout */
+      }
+
+      .left img {
+        width: 100%;
+        max-width: 420px;
+        margin-left: 0;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 420px;
+      }
+
+      .contact-row {
+        white-space: normal;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .contact-row span {
+        display: block;
+      }
+
+      .info-block {
+        min-width: 0;
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -188,7 +296,7 @@
 <!-- MAIN CONTENT -->
 <div class="main-container">
 
-  <!-- LEFT -->
+  <!-- LEFT (UNCHANGED) -->
   <div class="left">
     <img src="../Kris2.jpg" alt="Kris">
 
@@ -205,70 +313,91 @@
     </a>
   </div>
 
-  <!-- RIGHT -->
+  <!-- RIGHT (REWRITTEN) -->
   <div class="right">
 
-    <h2>Hello and welcome!</h2>
+    <!-- HEADER BLOCK -->
+    <h2 class="tutor-name">Kris</h2>
+    <p class="tutor-location">Portugal</p>
+    <p class="tutor-timezone">GMT+0</p>
 
-    <p>
-      If you’ve found your way here, you’re probably looking for some help with your English.
-      I’m Kristine, an experienced English teacher with a unique background and an inspiring passion for teaching.
-      I’m originally from Wales in the UK, but now reside in Portugal, where my husband and I manage an animal
-      rescue project and sanctuary on a farm where we live “off the grid”. Before becoming a teacher, I spent over 25 years as an accountant and troubleshooter, owning
-      and managing several businesses across various industries.
-    </p>
+    <!-- LEVELS + ENGLISH (SIDE BY SIDE) -->
+    <div class="info-row">
+      <div class="info-block">
+        <p class="label">Levels Taught</p>
+        <p class="value">A0 to C2</p>
+      </div>
+
+      <div class="info-block">
+        <p class="label">English</p>
+        <p class="value">Native — Wales</p>
+      </div>
+    </div>
+
+    <!-- EXPERTISE -->
+    <div class="section">
+      <p class="section-title">EXPERTISE</p>
+      <p class="expertise-line">IELTS – GRAMMAR – BUSINESS ENGLISH – CONVERSATION</p>
+    </div>
+
+    <!-- EXPERIENCE / CERTIFICATES -->
+    <div class="section experience-lines">
+      <p class="section-title">EXPERIENCE / CERTIFICATES</p>
+      <p>Years teaching: 6 years</p>
+      <p>Certificates: TEFL · Financial qualifications</p>
+    </div>
+
+    <!-- ACCEPTS PACKAGES (SAME LINE) -->
+    <p class="packages-line">ACCEPTS PACKAGES&nbsp;&nbsp;YES</p>
 
     <!-- DROPDOWN 1 -->
     <details>
-      <summary>My Teaching Approach</summary>
+      <summary>ABOUT ME</summary>
       <p>
-        My teaching philosophy revolves around flexibility and personalised learning. I troubleshoot English,
-        identify the issues and fix them in a simple and structured way, whether exam prep, interview practice,
-        general English or confidence building.
+        If you’ve found your way here, you’re probably looking for some help with your English. I’m Kristine, an experienced English teacher with a unique background and an inspiring passion for teaching. I’m originally from Wales in the UK, but now reside in Portugal, where my husband and I manage an animal rescue project and sanctuary on a farm where we live “off the grid”. Before becoming a teacher, I spent over 25 years as an accountant and troubleshooter, owning and managing several businesses across various industries.
       </p>
     </details>
 
     <!-- DROPDOWN 2 -->
     <details>
-      <summary>Personalised Learning Experience</summary>
+      <summary>TEACHING APPROACH &amp; WHAT TO EXPECT</summary>
       <p>
-        I create lessons for each individual student. My knowledge spans:
+        My teaching philosophy revolves around flexibility and personalised learning. I troubleshoot English, identify the issues and fix them in a simple and structured way, whether exam prep, interview practice, general English or confidence building. I create lessons for each individual student.
       </p>
-      <ul>
-        <li>Accountancy, Finance & Book-Keeping</li>
-        <li>Recycling & Waste Management</li>
-        <li>Hospitality Industry</li>
-        <li>Project Management</li>
-        <li>Art & Design</li>
-        <li>Sustainable Living & Permaculture</li>
-        <li>Animal Welfare & Rescue</li>
-      </ul>
+      <p>
+        My knowledge spans:
+      </p>
+      <p>
+        Accountancy, Finance &amp; Book-Keeping<br>
+        Recycling &amp; Waste Management<br>
+        Hospitality Industry<br>
+        Project Management<br>
+        Art &amp; Design<br>
+        Sustainable Living &amp; Permaculture<br>
+        Animal Welfare &amp; Rescue
+      </p>
+      <p>
+        I create a personalised Google folder for every student. All corrections, notes, vocabulary and lesson progress are saved automatically so you can access everything at any time. Lessons are relaxed, structured and paced around your needs—supportive, clear and goal-focused.
+      </p>
     </details>
 
-    <!-- DROPDOWN 3 -->
+    <!-- DROPDOWN 3 (VIDEO PLACEHOLDER) -->
     <details>
-      <summary>What to Expect</summary>
+      <summary>TUTOR VIDEO</summary>
       <p>
-        I create a personalised Google folder for every student. All corrections, notes, vocabulary and lesson
-        progress are saved automatically so you can access everything at any time.
+        <!-- Video embed goes here later -->
       </p>
     </details>
 
-    <!-- DROPDOWN 4 -->
-    <details>
-      <summary>Relaxed, Productive Learning</summary>
-      <p>
-        Lessons are relaxed, structured and paced around your needs—supportive, clear and goal-focused.
-      </p>
-    </details>
-
-<div class="contact-row">
-  <span>EMAIL: kris@englishtutorsonline.org</span>
-  <span style="margin-left: 40px;">WHATSAPP: 00351 969 386 072</span>
-</div>
+    <!-- CONTACT (SAME LINE) -->
+    <div class="contact-row">
+      <span>EMAIL: kris@englishtutorsonline.org</span>
+      <span>WHATSAPP: 00351 969 386 072</span>
+    </div>
 
   </div>
 </div>
 
 </body>
 </html>
+
