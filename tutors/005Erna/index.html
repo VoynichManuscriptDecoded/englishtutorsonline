@@ -73,6 +73,27 @@
       margin:0 auto 20px;
     }
 
+    .btn {
+      display: block;
+      margin: 18px auto;
+      padding: 14px 20px;
+      font-size: 22px;
+      font-weight: 700;
+      background: white;
+      color: black;
+      border: 2px solid black;
+      border-radius: 10px;
+      text-decoration: none;
+      width: 100%;
+      max-width: 380px;
+      box-sizing: border-box;
+    }
+
+    .btn:hover {
+      background: black;
+      color: white;
+    }
+
     .contact-left{
       font-size:20px;
       font-weight:700;
@@ -156,34 +177,33 @@
       font-size:22px;
     }
 
-/* MOBILE */
-@media (max-width: 900px){
+    /* MOBILE */
+    @media (max-width: 900px){
 
-  .header-bar{
-    padding: 16px 18px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+      .header-bar{
+        padding: 16px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
 
-  .header-title{
-    font-size: 28px;
-  }
+      .header-title{
+        font-size: 28px;
+      }
 
-  .header-title .small-org{
-    font-size: 18px;
-  }
+      .header-title .small-org{
+        font-size: 18px;
+      }
 
-  .header-nav{
-    width: 100%;
-  }
+      .header-nav{
+        width: 100%;
+      }
 
-  .header-nav a{
-    font-size: 18px;
-    margin-left: 0;
-    margin-right: 18px;
-  }
-
+      .header-nav a{
+        font-size: 18px;
+        margin-left: 0;
+        margin-right: 18px;
+      }
 
       .main-container{
         flex-direction:column;
@@ -196,6 +216,10 @@
       }
 
       .left img{
+        max-width:520px;
+      }
+
+      .btn{
         max-width:520px;
       }
 
@@ -262,9 +286,14 @@
 
     <div class="left">
       <img src="../005Erna.jpg" alt="Erna">
+
+      <a class="btn" href="https://calendar.app.google/dYVuXGqHP43EjGJn9" target="_blank" rel="noopener">
+        Book with Erna
+      </a>
+
       <div class="contact-left">
         EMAIL: ernabrink20@gmail.com<br>
-          </div>
+      </div>
     </div>
 
     <div class="right">
@@ -312,4 +341,3 @@ Leonardo Da Vinci said: "Learning never exhausts the mind."
 
 </body>
 </html>
-
