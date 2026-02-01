@@ -69,24 +69,23 @@
 }
 
     /* FILTERS (bigger + centered) */
-    .filters {
-      display: flex;
-      gap: 26px;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 0 0 22px;
-      padding: 14px 16px;
-      border: 2px solid black;
-      border-radius: 12px;
-      box-sizing: border-box;
-    }
+.filters {
+  display: flex;
+  gap: 80px;              /* wider spacing between selectors */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 0 22px;
+  padding: 0;             /* no padded box */
+  border: none;           /* remove card */
+  box-sizing: border-box;
+}
 
-    .filters .filter-group {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+.filters .filter-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
     .filters label {
       font-weight: 700;
@@ -217,11 +216,11 @@
       }
       .wrap { padding: 0 14px; }
 
-      .filters {
-        justify-content: flex-start;
-        padding: 12px 12px;
-        gap: 14px;
-      }
+.filters {
+  justify-content: flex-start;
+  padding: 0;
+  gap: 24px;
+}
       .filters label { font-size: 20px; }
       .filters select { font-size: 18px; min-width: 150px; }
     }
