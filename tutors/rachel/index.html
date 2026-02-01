@@ -85,33 +85,53 @@
       box-sizing:border-box;
     }
 
-    .top-header .row{
+    /* TOP HEADER (match Kris/Alison layout) */
+    .top-header{
       display:flex;
       justify-content:space-between;
-      align-items:baseline;
-      gap:30px;
+      align-items:flex-start;
+      gap:40px;
+      margin-left:50px;
+      box-sizing:border-box;
     }
 
-    .top-header .name{
+    .top-left{
+      width:40%;
+      min-width:320px;
+    }
+
+    .top-right{
+      width:60%;
+    }
+
+    .top-left .name{
       font-size:64px;
+      font-weight:700;
+      margin:0 0 18px;
+      line-height:1.05;
+    }
+
+    .kv{
+      font-size:22px;
+      margin:0 0 12px;
+      line-height:1.4;
+    }
+
+    .kv .k{
       font-weight:700;
     }
 
-    .top-header .loc{
-      font-size:22px;
-      opacity:0.8;
-      white-space:nowrap;
+    .kv .v{
+      font-weight:400;
     }
 
-    .top-header .meta{
-      margin-top:10px;
-      font-size:22px;
-      font-weight:600;
+    .top-right .kv{
+      margin-bottom:12px;
     }
 
     .center-title{
       text-align:center;
-      font-weight:700;
+      font-weight:600;
       margin:40px 0 24px;
       font-size:32px;
     }
@@ -119,7 +139,7 @@
     .center-packages{
       text-align:center;
       font-size:24px;
-      font-weight:700;
+      font-weight:600;
       margin:26px 0;
     }
 
@@ -156,34 +176,33 @@
       font-size:22px;
     }
 
-/* MOBILE */
-@media (max-width: 900px){
+    /* MOBILE */
+    @media (max-width: 900px){
 
-  .header-bar{
-    padding: 16px 18px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+      .header-bar{
+        padding: 16px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
 
-  .header-title{
-    font-size: 28px;
-  }
+      .header-title{
+        font-size: 28px;
+      }
 
-  .header-title .small-org{
-    font-size: 18px;
-  }
+      .header-title .small-org{
+        font-size: 18px;
+      }
 
-  .header-nav{
-    width: 100%;
-  }
+      .header-nav{
+        width: 100%;
+      }
 
-  .header-nav a{
-    font-size: 18px;
-    margin-left: 0;
-    margin-right: 18px;
-  }
-
+      .header-nav a{
+        font-size: 18px;
+        margin-left: 0;
+        margin-right: 18px;
+      }
 
       .main-container{
         flex-direction:column;
@@ -205,23 +224,23 @@
         margin-bottom:10px;
       }
 
-      /* stack rows cleanly on mobile */
-      .top-header .row{
+      .top-header{
         flex-direction:column;
-        align-items:flex-start;
-        gap:8px;
+        gap:18px;
+        margin-left:0;
       }
 
-      .top-header .name{
+      .top-left, .top-right{
+        width:100%;
+        min-width:0;
+      }
+
+      .top-left .name{
         font-size:54px;
+        margin-bottom:10px;
       }
 
-      .top-header .loc{
-        font-size:18px;
-        white-space:normal;
-      }
-
-      .top-header .meta{
+      .kv{
         font-size:20px;
       }
 
@@ -261,7 +280,7 @@
   <div class="main-container">
 
     <div class="left">
-      <img src="../Rachel.jpg" alt="Alison">
+      <img src="../Rachel.jpg" alt="Rachel">
       <div class="contact-left">
         EMAIL: rachel@englishtutorsonline.org<br>
         WHATSAPP: 0034 640 587 713
@@ -271,20 +290,23 @@
     <div class="right">
 
       <div class="top-header">
-        <div class="row">
+
+        <div class="top-left">
           <div class="name">Rachel</div>
-          <div class="loc">Spain | GMT+1</div>
+
+          <div class="kv">
+            <span class="k">Location</span><br>
+            <span class="v">Spain | GMT+1</span>
+          </div>
         </div>
 
-        <div class="row meta">
-          <div>Levels taught – A0 to C2</div>
-          <div>English – Native — Wales</div>
+        <div class="top-right">
+          <div class="kv"><span class="k">English –</span> <span class="v">Native — Wales</span></div>
+          <div class="kv"><span class="k">Years teaching:</span> <span class="v">18</span></div>
+          <div class="kv"><span class="k">Levels taught –</span> <span class="v">A0 to C2</span></div>
+          <div class="kv"><span class="k">Certificates:</span> <span class="v">TEFL - IELTS CERT</span></div>
         </div>
 
-        <div class="row meta">
-          <div><b>Years teaching:</b> 18</div>
-          <div><b>Certificates:</b> TOBEADDED</div>
-        </div>
       </div>
 
       <div class="center-title">
