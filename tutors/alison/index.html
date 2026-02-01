@@ -9,157 +9,228 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Lora', serif;
-      background: white;
-      color: black;
-      line-height: 1.7;
+    body{
+      margin:0;
+      font-family:'Lora',serif;
+      background:white;
+      color:black;
+      line-height:1.7;
     }
 
-    .header-bar {
-      background: black;
-      color: white;
-      padding: 22px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .header-bar{
+      background:black;
+      color:white;
+      padding:22px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-sizing:border-box;
+      gap:20px;
     }
 
-    .header-title {
-      font-size: 40px;
-      font-weight: 700;
+    .header-title{
+      font-size:40px;
+      font-weight:700;
+      white-space:nowrap;
     }
 
-    .header-title .small-org {
-      font-size: 26px;
-      margin-left: 6px;
-      opacity: 0.9;
+    .header-title .small-org{
+      font-size:26px;
+      margin-left:6px;
+      opacity:0.9;
     }
 
-    .header-nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 22px;
-      font-weight: 700;
-      margin-left: 40px;
+    .header-nav{
+      white-space:nowrap;
     }
 
-    .main-container {
-      display: flex;
-      gap: 50px;
-      padding: 40px 80px;
-      align-items: flex-start;
-      box-sizing: border-box;
+    .header-nav a{
+      color:white;
+      text-decoration:none;
+      font-size:22px;
+      font-weight:700;
+      margin-left:40px;
     }
 
-    .left {
-      width: 28%;
-      text-align: center;
+    .main-container{
+      display:flex;
+      gap:50px;
+      padding:40px 80px;
+      align-items:flex-start;
+      box-sizing:border-box;
     }
 
-    .left img {
-      width: 100%;
-      max-width: 380px;
-      border-radius: 14px;
-      display: block;
-      margin: 0 auto 20px;
+    .left{
+      width:28%;
+      text-align:center;
     }
 
-    .contact-left {
-      font-size: 20px;
-      font-weight: 700;
-      text-align: center;
-      line-height: 1.8;
+    .left img{
+      width:100%;
+      max-width:380px;
+      border-radius:14px;
+      display:block;
+      margin:0 auto 20px;
     }
 
-    .right {
-      width: 72%;
+    .contact-left{
+      font-size:20px;
+      font-weight:700;
+      text-align:center;
+      line-height:1.8;
     }
 
-    .top-header .row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 30px;
+    .right{
+      width:72%;
+      box-sizing:border-box;
     }
 
-    .top-header .name {
-      font-size: 64px;
-      font-weight: 700;
+    .top-header .row{
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      gap:30px;
     }
 
-    .top-header .loc {
-      font-size: 22px;
-      opacity: 0.8;
-      white-space: nowrap;
+    .top-header .name{
+      font-size:64px;
+      font-weight:700;
     }
 
-    .top-header .meta {
-      margin-top: 10px;
-      font-size: 22px;
-      font-weight: 600;
+    .top-header .loc{
+      font-size:22px;
+      opacity:0.8;
+      white-space:nowrap;
     }
 
-    .center-title {
-      text-align: center;
-      font-weight: 700;
-      margin: 40px 0 24px;
-      font-size: 32px;
+    .top-header .meta{
+      margin-top:10px;
+      font-size:22px;
+      font-weight:600;
     }
 
-    .center-packages {
-      text-align: center;
-      font-size: 24px;
-      font-weight: 700;
-      margin: 26px 0;
+    .center-title{
+      text-align:center;
+      font-weight:700;
+      margin:40px 0 24px;
+      font-size:32px;
     }
 
-    details {
-      margin: 26px 0;
-      font-size: 26px;
+    .center-packages{
+      text-align:center;
+      font-size:24px;
+      font-weight:700;
+      margin:26px 0;
     }
 
-    details summary {
-      cursor: pointer;
-      font-weight: 700;
-      padding: 14px 0;
-      border-bottom: 2px solid black;
-      list-style: none;
+    details{
+      margin:26px 0;
+      font-size:26px;
+    }
+
+    details summary{
+      cursor:pointer;
+      font-weight:700;
+      padding:14px 0;
+      border-bottom:2px solid black;
+      list-style:none;
     }
 
     details summary::marker,
-    details summary::-webkit-details-marker {
-      display: none;
+    details summary::-webkit-details-marker{
+      display:none;
     }
 
-    details summary::after {
-      content: "▼";
-      float: right;
-      font-size: 18px;
+    details summary::after{
+      content:"▼";
+      float:right;
+      font-size:18px;
     }
 
-    details[open] summary::after {
-      content: "▲";
+    details[open] summary::after{
+      content:"▲";
     }
 
-    details .drop-content {
-      margin-top: 16px;
-      font-size: 22px;
+    details .drop-content{
+      margin-top:16px;
+      font-size:22px;
     }
 
-    @media (max-width: 900px) {
-      .main-container {
-        flex-direction: column;
-        padding: 30px 24px;
+    /* MOBILE */
+    @media (max-width: 900px){
+      .header-bar{
+        padding:16px 18px;
       }
 
-      .left, .right {
-        width: 100%;
+      .header-title{
+        font-size:28px;
       }
 
-      .contact-left {
-        margin-bottom: 20px;
+      .header-title .small-org{
+        font-size:18px;
+      }
+
+      .header-nav a{
+        font-size:18px;
+        margin-left:18px;
+      }
+
+      .main-container{
+        flex-direction:column;
+        padding:24px 18px;
+        gap:22px;
+      }
+
+      .left, .right{
+        width:100%;
+      }
+
+      .left img{
+        max-width:520px;
+      }
+
+      .contact-left{
+        font-size:18px;
+        line-height:1.6;
+        margin-bottom:10px;
+      }
+
+      /* stack rows cleanly on mobile */
+      .top-header .row{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+      }
+
+      .top-header .name{
+        font-size:54px;
+      }
+
+      .top-header .loc{
+        font-size:18px;
+        white-space:normal;
+      }
+
+      .top-header .meta{
+        font-size:20px;
+      }
+
+      .center-title{
+        font-size:26px;
+        margin:26px 0 18px;
+      }
+
+      .center-packages{
+        font-size:22px;
+        margin:18px 0;
+      }
+
+      details{
+        font-size:22px;
+      }
+
+      details .drop-content{
+        font-size:20px;
       }
     }
   </style>
@@ -181,7 +252,6 @@
 
     <div class="left">
       <img src="../Alison.jpg" alt="Alison">
-
       <div class="contact-left">
         EMAIL: alison@englishtutorsonline.org<br>
         WHATSAPP: 0034 650 751592
@@ -217,12 +287,12 @@
 
       <details>
         <summary>ABOUT ME</summary>
-        <div class="drop-content">If you’ve found your way here, you’ve probably got some specific English language needs. If you can’t find what you're looking for below — but think I can help (and I probably can) — please get in touch. I offer a free, no-obligation session where I can evaluate your level and discuss how I can help. What I love most about being an English teacher is helping people achieve their dreams — whether that's gaining a place at university, securing an international job, or simply enjoying the pleasure of engaging with English: one of the most wonderful and challenging languages in the world. I have been teaching English for over 20 years, after careers in publishing, politics and international finance. The first two brought me into contact with many different people and subject areas, so I know a little about a lot of things. After qualifying as an English teacher at IH London I lived and worked in Russia, Malaysia, China, Kazakhstan, Saudi Arabia and Spain, where I now live. I have a CELTA, DELTA and MA (TESOL), was an IELTS examiner (IDP Certification) and have qualifications in teaching Business English, online tutoring and translation. I’ve written English language teaching materials for CUP, Kaplan (IELTS preparation book) and various private language courses (mostly for the Middle East) as well as a series of Checkpoint books for Collins which are used to prepare students for the English GSCE at English-medium schools outside the UK. For the last five years I’ve been working exclusively online as both a teacher and a teacher trainer (International House).</div>
+        <div class="drop-content">to be added</div>
       </details>
 
       <details>
         <summary>TEACHING APPROACH &amp; WHAT TO EXPECT</summary>
-        <div class="drop-content">Every student is different, and I can easily adapt my teaching to your learning style or meet a specific set of language needs. So, for example, if you are doing the IELTS exam in a month or so, we will work solidly on test practice so you feel confident that you can perform at your very best in the exam. Or, if you wish to improve your English conversation, we will do a lot of talking (with appropriate corrections and input). During our initial, free, no-obligation meeting we can discuss how best you like to learn, and I will offer a variety of suggestions as to what we can do in class together. I have helped many students prepare for job interviews, with a lot of success I am happy to say. I also really enjoy working with students on their presentations — helping with both the text and the delivery.</div>
+        <div class="drop-content">to be added</div>
       </details>
 
       <details>
