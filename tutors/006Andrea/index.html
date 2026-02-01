@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andrea – English Tutors Online</title>
+  <title>Alison – English Tutors Online</title>
 
   <link rel="icon" type="image/png" href="../../favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
@@ -85,33 +85,53 @@
       box-sizing:border-box;
     }
 
-    .top-header .row{
+    /* TOP HEADER (match Kris layout) */
+    .top-header{
       display:flex;
       justify-content:space-between;
-      align-items:baseline;
-      gap:30px;
+      align-items:flex-start;
+      gap:40px;
+      margin-left:50px; /* shift slightly right like Kris */
+      box-sizing:border-box;
     }
 
-    .top-header .name{
+    .top-left{
+      width:40%;
+      min-width:320px;
+    }
+
+    .top-right{
+      width:60%;
+    }
+
+    .top-left .name{
       font-size:64px;
+      font-weight:700;
+      margin:0 0 18px;
+      line-height:1.05;
+    }
+
+    .kv{
+      font-size:22px;
+      margin:0 0 12px;
+      line-height:1.4;
+    }
+
+    .kv .k{
       font-weight:700;
     }
 
-    .top-header .loc{
-      font-size:22px;
-      opacity:0.8;
-      white-space:nowrap;
+    .kv .v{
+      font-weight:400;
     }
 
-    .top-header .meta{
-      margin-top:10px;
-      font-size:22px;
-      font-weight:600;
+    .top-right .kv{
+      margin-bottom:12px;
     }
 
     .center-title{
       text-align:center;
-      font-weight:700;
+      font-weight:600;
       margin:40px 0 24px;
       font-size:32px;
     }
@@ -119,7 +139,7 @@
     .center-packages{
       text-align:center;
       font-size:24px;
-      font-weight:700;
+      font-weight:600;
       margin:26px 0;
     }
 
@@ -156,34 +176,33 @@
       font-size:22px;
     }
 
-/* MOBILE */
-@media (max-width: 900px){
+    /* MOBILE */
+    @media (max-width: 900px){
 
-  .header-bar{
-    padding: 16px 18px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+      .header-bar{
+        padding: 16px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
 
-  .header-title{
-    font-size: 28px;
-  }
+      .header-title{
+        font-size: 28px;
+      }
 
-  .header-title .small-org{
-    font-size: 18px;
-  }
+      .header-title .small-org{
+        font-size: 18px;
+      }
 
-  .header-nav{
-    width: 100%;
-  }
+      .header-nav{
+        width: 100%;
+      }
 
-  .header-nav a{
-    font-size: 18px;
-    margin-left: 0;
-    margin-right: 18px;
-  }
-
+      .header-nav a{
+        font-size: 18px;
+        margin-left: 0;
+        margin-right: 18px;
+      }
 
       .main-container{
         flex-direction:column;
@@ -205,23 +224,23 @@
         margin-bottom:10px;
       }
 
-      /* stack rows cleanly on mobile */
-      .top-header .row{
+      .top-header{
         flex-direction:column;
-        align-items:flex-start;
-        gap:8px;
+        gap:18px;
+        margin-left:0; /* no offset on mobile */
       }
 
-      .top-header .name{
+      .top-left, .top-right{
+        width:100%;
+        min-width:0;
+      }
+
+      .top-left .name{
         font-size:54px;
+        margin-bottom:10px;
       }
 
-      .top-header .loc{
-        font-size:18px;
-        white-space:normal;
-      }
-
-      .top-header .meta{
+      .kv{
         font-size:20px;
       }
 
@@ -261,43 +280,45 @@
   <div class="main-container">
 
     <div class="left">
-      <img src="../image.jpeg" alt="Andrea">
+      <img src="../006Andrea.jpg" alt="Andrea">
       <div class="contact-left">
-        EMAIL: TO BE ADDED<br>
-        WHATSAPP: TO BE ADDED
+        EMAIL: communicate@casalinho.com<br>
+        WHATSAPP: 00351 934542254
       </div>
     </div>
 
     <div class="right">
 
       <div class="top-header">
-        <div class="row">
+
+        <div class="top-left">
           <div class="name">Andrea</div>
-          <div class="loc">TO BE ADDED</div>
+
+          <div class="kv">
+            <span class="k">Location</span><br>
+            <span class="v">Portugal | GMT+0</span>
+          </div>
         </div>
 
-        <div class="row meta">
-          <div>Levels taught – TO BE ADDED</div>
-          <div>TO BE ADDED</div>
+        <div class="top-right">
+          <div class="kv"><span class="k">English –</span> <span class="v">Native — England (Also A1 Portuguese)</span></div>
+          <div class="kv"><span class="k">Years teaching:</span> <span class="v">8</span></div>
+          <div class="kv"><span class="k">Levels taught –</span> <span class="v">A1 to C2</span></div>
+          <div class="kv"><span class="k">Certificates:</span> <span class="v">TEFL</span></div>
         </div>
 
-        <div class="row meta">
-          <div><b>Years teaching:</b> TO BE ADDED</div>
-          <div><b>Certificates:</b> TO BE ADDED</div>
-        </div>
       </div>
 
       <div class="center-title">
-        TO BE ADDED
-      </div>
+TO BE ADDED      </div>
 
       <div class="center-packages">
-        ACCEPTS PACKAGES&nbsp;&nbsp;TO BE ADDED
+        ACCEPTS PACKAGES&nbsp;&nbsp;YES
       </div>
 
       <details>
         <summary>ABOUT ME</summary>
-        <div class="drop-content">TO BE ADDED</div>
+        <div class="drop-content">My background is in the recruitment industry where I worked in the finance and hospitality sectors for many years. Since following my heart to Portugal I've been running my own sustainable agriculture education project in addition to teaching. I studied economics and social sciences in my university days. More recently, I've become TEFL qualified  and I'm also a permaculture teacher. I really believe we should never stop learning!</div>
       </details>
 
       <details>
@@ -315,4 +336,3 @@
 
 </body>
 </html>
-
