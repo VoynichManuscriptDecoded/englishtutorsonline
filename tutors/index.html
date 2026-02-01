@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tutors – English Tutors Online</title>
 
-  <!-- Favicon -->
-<link rel="icon" type="image/png" href="../favicon.png">
-
+  <link rel="icon" type="image/png" href="../favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -29,11 +27,13 @@
       justify-content: space-between;
       align-items: center;
       box-sizing: border-box;
+      gap: 20px;
     }
 
     .header-title {
       font-size: 36px;
       font-weight: 700;
+      white-space: nowrap;
     }
 
     .header-title .small-org {
@@ -42,6 +42,10 @@
       position: relative;
       top: -2px;
       margin-left: 4px;
+    }
+
+    .header-nav {
+      white-space: nowrap;
     }
 
     .header-nav a {
@@ -56,50 +60,84 @@
       opacity: 0.7;
     }
 
-    /* GRID */
-    .tutor-grid {
-      max-width: 1300px;
-      margin: 40px auto;
-      padding: 0 20px;
+    /* PAGE WRAP (wider, less wasted space) */
+    .wrap {
+      max-width: 1800px;
+      margin: 26px auto 40px;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+
+    /* FILTERS */
+    .filters {
       display: flex;
-      justify-content: center;
-      gap: 50px;
+      gap: 16px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin: 0 0 18px;
     }
 
-    /* Each Tutor Column */
-.tutor-column {
-  width: 30%;
-  text-align: center;
-  border: 1px solid black;    /* thin black frame */
-  padding: 20px;              /* space inside the frame */
-  border-radius: 8px;         /* optional: soft rounded edges */
-  box-sizing: border-box;     /* keeps layout stable */
-}
+    .filters label {
+      font-weight: 700;
+      font-size: 18px;
+    }
 
-    .tutor-column img {
-      width: 70%;
+    .filters select {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      padding: 10px 12px;
+      border: 2px solid black;
       border-radius: 10px;
-      margin-bottom: 12px;
+      background: white;
     }
 
-    .tutor-column h2 {
-      font-size: 32px;
-      margin: 10px 0 20px;
+    /* GRID: 6 across on wide screens */
+    .tutor-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    /* Card */
+    .tutor-card {
+      text-align: center;
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 14px;
+      box-sizing: border-box;
+    }
+
+    .tutor-card img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto 10px;
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
+    }
+
+    .tutor-card h2 {
+      font-size: 26px;
+      margin: 8px 0 10px;
       font-weight: 700;
     }
 
-    /* DROPDOWNS */
+    /* DROPDOWN */
     details {
-      margin: 15px 0;
-      font-size: 19px;
+      margin: 10px 0 12px;
+      font-size: 18px;
     }
 
     details summary {
       cursor: pointer;
       font-weight: 700;
-      font-size: 20px;
-      padding-bottom: 6px;
+      font-size: 18px;
+      padding: 8px 0;
       border-bottom: 1px solid black;
+      list-style: none;
+      text-align: left;
     }
 
     details summary::-webkit-details-marker,
@@ -110,7 +148,7 @@
     details summary::after {
       content: "▼";
       float: right;
-      font-size: 16px;
+      font-size: 14px;
       opacity: 0.8;
     }
 
@@ -120,8 +158,8 @@
 
     details ul {
       text-align: left;
-      margin-top: 10px;
-      padding-left: 15px;
+      margin: 10px 0 0;
+      padding-left: 18px;
     }
 
     details ul li {
@@ -131,16 +169,17 @@
     /* BUTTONS */
     .btn {
       display: block;
-      margin: 15px auto;
-      padding: 10px 22px;
+      margin: 10px auto;
+      padding: 10px 14px;
       background: white;
       color: black;
       border: 2px solid black;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 18px;
       font-weight: 700;
       text-decoration: none;
-      width: 80%;
+      width: 100%;
+      box-sizing: border-box;
       transition: 0.2s ease;
     }
 
@@ -150,94 +189,212 @@
       border-color: black;
     }
 
-    /* RESPONSIVE */
-    @media(max-width: 900px) {
-      .tutor-grid {
+    /* RESPONSIVE BREAKPOINTS */
+    @media (max-width: 1600px) {
+      .tutor-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 1300px) {
+      .tutor-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 1050px) {
+      .tutor-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 800px) {
+      .tutor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    /* MOBILE HEADER FIX */
+    @media (max-width: 900px) {
+      .header-bar {
+        padding: 16px 18px;
         flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
       }
-      .tutor-column {
-        width: 100%;
+      .header-title { font-size: 28px; }
+      .header-title .small-org { font-size: 18px; }
+      .header-nav { width: 100%; }
+      .header-nav a {
+        font-size: 18px;
+        margin-left: 0;
+        margin-right: 18px;
       }
-      .tutor-column img {
-        width: 55%;
-      }
+      .wrap { padding: 0 18px; }
+    }
+
+    @media (max-width: 520px) {
+      .tutor-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
 
-<!-- HEADER BAR -->
-<div class="header-bar">
-  <div class="header-title">
-    englishtutorsonline<span class="small-org">.org</span>
+  <div class="header-bar">
+    <div class="header-title">
+      englishtutorsonline<span class="small-org">.org</span>
+    </div>
+
+    <div class="header-nav">
+      <a href="../pricing/">Pricing</a>
+      <a href="../terms/">Terms & Conditions</a>
+    </div>
   </div>
 
-  <div class="header-nav">
-    <a href="pricing/">Pricing</a>
-    <a href="terms/">Terms & Conditions</a>
+  <div class="wrap">
+
+    <!-- FILTERS (top, above cards) -->
+    <div class="filters">
+      <label for="filterNative">Native:</label>
+      <select id="filterNative">
+        <option value="all">All</option>
+        <option value="native">Native</option>
+        <option value="non-native">Non-native</option>
+      </select>
+
+      <label for="filterPackages">Accepts packages:</label>
+      <select id="filterPackages">
+        <option value="all">All</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+
+    <!-- GRID -->
+    <div class="tutor-grid" id="tutorGrid">
+
+      <!-- 1) KRIS -->
+      <div class="tutor-card" data-native="native" data-packages="yes">
+        <img src="Kris2.jpg" alt="Kris">
+        <h2>Kris</h2>
+
+        <details>
+          <summary>Basic info</summary>
+          <ul>
+            <li>Customised learning (Beginner → Proficient)</li>
+            <li>Grammar & vocabulary troubleshooting</li>
+            <li>Business English, interviews & presentations</li>
+            <li>Exam prep: Cambridge / IELTS / TOEIC</li>
+          </ul>
+        </details>
+
+        <a class="btn" href="kris/">Read more / Book</a>
+        <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#client/sign-in/">Student Login</a>
+      </div>
+
+      <!-- 2) ALISON -->
+      <div class="tutor-card" data-native="native" data-packages="yes">
+        <img src="Alison.jpg" alt="Alison">
+        <h2>Alison</h2>
+
+        <details>
+          <summary>Basic info</summary>
+          <ul>
+            <li>IELTS 7+ – CAE</li>
+            <li>Vocabulary</li>
+            <li>Presentations</li>
+            <li>Academic Writing/Editing</li>
+          </ul>
+        </details>
+
+        <a class="btn" href="alison/">Read more</a>
+      </div>
+
+      <!-- 3) RACHEL -->
+      <div class="tutor-card" data-native="" data-packages="">
+        <img src="Rachel.jpg" alt="Rachel">
+        <h2>Rachel</h2>
+
+        <details>
+          <summary>Basic info</summary>
+          <ul>
+            <li>Lessons for all levels</li>
+            <li>LanguageCert / Cambridge / IELTS</li>
+            <li>Business, medical & legal English</li>
+            <li>Pronunciation & vocabulary development</li>
+          </ul>
+        </details>
+
+        <a class="btn" href="rachel/">Read more</a>
+      </div>
+
+      <!-- 4) 004 VANESSA -->
+      <div class="tutor-card" data-native="" data-packages="">
+        <img src="image.jpeg" alt="Vanessa">
+        <h2>Vanessa</h2>
+
+        <details>
+          <summary>Basic info</summary>
+          <ul>
+            <li>to be added</li>
+          </ul>
+        </details>
+
+        <a class="btn" href="004Vanessa/">Read more</a>
+      </div>
+
+      <!-- 5) 005 ERNA -->
+      <div class="tutor-card" data-native="" data-packages="">
+        <img src="image.jpeg" alt="Erna">
+        <h2>Erna</h2>
+
+        <details>
+          <summary>Basic info</summary>
+          <ul>
+            <li>to be added</li>
+          </ul>
+        </details>
+
+        <a class="btn" href="005Erna/">Read more</a>
+      </div>
+
+      <!-- 6) 006 ANDREA -->
+      <div class="tutor-card" data-native="" data-packages="">
+        <img src="image.jpeg" alt="Andrea">
+        <h2>Andrea</h2>
+
+        <details>
+          <summary>Basic info</summary>
+          <ul>
+            <li>to be added</li>
+          </ul>
+        </details>
+
+        <a class="btn" href="006Andrea/">Read more</a>
+      </div>
+
+    </div>
   </div>
-</div>
 
-<!-- THREE TUTOR COLUMNS -->
-<div class="tutor-grid">
+  <script>
+    const nativeSel = document.getElementById('filterNative');
+    const packSel = document.getElementById('filterPackages');
+    const cards = Array.from(document.querySelectorAll('.tutor-card'));
 
-  <!-- KRIS -->
-  <div class="tutor-column">
-    <img src="Kris2.jpg" alt="Kris">
-    <h2>Kris</h2>
+    function match(cardVal, selectedVal) {
+      if (selectedVal === 'all') return true;
+      if (!cardVal) return true;           // if not set yet, don't hide it
+      return cardVal === selectedVal;
+    }
 
-    <details>
-      <summary>More info</summary>
-      <ul>
-        <li>Customised learning (Beginner → Proficient)</li>
-        <li>Grammar & vocabulary troubleshooting</li>
-        <li>Business English, interviews & presentations</li>
-        <li>Exam prep: Cambridge / IELTS / TOEIC</li>
-      </ul>
-    </details>
+    function applyFilters() {
+      const n = nativeSel.value;
+      const p = packSel.value;
 
-    <a class="btn" href="kris/">Read more / Book</a>
-    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#client/sign-in/">Student Login</a>
-  </div>
+      cards.forEach(card => {
+        const cn = card.getAttribute('data-native') || '';
+        const cp = card.getAttribute('data-packages') || '';
+        const show = match(cn, n) && match(cp, p);
+        card.style.display = show ? '' : 'none';
+      });
+    }
 
-  <!-- ALISON -->
-  <div class="tutor-column">
-    <img src="Alison.jpg" alt="Alison">
-    <h2>Alison</h2>
-
-    <details>
-      <summary>More info</summary>
-      <ul>
-        <li>IELTS 7+ / CAE specialist</li>
-        <li>Vocabulary refinement</li>
-        <li>Presentations & public speaking</li>
-        <li>Academic writing editing</li>
-      </ul>
-    </details>
-
-    <a class="btn" href="alison/">Read more / Book</a>
-  </div>
-
-  <!-- RACHEL -->
-  <div class="tutor-column">
-    <img src="Rachel.jpg" alt="Rachel">
-    <h2>Rachel</h2>
-
-    <details>
-      <summary>More info</summary>
-      <ul>
-        <li>Lessons for all levels</li>
-        <li>LanguageCert / Cambridge / IELTS</li>
-        <li>Business, medical & legal English</li>
-        <li>Pronunciation & vocabulary development</li>
-      </ul>
-    </details>
-
-    <a class="btn" href="rachel/">Read more / Book</a>
-  </div>
-
-</div>
+    nativeSel.addEventListener('change', applyFilters);
+    packSel.addEventListener('change', applyFilters);
+  </script>
 
 </body>
 </html>
