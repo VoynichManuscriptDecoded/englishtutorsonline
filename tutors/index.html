@@ -71,13 +71,13 @@
     /* FILTERS (bigger + centered) */
 .filters {
   display: flex;
-  gap: 80px;              /* wider spacing between selectors */
+  gap: 140px;   /* MUCH wider separation */
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 0 0 22px;
-  padding: 0;             /* no padded box */
-  border: none;           /* remove card */
+  margin: 0 0 26px;
+  padding: 0;
+  border: none;
   box-sizing: border-box;
 }
 
@@ -119,13 +119,12 @@
   box-sizing: border-box;
 }
 
-    /* Round avatar */
 .tutor-card img {
-  width: 140px;
-  height: 140px;
+  width: 170px;
+  height: 170px;
   border-radius: 0;
   display: block;
-  margin: 0 auto 14px;
+  margin: 0 auto 16px;
   object-fit: cover;
   border: 1px solid black;
   box-sizing: border-box;
@@ -227,7 +226,7 @@
 
 @media (max-width: 520px) {
   .tutor-grid { grid-template-columns: 1fr; }
-  .tutor-card img { width: 130px; height: 130px; }
+  .tutor-card img { width: 160px; height: 160px; }
 }
   </style>
 </head>
