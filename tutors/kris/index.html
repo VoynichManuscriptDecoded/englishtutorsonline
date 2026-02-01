@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kris – English Tutors Online</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="../../favicon.png">
-
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -21,14 +19,12 @@
 
     /* HEADER BAR */
     .header-bar {
-      width: 100%;
       background: black;
       color: white;
       padding: 18px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-sizing: border-box;
     }
 
     .header-title {
@@ -39,8 +35,6 @@
     .header-title .small-org {
       font-size: 24px;
       opacity: 0.9;
-      position: relative;
-      top: -2px;
       margin-left: 4px;
     }
 
@@ -52,32 +46,24 @@
       margin-left: 30px;
     }
 
-    .header-nav a:hover {
-      opacity: 0.7;
+    /* MAIN LAYOUT */
+    .main-container {
+      display: flex;
+      gap: 40px;
+      padding: 20px;
+      align-items: flex-start;
     }
 
-    /* MAIN LAYOUT */
-.main-container {
-  max-width: 1500px;
-  margin: 20px auto;
-  padding: 0 20px;
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-
-    /* LEFT SIDE IMAGE + BUTTONS */
+    /* LEFT COLUMN */
     .left {
-      flex: 1;
+      width: 35%;
       text-align: center;
     }
 
-.left img {
-  width: 55%;
-  border-radius: 12px;
-  margin-left: -10px;
-}
+    .left img {
+      width: 100%;
+      border-radius: 12px;
+    }
 
     .btn {
       display: block;
@@ -90,30 +76,45 @@
       border: 2px solid black;
       border-radius: 8px;
       text-decoration: none;
-      width: 70%;
-      transition: 0.2s;
+      width: 100%;
     }
 
     .btn:hover {
       background: black;
       color: white;
-      border-color: black;
     }
 
-    /* RIGHT SIDE TEXT */
+    /* RIGHT COLUMN */
     .right {
-      flex: 1.8;
-      min-width: 380px;
+      width: 65%;
     }
 
-    h2 {
-      font-size: 32px;
-      margin-top: 0;
+    /* TOP TEXT BLOCK */
+    .profile-header {
+      margin-bottom: 25px;
     }
 
-    p {
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+    }
+
+    .name {
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .location {
       font-size: 18px;
-      margin-bottom: 16px;
+      opacity: 0.8;
+      white-space: nowrap;
+    }
+
+    .meta {
+      font-size: 20px;
+      margin-top: 8px;
     }
 
     /* DROPDOWNS */
@@ -125,70 +126,78 @@
     details summary {
       cursor: pointer;
       font-weight: 700;
-      font-size: 20px;
-      padding: 8px;
       border-bottom: 1px solid black;
+      padding: 8px 0;
     }
 
-    /* REMOVE DEFAULT ARROWS */
-    details summary::-webkit-details-marker,
-    details summary::marker {
+    details summary::marker,
+    details summary::-webkit-details-marker {
       display: none;
     }
 
-    /* CUSTOM ARROW */
     details summary::after {
       content: "▼";
       float: right;
       font-size: 16px;
-      opacity: 0.7;
     }
 
     details[open] summary::after {
       content: "▲";
     }
 
-    details p, details ul {
-      padding-left: 10px;
+    details p,
+    details ul {
       margin-top: 10px;
       font-size: 17px;
     }
 
-/* CONTACT ROW */
-.contact-row {
-  margin-top: 10px;
-  font-size: 20px;
+    /* CONTACT */
+    .contact-row {
+      margin-top: 20px;
+      font-size: 20px;
+      display: flex;
+      gap: 60px;
+      white-space: nowrap;
+    }
 
-  white-space: nowrap;   /* keep on one line */
-  display: flex;
-  align-items: center;
-  gap: 60px;             /* move WhatsApp right */
-}
+    .contact-row span {
+      font-weight: 700;
+    }
 
-.contact-row span {
-  font-weight: 700;      /* bold */
-}
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .main-container {
+        flex-direction: column;
+      }
 
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .contact-row {
+        flex-direction: column;
+        gap: 10px;
+        white-space: normal;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
 <div class="header-bar">
   <div class="header-title">
     englishtutorsonline<span class="small-org">.org</span>
   </div>
-
   <div class="header-nav">
     <a href="../../index.html">Home</a>
     <a href="../index.html">Tutors</a>
   </div>
 </div>
 
-<!-- MAIN CONTENT -->
 <div class="main-container">
 
-  <!-- LEFT -->
   <div class="left">
     <img src="../Kris2.jpg" alt="Kris">
 
@@ -205,35 +214,30 @@
     </a>
   </div>
 
-  <!-- RIGHT -->
   <div class="right">
 
-    <h2>Hello and welcome!</h2>
+    <div class="profile-header">
+      <div class="row">
+        <div class="name">Kris</div>
+        <div class="location">Portugal | GMT+0</div>
+      </div>
 
-    <p>
-      If you’ve found your way here, you’re probably looking for some help with your English.
-      I’m Kristine, an experienced English teacher with a unique background and an inspiring passion for teaching.
-      I’m originally from Wales in the UK, but now reside in Portugal, where my husband and I manage an animal
-      rescue project and sanctuary on a farm where we live “off the grid”. Before becoming a teacher, I spent over 25 years as an accountant and troubleshooter, owning
-      and managing several businesses across various industries.
-    </p>
+      <div class="row meta">
+        <div>Levels taught – A0 to C2</div>
+        <div>English – Native — Wales</div>
+      </div>
+    </div>
 
-    <!-- DROPDOWN 1 -->
     <details>
       <summary>My Teaching Approach</summary>
       <p>
         My teaching philosophy revolves around flexibility and personalised learning. I troubleshoot English,
-        identify the issues and fix them in a simple and structured way, whether exam prep, interview practice,
-        general English or confidence building.
+        identify issues and fix them in a simple, structured way.
       </p>
     </details>
 
-    <!-- DROPDOWN 2 -->
     <details>
       <summary>Personalised Learning Experience</summary>
-      <p>
-        I create lessons for each individual student. My knowledge spans:
-      </p>
       <ul>
         <li>Accountancy, Finance & Book-Keeping</li>
         <li>Recycling & Waste Management</li>
@@ -245,27 +249,17 @@
       </ul>
     </details>
 
-    <!-- DROPDOWN 3 -->
     <details>
       <summary>What to Expect</summary>
       <p>
-        I create a personalised Google folder for every student. All corrections, notes, vocabulary and lesson
-        progress are saved automatically so you can access everything at any time.
+        I create a personalised Google folder for every student with notes, corrections and progress tracking.
       </p>
     </details>
 
-    <!-- DROPDOWN 4 -->
-    <details>
-      <summary>Relaxed, Productive Learning</summary>
-      <p>
-        Lessons are relaxed, structured and paced around your needs—supportive, clear and goal-focused.
-      </p>
-    </details>
-
-<div class="contact-row">
-  <span>EMAIL: kris@englishtutorsonline.org</span>
-  <span style="margin-left: 40px;">WHATSAPP: 00351 969 386 072</span>
-</div>
+    <div class="contact-row">
+      <span>EMAIL: kris@englishtutorsonline.org</span>
+      <span>WHATSAPP: 00351 969 386 072</span>
+    </div>
 
   </div>
 </div>
