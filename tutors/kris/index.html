@@ -106,6 +106,13 @@
       gap: 30px;
     }
 
+    /* meta rows should not be space-between (prevents the "scattered" look) */
+    .top-header .row.meta {
+      justify-content: flex-start;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
     .top-header .name {
       font-size: 64px;
       font-weight: 700;
@@ -120,12 +127,16 @@
     .top-header .meta {
       margin-top: 10px;
       font-size: 22px;
+      font-weight: 400;
+    }
+
+    .top-header .meta b {
       font-weight: 600;
     }
 
     .center-title {
       text-align: center;
-      font-weight: 700;
+      font-weight: 600;
       margin: 40px 0 24px;
       font-size: 32px;
     }
@@ -133,7 +144,7 @@
     .center-packages {
       text-align: center;
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 600;
       margin: 26px 0;
     }
 
@@ -247,11 +258,13 @@
       .center-title{
         font-size: 26px;
         margin: 26px 0 18px;
+        font-weight: 600;
       }
 
       .center-packages{
         font-size: 22px;
         margin: 18px 0;
+        font-weight: 600;
       }
 
       details{
