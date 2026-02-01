@@ -99,39 +99,47 @@
       box-sizing: border-box;
     }
 
-    .top-header .row {
+    /* TOP HEADER (clean stacked layout) */
+    .top-header {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      gap: 30px;
-    }
-
-    /* meta rows should not be space-between (prevents the "scattered" look) */
-    .top-header .row.meta {
-      justify-content: flex-start;
+      align-items: flex-start;
       gap: 60px;
-      flex-wrap: wrap;
+      box-sizing: border-box;
     }
 
-    .top-header .name {
+    .top-left {
+      width: 40%;
+      min-width: 320px;
+    }
+
+    .top-right {
+      width: 60%;
+    }
+
+    .top-left .name {
       font-size: 64px;
+      font-weight: 700;
+      margin: 0 0 18px;
+      line-height: 1.05;
+    }
+
+    .kv {
+      font-size: 22px;
+      margin: 0 0 10px;
+      line-height: 1.4;
+    }
+
+    .kv .k {
       font-weight: 700;
     }
 
-    .top-header .loc {
-      font-size: 22px;
-      opacity: 0.8;
-      white-space: nowrap;
-    }
-
-    .top-header .meta {
-      margin-top: 10px;
-      font-size: 22px;
+    .kv .v {
       font-weight: 400;
     }
 
-    .top-header .meta b {
-      font-weight: 600;
+    .top-right .kv {
+      margin-bottom: 12px;
     }
 
     .center-title {
@@ -235,36 +243,33 @@
         max-width: 100%;
       }
 
-      /* stack the top rows cleanly on mobile */
-      .top-header .row{
+      .top-header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
+        gap: 18px;
       }
 
-      .top-header .name{
+      .top-left, .top-right {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .top-left .name{
         font-size: 54px;
+        margin-bottom: 10px;
       }
 
-      .top-header .loc{
-        font-size: 18px;
-        white-space: normal;
-      }
-
-      .top-header .meta{
+      .kv{
         font-size: 20px;
       }
 
       .center-title{
         font-size: 26px;
         margin: 26px 0 18px;
-        font-weight: 600;
       }
 
       .center-packages{
         font-size: 22px;
         margin: 18px 0;
-        font-weight: 600;
       }
 
       details{
@@ -318,20 +323,23 @@
     <div class="right">
 
       <div class="top-header">
-        <div class="row">
+
+        <div class="top-left">
           <div class="name">Kris</div>
-          <div class="loc">Portugal | GMT+0</div>
+
+          <div class="kv">
+            <span class="k">Location</span><br>
+            <span class="v">Portugal | GMT+0</span>
+          </div>
         </div>
 
-        <div class="row meta">
-          <div>Levels taught – A0 to C2</div>
-          <div>English – Native — Wales</div>
+        <div class="top-right">
+          <div class="kv"><span class="k">English –</span> <span class="v">Native — Wales</span></div>
+          <div class="kv"><span class="k">Years teaching:</span> <span class="v">7</span></div>
+          <div class="kv"><span class="k">Levels taught –</span> <span class="v">A0 to C2</span></div>
+          <div class="kv"><span class="k">Certificates:</span> <span class="v">TEFL (120hr) - Accountancy Degree</span></div>
         </div>
 
-        <div class="row meta">
-          <div><b>Years teaching:</b> 7</div>
-          <div><b>Certificates:</b> TEFL (120hr) - Accountancy Degree</div>
-        </div>
       </div>
 
       <div class="center-title">
