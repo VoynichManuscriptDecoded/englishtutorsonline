@@ -17,14 +17,15 @@
       line-height: 1.6;
     }
 
-    /* HEADER BAR */
     .header-bar {
+      width: 100%;
       background: black;
       color: white;
       padding: 18px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-sizing: border-box;
     }
 
     .header-title {
@@ -35,6 +36,8 @@
     .header-title .small-org {
       font-size: 24px;
       opacity: 0.9;
+      position: relative;
+      top: -2px;
       margin-left: 4px;
     }
 
@@ -46,23 +49,28 @@
       margin-left: 30px;
     }
 
-    /* MAIN LAYOUT */
-    .main-container {
-      display: flex;
-      gap: 40px;
-      padding: 20px;
-      align-items: flex-start;
+    .header-nav a:hover {
+      opacity: 0.7;
     }
 
-    /* LEFT COLUMN */
+    .main-container {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+      box-sizing: border-box;
+    }
+
     .left {
-      width: 35%;
+      width: 30%;
       text-align: center;
     }
 
     .left img {
       width: 100%;
       border-radius: 12px;
+      display: block;
     }
 
     .btn {
@@ -77,61 +85,85 @@
       border-radius: 8px;
       text-decoration: none;
       width: 100%;
+      transition: 0.2s;
+      box-sizing: border-box;
     }
 
     .btn:hover {
       background: black;
       color: white;
+      border-color: black;
     }
 
-    /* RIGHT COLUMN */
     .right {
-      width: 65%;
+      width: 70%;
+      box-sizing: border-box;
     }
 
-    /* TOP TEXT BLOCK */
-    .profile-header {
-      margin-bottom: 25px;
-    }
-
-    .row {
+    .top-header .row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 20px;
     }
 
-    .name {
-      font-size: 36px;
+    .top-header .name {
+      font-size: 46px;
       font-weight: 700;
+      margin: 0;
     }
 
-    .location {
-      font-size: 18px;
+    .top-header .loc {
+      font-size: 16px;
       opacity: 0.8;
       white-space: nowrap;
     }
 
-    .meta {
+    .top-header .meta {
+      margin-top: 10px;
       font-size: 20px;
-      margin-top: 8px;
+      font-weight: 600;
     }
 
-    /* DROPDOWNS */
+    .center-title {
+      text-align: center;
+      font-weight: 700;
+      margin: 24px 0 10px;
+      font-size: 18px;
+    }
+
+    .info-lines {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+
+    .info-lines b {
+      font-weight: 700;
+    }
+
+    .center-packages {
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+      margin: 18px 0 10px;
+    }
+
     details {
-      margin: 20px 0;
+      margin: 18px 0;
       font-size: 20px;
     }
 
     details summary {
       cursor: pointer;
       font-weight: 700;
+      font-size: 20px;
+      padding: 10px 0;
       border-bottom: 1px solid black;
-      padding: 8px 0;
+      list-style: none;
     }
 
-    details summary::marker,
-    details summary::-webkit-details-marker {
+    details summary::-webkit-details-marker,
+    details summary::marker {
       display: none;
     }
 
@@ -139,39 +171,34 @@
       content: "▼";
       float: right;
       font-size: 16px;
+      opacity: 0.8;
     }
 
     details[open] summary::after {
       content: "▲";
     }
 
-    details p,
-    details ul {
+    details .drop-content {
       margin-top: 10px;
-      font-size: 17px;
+      font-size: 18px;
     }
 
-    /* CONTACT */
     .contact-row {
-      margin-top: 20px;
-      font-size: 20px;
+      margin-top: 18px;
+      font-size: 18px;
       display: flex;
       gap: 60px;
+      align-items: center;
       white-space: nowrap;
-    }
-
-    .contact-row span {
       font-weight: 700;
     }
 
-    /* MOBILE */
     @media (max-width: 900px) {
       .main-container {
         flex-direction: column;
       }
 
-      .left,
-      .right {
+      .left, .right {
         width: 100%;
       }
 
@@ -179,90 +206,86 @@
         flex-direction: column;
         gap: 10px;
         white-space: normal;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 
 <body>
-
-<div class="header-bar">
-  <div class="header-title">
-    englishtutorsonline<span class="small-org">.org</span>
-  </div>
-  <div class="header-nav">
-    <a href="../../index.html">Home</a>
-    <a href="../index.html">Tutors</a>
-  </div>
-</div>
-
-<div class="main-container">
-
-  <div class="left">
-    <img src="../Kris2.jpg" alt="Kris">
-
-    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#book">
-      Book 1 × 30 min Lesson (€15)
-    </a>
-
-    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#packages">
-      Book a Package of Lessons
-    </a>
-
-    <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#client/sign-in/">
-      Student Login
-    </a>
+  <div class="header-bar">
+    <div class="header-title">
+      englishtutorsonline<span class="small-org">.org</span>
+    </div>
+    <div class="header-nav">
+      <a href="../../index.html">Home</a>
+      <a href="../index.html">Tutors</a>
+    </div>
   </div>
 
-  <div class="right">
+  <div class="main-container">
+    <div class="left">
+      <img src="../Kris2.jpg" alt="Kris">
 
-    <div class="profile-header">
-      <div class="row">
-        <div class="name">Kris</div>
-        <div class="location">Portugal | GMT+0</div>
-      </div>
+      <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#book">
+        Book 1 × 30 min Lesson (€15)
+      </a>
 
-      <div class="row meta">
-        <div>Levels taught – A0 to C2</div>
-        <div>English – Native — Wales</div>
-      </div>
+      <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#packages">
+        Book a Package of Lessons
+      </a>
+
+      <a class="btn" href="https://englishtutorsonline.simplybook.it/v2/#client/sign-in/">
+        Student Login
+      </a>
     </div>
 
-    <details>
-      <summary>My Teaching Approach</summary>
-      <p>
-        My teaching philosophy revolves around flexibility and personalised learning. I troubleshoot English,
-        identify issues and fix them in a simple, structured way.
-      </p>
-    </details>
+    <div class="right">
+      <div class="top-header">
+        <div class="row">
+          <div class="name">Kris</div>
+          <div class="loc">Portugal&nbsp;&nbsp;|&nbsp;&nbsp;GMT+0</div>
+        </div>
 
-    <details>
-      <summary>Personalised Learning Experience</summary>
-      <ul>
-        <li>Accountancy, Finance & Book-Keeping</li>
-        <li>Recycling & Waste Management</li>
-        <li>Hospitality Industry</li>
-        <li>Project Management</li>
-        <li>Art & Design</li>
-        <li>Sustainable Living & Permaculture</li>
-        <li>Animal Welfare & Rescue</li>
-      </ul>
-    </details>
+        <div class="row meta">
+          <div>Levels taught - A0 to C2</div>
+          <div>English - Native — Wales</div>
+        </div>
+      </div>
 
-    <details>
-      <summary>What to Expect</summary>
-      <p>
-        I create a personalised Google folder for every student with notes, corrections and progress tracking.
-      </p>
-    </details>
+      <div class="center-title">
+        IELTS – GRAMMAR – BUSINESS ENGLISH – CONVERSATION
+      </div>
 
-    <div class="contact-row">
-      <span>EMAIL: kris@englishtutorsonline.org</span>
-      <span>WHATSAPP: 00351 969 386 072</span>
+      <div class="info-lines">
+        <div><b>Years teaching:</b> to be added</div>
+        <div><b>Certificates:</b> to be added</div>
+      </div>
+
+      <div class="center-packages">
+        ACCEPTS PACKAGES&nbsp;&nbsp;&nbsp;&nbsp;YES
+      </div>
+
+      <details>
+        <summary>ABOUT ME</summary>
+        <div class="drop-content">to be added</div>
+      </details>
+
+      <details>
+        <summary>TEACHING APPROACH &amp; WHAT TO EXPECT</summary>
+        <div class="drop-content">to be added</div>
+      </details>
+
+      <details>
+        <summary>TUTOR VIDEO</summary>
+        <div class="drop-content">(Placeholder — video to be added later)</div>
+      </details>
+
+      <div class="contact-row">
+        <div>EMAIL: kris@englishtutorsonline.org</div>
+        <div>WHATSAPP: 00351 969 386 072</div>
+      </div>
     </div>
-
   </div>
-</div>
-
 </body>
 </html>
