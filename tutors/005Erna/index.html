@@ -1,1 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erna – English Tutors Online</title>
+
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      margin:0;
+      font-family:'Lora',serif;
+      background:white;
+      color:black;
+      line-height:1.7;
+    }
+
+    .header-bar{
+      background:black;
+      color:white;
+      padding:22px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-sizing:border-box;
+      gap:20px;
+    }
+
+    .header-title{
+      font-size:40px;
+      font-weight:700;
+      white-space:nowrap;
+    }
+
+    .header-title .small-org{
+      font-size:26px;
+      margin-left:6px;
+      opacity:0.9;
+    }
+
+    .header-nav{
+      white-space:nowrap;
+    }
+
+    .header-nav a{
+      color:white;
+      text-decoration:none;
+      font-size:22px;
+      font-weight:700;
+      margin-left:40px;
+    }
+
+    .main-container{
+      display:flex;
+      gap:50px;
+      padding:40px 80px;
+      align-items:flex-start;
+      box-sizing:border-box;
+    }
+
+    .left{
+      width:28%;
+      text-align:center;
+    }
+
+    .left img{
+      width:100%;
+      max-width:380px;
+      border-radius:14px;
+      display:block;
+      margin:0 auto 20px;
+    }
+
+    .contact-left{
+      font-size:20px;
+      font-weight:700;
+      text-align:center;
+      line-height:1.8;
+    }
+
+    .right{
+      width:72%;
+      box-sizing:border-box;
+    }
+
+    .top-header .row{
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      gap:30px;
+    }
+
+    .top-header .name{
+      font-size:64px;
+      font-weight:700;
+    }
+
+    .top-header .loc{
+      font-size:22px;
+      opacity:0.8;
+      white-space:nowrap;
+    }
+
+    .top-header .meta{
+      margin-top:10px;
+      font-size:22px;
+      font-weight:600;
+    }
+
+    .center-title{
+      text-align:center;
+      font-weight:700;
+      margin:40px 0 24px;
+      font-size:32px;
+    }
+
+    .center-packages{
+      text-align:center;
+      font-size:24px;
+      font-weight:700;
+      margin:26px 0;
+    }
+
+    details{
+      margin:26px 0;
+      font-size:26px;
+    }
+
+    details summary{
+      cursor:pointer;
+      font-weight:700;
+      padding:14px 0;
+      border-bottom:2px solid black;
+      list-style:none;
+    }
+
+    details summary::marker,
+    details summary::-webkit-details-marker{
+      display:none;
+    }
+
+    details summary::after{
+      content:"▼";
+      float:right;
+      font-size:18px;
+    }
+
+    details[open] summary::after{
+      content:"▲";
+    }
+
+    details .drop-content{
+      margin-top:16px;
+      font-size:22px;
+    }
+
+/* MOBILE */
+@media (max-width: 900px){
+
+  .header-bar{
+    padding: 16px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-title{
+    font-size: 28px;
+  }
+
+  .header-title .small-org{
+    font-size: 18px;
+  }
+
+  .header-nav{
+    width: 100%;
+  }
+
+  .header-nav a{
+    font-size: 18px;
+    margin-left: 0;
+    margin-right: 18px;
+  }
+
+
+      .main-container{
+        flex-direction:column;
+        padding:24px 18px;
+        gap:22px;
+      }
+
+      .left, .right{
+        width:100%;
+      }
+
+      .left img{
+        max-width:520px;
+      }
+
+      .contact-left{
+        font-size:18px;
+        line-height:1.6;
+        margin-bottom:10px;
+      }
+
+      /* stack rows cleanly on mobile */
+      .top-header .row{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+      }
+
+      .top-header .name{
+        font-size:54px;
+      }
+
+      .top-header .loc{
+        font-size:18px;
+        white-space:normal;
+      }
+
+      .top-header .meta{
+        font-size:20px;
+      }
+
+      .center-title{
+        font-size:26px;
+        margin:26px 0 18px;
+      }
+
+      .center-packages{
+        font-size:22px;
+        margin:18px 0;
+      }
+
+      details{
+        font-size:22px;
+      }
+
+      details .drop-content{
+        font-size:20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header-bar">
+    <div class="header-title">
+      englishtutorsonline<span class="small-org">.org</span>
+    </div>
+    <div class="header-nav">
+      <a href="../../index.html">Home</a>
+      <a href="../index.html">Tutors</a>
+    </div>
+  </div>
+
+  <div class="main-container">
+
+    <div class="left">
+      <img src="../image.jpeg" alt="Erna">
+      <div class="contact-left">
+        EMAIL: TO BE ADDED<br>
+        WHATSAPP: TO BE ADDED
+      </div>
+    </div>
+
+    <div class="right">
+
+      <div class="top-header">
+        <div class="row">
+          <div class="name">Erna</div>
+          <div class="loc">TO BE ADDED</div>
+        </div>
+
+        <div class="row meta">
+          <div>Levels taught – TO BE ADDED</div>
+          <div>TO BE ADDED</div>
+        </div>
+
+        <div class="row meta">
+          <div><b>Years teaching:</b> TO BE ADDED</div>
+          <div><b>Certificates:</b> TO BE ADDED</div>
+        </div>
+      </div>
+
+      <div class="center-title">
+        TO BE ADDED
+      </div>
+
+      <div class="center-packages">
+        ACCEPTS PACKAGES&nbsp;&nbsp;TO BE ADDED
+      </div>
+
+      <details>
+        <summary>ABOUT ME</summary>
+        <div class="drop-content">TO BE ADDED</div>
+      </details>
+
+      <details>
+        <summary>TEACHING APPROACH &amp; WHAT TO EXPECT</summary>
+        <div class="drop-content">TO BE ADDED</div>
+      </details>
+
+      <details>
+        <summary>TUTOR VIDEO</summary>
+        <div class="drop-content">(Placeholder — video to be added later)</div>
+      </details>
+
+    </div>
+  </div>
+
+</body>
+</html>
 
