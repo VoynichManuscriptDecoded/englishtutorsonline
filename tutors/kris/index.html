@@ -14,127 +14,122 @@
       font-family: 'Lora', serif;
       background: white;
       color: black;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
+    /* HEADER */
     .header-bar {
-      width: 100%;
       background: black;
       color: white;
-      padding: 18px 40px;
+      padding: 22px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-sizing: border-box;
     }
 
     .header-title {
-      font-size: 36px;
+      font-size: 40px;
       font-weight: 700;
     }
 
     .header-title .small-org {
-      font-size: 24px;
+      font-size: 26px;
+      margin-left: 6px;
       opacity: 0.9;
-      position: relative;
-      top: -2px;
-      margin-left: 4px;
     }
 
     .header-nav a {
       color: white;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
-      margin-left: 30px;
+      margin-left: 40px;
     }
 
-    .header-nav a:hover {
-      opacity: 0.7;
-    }
-
+    /* MAIN */
     .main-container {
-      width: 100%;
-      padding: 20px;
       display: flex;
-      gap: 28px;
+      gap: 50px;
+      padding: 40px 80px;   /* BIGGER margins */
       align-items: flex-start;
       box-sizing: border-box;
     }
 
+    /* LEFT */
     .left {
-      width: 30%;
+      width: 28%;
       text-align: center;
     }
 
     .left img {
       width: 100%;
-      border-radius: 12px;
+      max-width: 380px;    /* IMAGE REDUCED */
+      border-radius: 14px;
       display: block;
+      margin: 0 auto;
     }
 
     .btn {
       display: block;
-      margin: 14px auto;
-      padding: 10px 18px;
-      font-size: 18px;
+      margin: 18px auto;
+      padding: 14px 20px;
+      font-size: 22px;
       font-weight: 700;
       background: white;
       color: black;
       border: 2px solid black;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
       width: 100%;
-      transition: 0.2s;
-      box-sizing: border-box;
+      max-width: 380px;   /* SAME AS IMAGE */
     }
 
     .btn:hover {
       background: black;
       color: white;
-      border-color: black;
     }
 
+    /* RIGHT */
     .right {
-      width: 70%;
-      box-sizing: border-box;
+      width: 72%;
     }
 
+    /* TOP HEADER */
     .top-header .row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: 20px;
+      gap: 30px;
     }
 
     .top-header .name {
-      font-size: 46px;
+      font-size: 56px;     /* MUCH BIGGER */
       font-weight: 700;
-      margin: 0;
     }
 
     .top-header .loc {
-      font-size: 16px;
+      font-size: 22px;
       opacity: 0.8;
       white-space: nowrap;
     }
 
     .top-header .meta {
-      margin-top: 10px;
-      font-size: 20px;
+      margin-top: 14px;
+      font-size: 26px;
       font-weight: 600;
     }
 
+    /* CENTER TEXT */
     .center-title {
       text-align: center;
       font-weight: 700;
-      margin: 24px 0 10px;
-      font-size: 18px;
+      margin: 36px 0 18px;
+      font-size: 24px;
     }
 
     .info-lines {
-      margin: 0 0 14px;
-      font-size: 18px;
+      font-size: 24px;
+      margin-bottom: 24px;
     }
 
     .info-lines b {
@@ -143,35 +138,34 @@
 
     .center-packages {
       text-align: center;
+      font-size: 24px;
       font-weight: 700;
-      font-size: 18px;
-      margin: 18px 0 10px;
+      margin: 26px 0;
     }
 
+    /* DROPDOWNS */
     details {
-      margin: 18px 0;
-      font-size: 20px;
+      margin: 26px 0;
+      font-size: 26px;
     }
 
     details summary {
       cursor: pointer;
       font-weight: 700;
-      font-size: 20px;
-      padding: 10px 0;
-      border-bottom: 1px solid black;
+      padding: 14px 0;
+      border-bottom: 2px solid black;
       list-style: none;
     }
 
-    details summary::-webkit-details-marker,
-    details summary::marker {
+    details summary::marker,
+    details summary::-webkit-details-marker {
       display: none;
     }
 
     details summary::after {
       content: "▼";
       float: right;
-      font-size: 16px;
-      opacity: 0.8;
+      font-size: 18px;
     }
 
     details[open] summary::after {
@@ -179,40 +173,47 @@
     }
 
     details .drop-content {
-      margin-top: 10px;
-      font-size: 18px;
+      margin-top: 16px;
+      font-size: 22px;
     }
 
+    /* CONTACT */
     .contact-row {
-      margin-top: 18px;
-      font-size: 18px;
-      display: flex;
-      gap: 60px;
-      align-items: center;
-      white-space: nowrap;
+      margin-top: 30px;
+      font-size: 22px;
       font-weight: 700;
+      display: flex;
+      gap: 80px;
+      white-space: nowrap;
     }
 
+    /* MOBILE */
     @media (max-width: 900px) {
       .main-container {
         flex-direction: column;
+        padding: 30px 24px;
       }
 
       .left, .right {
         width: 100%;
       }
 
+      .left img,
+      .btn {
+        max-width: 100%;
+      }
+
       .contact-row {
         flex-direction: column;
-        gap: 10px;
+        gap: 14px;
         white-space: normal;
-        align-items: flex-start;
       }
     }
   </style>
 </head>
 
 <body>
+
   <div class="header-bar">
     <div class="header-title">
       englishtutorsonline<span class="small-org">.org</span>
@@ -224,6 +225,7 @@
   </div>
 
   <div class="main-container">
+
     <div class="left">
       <img src="../Kris2.jpg" alt="Kris">
 
@@ -241,15 +243,16 @@
     </div>
 
     <div class="right">
+
       <div class="top-header">
         <div class="row">
           <div class="name">Kris</div>
-          <div class="loc">Portugal&nbsp;&nbsp;|&nbsp;&nbsp;GMT+0</div>
+          <div class="loc">Portugal | GMT+0</div>
         </div>
 
         <div class="row meta">
-          <div>Levels taught - A0 to C2</div>
-          <div>English - Native — Wales</div>
+          <div>Levels taught – A0 to C2</div>
+          <div>English – Native — Wales</div>
         </div>
       </div>
 
@@ -263,7 +266,7 @@
       </div>
 
       <div class="center-packages">
-        ACCEPTS PACKAGES&nbsp;&nbsp;&nbsp;&nbsp;YES
+        ACCEPTS PACKAGES &nbsp;&nbsp; YES
       </div>
 
       <details>
@@ -285,7 +288,9 @@
         <div>EMAIL: kris@englishtutorsonline.org</div>
         <div>WHATSAPP: 00351 969 386 072</div>
       </div>
+
     </div>
   </div>
+
 </body>
 </html>
