@@ -63,7 +63,14 @@
       max-width: 380px;
       border-radius: 14px;
       display: block;
-      margin: 0 auto;
+      margin: 0 auto 20px;
+    }
+
+    .contact-left {
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.8;
     }
 
     .right {
@@ -141,16 +148,6 @@
       font-size: 22px;
     }
 
-    .contact-row {
-      margin-top: 30px;
-      font-size: 22px;
-      font-weight: 700;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      white-space: nowrap;
-    }
-
     @media (max-width: 900px) {
       .main-container {
         flex-direction: column;
@@ -161,15 +158,8 @@
         width: 100%;
       }
 
-      .left img {
-        max-width: 100%;
-      }
-
-      .contact-row {
-        flex-direction: column;
-        gap: 14px;
-        white-space: normal;
-        align-items: flex-start;
+      .contact-left {
+        margin-bottom: 20px;
       }
     }
   </style>
@@ -191,6 +181,11 @@
 
     <div class="left">
       <img src="../Alison.jpg" alt="Alison">
+
+      <div class="contact-left">
+        EMAIL: alison@englishtutorsonline.org<br>
+        WHATSAPP: 0034 650 751592
+      </div>
     </div>
 
     <div class="right">
@@ -213,7 +208,7 @@
       </div>
 
       <div class="center-title">
-        IELTS 7+ – CAE – Vocabulary – Presentations - Public Speaking – Academic Writing/Editing
+        IELTS 7+ – CAE – Vocabulary – Presentations – Academic Writing/Editing
       </div>
 
       <div class="center-packages">
@@ -234,11 +229,6 @@
         <summary>TUTOR VIDEO</summary>
         <div class="drop-content">(Placeholder — video to be added later)</div>
       </details>
-
-      <div class="contact-row">
-        <div>EMAIL: to be added</div>
-        <div>WHATSAPP: to be added</div>
-      </div>
 
     </div>
   </div>
