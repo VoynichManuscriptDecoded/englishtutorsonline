@@ -1,1 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fran – English Tutors Online</title>
 
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      margin:0;
+      font-family:'Lora',serif;
+      background:white;
+      color:black;
+      line-height:1.7;
+    }
+
+    .header-bar{
+      background:black;
+      color:white;
+      padding:22px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-sizing:border-box;
+      gap:20px;
+    }
+
+    .header-title{
+      font-size:40px;
+      font-weight:700;
+      white-space:nowrap;
+    }
+
+    .header-title .small-org{
+      font-size:26px;
+      margin-left:6px;
+      opacity:0.9;
+    }
+
+    .header-nav{
+      white-space:nowrap;
+    }
+
+    .header-nav a{
+      color:white;
+      text-decoration:none;
+      font-size:22px;
+      font-weight:700;
+      margin-left:40px;
+    }
+
+    .main-container{
+      display:flex;
+      gap:50px;
+      padding:40px 80px;
+      align-items:flex-start;
+      box-sizing:border-box;
+    }
+
+    .left{
+      width:28%;
+      text-align:center;
+    }
+
+    .left img{
+      width:100%;
+      max-width:380px;
+      border-radius:14px;
+      display:block;
+      margin:0 auto 20px;
+    }
+
+    .contact-left{
+      font-size:20px;
+      font-weight:700;
+      text-align:center;
+      line-height:1.8;
+    }
+
+    .right{
+      width:72%;
+      box-sizing:border-box;
+    }
+
+    /* TOP HEADER (match Kris layout) */
+    .top-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:40px;
+      margin-left:50px; /* shift slightly right like Kris */
+      box-sizing:border-box;
+    }
+
+    .top-left{
+      width:40%;
+      min-width:320px;
+    }
+
+    .top-right{
+      width:60%;
+    }
+
+    .top-left .name{
+      font-size:64px;
+      font-weight:700;
+      margin:0 0 18px;
+      line-height:1.05;
+    }
+
+    .kv{
+      font-size:22px;
+      margin:0 0 12px;
+      line-height:1.4;
+    }
+
+    .kv .k{
+      font-weight:700;
+    }
+
+    .kv .v{
+      font-weight:400;
+    }
+
+    .top-right .kv{
+      margin-bottom:12px;
+    }
+
+    .center-title{
+      text-align:center;
+      font-weight:600;
+      margin:40px 0 24px;
+      font-size:32px;
+    }
+
+    .center-packages{
+      text-align:center;
+      font-size:24px;
+      font-weight:600;
+      margin:26px 0;
+    }
+
+    details{
+      margin:26px 0;
+      font-size:26px;
+    }
+
+    details summary{
+      cursor:pointer;
+      font-weight:700;
+      padding:14px 0;
+      border-bottom:2px solid black;
+      list-style:none;
+    }
+
+    details summary::marker,
+    details summary::-webkit-details-marker{
+      display:none;
+    }
+
+    details summary::after{
+      content:"▼";
+      float:right;
+      font-size:18px;
+    }
+
+    details[open] summary::after{
+      content:"▲";
+    }
+
+    details .drop-content{
+      margin-top:16px;
+      font-size:22px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px){
+
+      .header-bar{
+        padding: 16px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .header-title{
+        font-size: 28px;
+      }
+
+      .header-title .small-org{
+        font-size: 18px;
+      }
+
+      .header-nav{
+        width: 100%;
+      }
+
+      .header-nav a{
+        font-size: 18px;
+        margin-left: 0;
+        margin-right: 18px;
+      }
+
+      .main-container{
+        flex-direction:column;
+        padding:24px 18px;
+        gap:22px;
+      }
+
+      .left, .right{
+        width:100%;
+      }
+
+      .left img{
+        max-width:520px;
+      }
+
+      .contact-left{
+        font-size:18px;
+        line-height:1.6;
+        margin-bottom:10px;
+      }
+
+      .top-header{
+        flex-direction:column;
+        gap:18px;
+        margin-left:0; /* no offset on mobile */
+      }
+
+      .top-left, .top-right{
+        width:100%;
+        min-width:0;
+      }
+
+      .top-left .name{
+        font-size:54px;
+        margin-bottom:10px;
+      }
+
+      .kv{
+        font-size:20px;
+      }
+
+      .center-title{
+        font-size:26px;
+        margin:26px 0 18px;
+      }
+
+      .center-packages{
+        font-size:22px;
+        margin:18px 0;
+      }
+
+      details{
+        font-size:22px;
+      }
+
+      details .drop-content{
+        font-size:20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header-bar">
+    <div class="header-title">
+      englishtutorsonline<span class="small-org">.org</span>
+    </div>
+    <div class="header-nav">
+      <a href="../../index.html">Home</a>
+      <a href="../index.html">Tutors</a>
+    </div>
+  </div>
+
+  <div class="main-container">
+
+    <div class="left">
+      <img src="../012Fran.jpg" alt="Fran">
+      <div class="contact-left">
+        EMAIL: frangifreedom@gmail.com<br>
+        WHATSAPP: 00351 926587016
+      </div>
+    </div>
+
+    <div class="right">
+
+      <div class="top-header">
+
+        <div class="top-left">
+          <div class="name">Fran</div>
+
+          <div class="kv">
+            <span class="k">Location</span><br>
+            <span class="v">Portugal | GMT</span>
+          </div>
+        </div>
+
+        <div class="top-right">
+          <div class="kv"><span class="k">English –</span> <span class="v">Native — England (Also Portuguese B1)</span></div>
+          <div class="kv"><span class="k">Years teaching:</span> <span class="v">10</span></div>
+          <div class="kv"><span class="k">Levels taught –</span> <span class="v">B2+</span></div>
+         
+        </div>
+
+      </div>
+
+      <div class="center-title">
+        IELTS 7+ – CAE – Vocabulary – Presentations – Academic Writing/Editing
+      </div>
+
+      <div class="center-packages">
+        ACCEPTS PACKAGES&nbsp;&nbsp;YES
+      </div>
+
+      <details>
+        <summary>ABOUT ME</summary>
+        <div class="drop-content">Do you want to speak your best, clearest and most confident English? If the answer is yes you've come to the right place! 
+
+I’m Fran and I live in rural Portugal with my family, my kids are now teenagers, and furry friends. When I'm not teaching English online, I love to teach yoga in my home studio as well as taking long walks with the dogs. My garden is my sanctuary. I have many fruit trees which I enjoy harvesting for eating or making preserves and I also grow my own vegetables. I'm an absolute nature lover and passionate about living a simple and sustainable life. I also love to travel, not so long haul any more, and enjoy talking about different cultures, which I hope to do in our lessons!
+
+I very much look forward to meeting you soon. All the best till then.</div>
+      </details>
+
+      <details>
+        <summary>TEACHING APPROACH &amp; WHAT TO EXPECT</summary>
+        <div class="drop-content">I specialise in accent reduction mostly for C1+ students who feel stuck at their current level and really want to make the leap to full proficiency/near native level. I have proven methods,using specially designed material, involving drills, discussion and reading out loud, which I have used for several years with my students from all around the world to produce the desired result - to be able to speak the best and clearest English possible! 
+
+During a class with me, as well as helping you with your accent, I will at all times carefully correct your grammar and vocabulary too, always suggesting more natural idioms, everything being carefully logged in a google doc, which you can also edit. eg add homework or make notes.
+
+If you decide to work with me, specifically on accent reduction, I supply you with clear to follow audios after each lesson.
+
+I believe all of the above give me the qualities needed to be a great teacher! A very clear to follow approach, a teacher with patience, kindness but a good dose of fun thrown in for good measure!</div>
+      </details>
+
+      <details>
+        <summary>TUTOR VIDEO</summary>
+        <div class="drop-content">(Placeholder — video to be added later)</div>
+      </details>
+
+    </div>
+  </div>
+
+</body>
+</html>
