@@ -5,73 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Christine – English Tutors Online</title>
 
-  <link rel="icon" type="image/png" href="../../favicon.png">
+<link rel="icon" type="image/png" href="../../favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body{
-      margin:0;
-      font-family:'Lora',serif;
-      background:white;
-      color:black;
-      line-height:1.7;
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background: white;
+      color: black;
+      line-height: 1.7;
     }
 
-    .header-bar{
-      background:black;
-      color:white;
-      padding:22px 60px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      box-sizing:border-box;
-      gap:20px;
+    .header-bar {
+      background: black;
+      color: white;
+      padding: 22px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      gap: 20px;
     }
 
-    .header-title{
-      font-size:40px;
-      font-weight:700;
-      white-space:nowrap;
+    .header-title {
+      font-size: 46px;
+      font-weight: 700;
+      white-space: nowrap;
     }
 
-    .header-title .small-org{
-      font-size:26px;
-      margin-left:6px;
-      opacity:0.9;
+    .header-title .small-org {
+      font-size: 32px;
+      margin-left: 6px;
+      opacity: 0.9;
     }
 
-    .header-nav{
-      white-space:nowrap;
+    .header-nav {
+      white-space: nowrap;
     }
 
-    .header-nav a{
-      color:white;
-      text-decoration:none;
-      font-size:22px;
-      font-weight:700;
-      margin-left:40px;
+    .header-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 700;
+      margin-left: 40px;
     }
 
-    .main-container{
-      display:flex;
-      gap:50px;
-      padding:40px 80px;
-      align-items:flex-start;
-      box-sizing:border-box;
+    .main-container {
+      display: flex;
+      gap: 50px;
+      padding: 40px 80px;
+      align-items: flex-start;
+      box-sizing: border-box;
     }
 
-    .left{
-      width:28%;
-      text-align:center;
+    .left {
+      width: 28%;
+      text-align: center;
     }
 
-    .left img{
-      width:100%;
-      max-width:380px;
-      border-radius:14px;
-      display:block;
-      margin:0 auto 20px;
+    .left img {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 14px;
+      display: block;
+      margin: 0 auto;
     }
+
+.contact-left{
+  margin-top: 18px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
 
     .btn {
       display: block;
@@ -94,111 +102,115 @@
       color: white;
     }
 
-    .contact-left{
-      font-size:20px;
-      font-weight:700;
-      text-align:center;
-      line-height:1.8;
+    .right {
+      width: 72%;
+      box-sizing: border-box;
     }
 
-    .right{
-      width:72%;
-      box-sizing:border-box;
+/* TOP HEADER (clean stacked layout) */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-left: 50px;   /* shifts content to the right */
+  box-sizing: border-box;
+}
+
+    .top-left {
+      width: 40%;
+      min-width: 320px;
     }
 
-    /* TOP HEADER (match Kris/Alison/Rachel/Vanessa layout) */
-    .top-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:40px;
-      margin-left:50px;
-      box-sizing:border-box;
+    .top-right {
+      width: 60%;
     }
 
-    .top-left{
-      width:40%;
-      min-width:320px;
+    .top-left .name {
+      font-size: 64px;
+      font-weight: 700;
+      margin: 0 0 18px;
+      line-height: 1.05;
     }
 
-    .top-right{
-      width:60%;
+    .kv {
+      font-size: 22px;
+      margin: 0 0 10px;
+      line-height: 1.4;
     }
 
-    .top-left .name{
-      font-size:64px;
-      font-weight:700;
-      margin:0 0 18px;
-      line-height:1.05;
+    .kv .k {
+      font-weight: 700;
     }
 
-    .kv{
-      font-size:22px;
-      margin:0 0 12px;
-      line-height:1.4;
+    .kv .v {
+      font-weight: 400;
     }
 
-    .kv .k{
-      font-weight:700;
+    .top-right .kv {
+      margin-bottom: 12px;
     }
 
-    .kv .v{
-      font-weight:400;
+    .center-title {
+      text-align: center;
+      font-weight: 600;
+      margin: 40px 0 24px;
+      font-size: 32px;
     }
 
-    .top-right .kv{
-      margin-bottom:12px;
+    .center-packages {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 26px 0;
     }
 
-    .center-title{
-      text-align:center;
-      font-weight:600;
-      margin:40px 0 24px;
-      font-size:32px;
+    details {
+      margin: 26px 0;
+      font-size: 26px;
     }
 
-    .center-packages{
-      text-align:center;
-      font-size:24px;
-      font-weight:600;
-      margin:26px 0;
-    }
-
-    details{
-      margin:26px 0;
-      font-size:26px;
-    }
-
-    details summary{
-      cursor:pointer;
-      font-weight:700;
-      padding:14px 0;
-      border-bottom:2px solid black;
-      list-style:none;
+    details summary {
+      cursor: pointer;
+      font-weight: 700;
+      padding: 14px 0;
+      border-bottom: 2px solid black;
+      list-style: none;
     }
 
     details summary::marker,
-    details summary::-webkit-details-marker{
-      display:none;
+    details summary::-webkit-details-marker {
+      display: none;
     }
 
-    details summary::after{
-      content:"▼";
-      float:right;
-      font-size:18px;
+    details summary::after {
+      content: "▼";
+      float: right;
+      font-size: 18px;
     }
 
-    details[open] summary::after{
-      content:"▲";
+    details[open] summary::after {
+      content: "▲";
     }
 
-    details .drop-content{
-      margin-top:16px;
-      font-size:22px;
+    details .drop-content {
+      margin-top: 16px;
+      font-size: 22px;
+    }
+
+    .contact-row {
+      margin-top: 30px;
+      font-size: 22px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      white-space: nowrap;
+      box-sizing: border-box;
     }
 
     /* MOBILE */
-    @media (max-width: 900px){
+    @media (max-width: 900px) {
 
       .header-bar{
         padding: 16px 18px;
@@ -225,66 +237,63 @@
         margin-right: 18px;
       }
 
-      .main-container{
-        flex-direction:column;
-        padding:24px 18px;
-        gap:22px;
+      .main-container {
+        flex-direction: column;
+        padding: 30px 24px;
+        gap: 22px;
       }
 
-      .left, .right{
-        width:100%;
+      .left, .right {
+        width: 100%;
       }
 
-      .left img{
-        max-width:520px;
+      .left img,
+      .btn {
+        max-width: 100%;
       }
 
-      .btn{
-        max-width:520px;
+      .top-header {
+        flex-direction: column;
+        gap: 18px;
       }
 
-      .contact-left{
-        font-size:18px;
-        line-height:1.6;
-        margin-bottom:10px;
-      }
-
-      .top-header{
-        flex-direction:column;
-        gap:18px;
-        margin-left:0;
-      }
-
-      .top-left, .top-right{
-        width:100%;
-        min-width:0;
+      .top-left, .top-right {
+        width: 100%;
+        min-width: 0;
       }
 
       .top-left .name{
-        font-size:54px;
-        margin-bottom:10px;
+        font-size: 54px;
+        margin-bottom: 10px;
       }
 
       .kv{
-        font-size:20px;
+        font-size: 20px;
       }
 
       .center-title{
-        font-size:26px;
-        margin:26px 0 18px;
+        font-size: 26px;
+        margin: 26px 0 18px;
       }
 
       .center-packages{
-        font-size:22px;
-        margin:18px 0;
+        font-size: 22px;
+        margin: 18px 0;
       }
 
       details{
-        font-size:22px;
+        font-size: 22px;
       }
 
       details .drop-content{
-        font-size:20px;
+        font-size: 20px;
+      }
+
+      .contact-row {
+        flex-direction: column;
+        gap: 14px;
+        white-space: normal;
+        align-items: flex-start;
       }
     }
   </style>
@@ -298,9 +307,12 @@
     </div>
     <div class="header-nav">
       <a href="../../index.html">Home</a>
+      <a href="../pricing/">Pricing</a>
+      <a href="../terms/">Terms & Conditions</a>
       <a href="../index.html">Tutors</a>
     </div>
   </div>
+
 
   <div class="main-container">
 
