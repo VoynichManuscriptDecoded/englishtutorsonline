@@ -247,18 +247,6 @@
 
   <div class="wrap">
 
-    <!-- FILTERS (packages only) -->
-    <div class="filters">
-      <div class="filter-group">
-        <label for="filterPackages">Accepts packages:</label>
-        <select id="filterPackages">
-          <option value="all">All</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      </div>
-    </div>
-
     <!-- GRID -->
     <div class="tutor-grid" id="tutorGrid">
 
@@ -719,28 +707,6 @@
       
     </div>
   </div>
-
-  <script>
-    const packSel = document.getElementById('filterPackages');
-    const cards = Array.from(document.querySelectorAll('.tutor-card'));
-
-    function match(cardVal, selectedVal) {
-      if (selectedVal === 'all') return true;
-      if (!cardVal) return true; // if not set yet, don't hide it
-      return cardVal === selectedVal;
-    }
-
-    function applyFilters() {
-      const p = packSel.value;
-
-      cards.forEach(card => {
-        const cp = card.getAttribute('data-packages') || '';
-        card.style.display = match(cp, p) ? '' : 'none';
-      });
-    }
-
-    packSel.addEventListener('change', applyFilters);
-  </script>
 
 </body>
 </html>
