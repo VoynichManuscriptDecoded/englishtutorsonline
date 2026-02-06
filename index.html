@@ -5,82 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Tutors Online</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       font-family: 'Lora', serif;
+      background: white;
       color: black;
-      background-color: white;
       text-align: center;
     }
 
-    /* --- TOP NAV (WHITE) --- */
     header {
-      background-color: white;
       height: 25vh;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 0 60px;
-      box-sizing: border-box;
+      align-items: center;
       border-bottom: 1px solid #ccc;
     }
 
-    .nav {
-      display: flex;
-      justify-content: center;
-      gap: 80px;
-    }
-
     .nav a {
-      text-decoration: none;
-      color: black;
       font-size: 32px;
       font-weight: 700;
+      text-decoration: none;
+      color: black;
       letter-spacing: 1px;
-      text-transform: uppercase;
     }
 
-    .nav a:hover {
-      opacity: 0.7;
-    }
-
-    /* --- HERO SECTION (BLACK) --- */
     section.hero {
-      background-color: black;
-      color: white;
       height: 50vh;
+      background: black;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 40px; /* safe default */
+      padding: 0 40px;
       box-sizing: border-box;
     }
 
-    .hero h1 {
-      font-size: 96px;
+    h1.brand {
       margin: 0;
-      font-weight: 700;
+      font-size: 96px;
       letter-spacing: 2px;
-      white-space: nowrap; /* NEVER wrap */
+      white-space: nowrap;
+      font-weight: 400;
     }
 
-    .red-org {
+    h1.brand span {
+      display: inline;
+    }
+
+    h1.brand strong {
+      font-weight: 700;
+    }
+
+    h1.brand .org {
       font-size: 40px;
-      margin-left: 6px;
+      margin-left: 8px;
       position: relative;
       top: -4px;
     }
 
-    /* --- BOTTOM SECTION (WHITE) --- */
     section.bottom {
-      background-color: white;
       height: 25vh;
       display: flex;
       justify-content: center;
@@ -89,36 +76,33 @@
     }
 
     section.bottom a {
-      text-decoration: none;
-      color: black;
       font-size: 28px;
       font-weight: 700;
-      text-transform: uppercase;
+      text-decoration: none;
+      color: black;
       letter-spacing: 1px;
-    }
-
-    section.bottom a:hover {
-      opacity: 0.7;
-    }
-
-    /* --- RESPONSIVE --- */
-    @media (max-width: 900px) {
-      .nav a { font-size: 24px; }
-      .hero h1 { font-size: 60px; }
-      .red-org { font-size: 26px; }
     }
 
     @media (max-width: 550px) {
       section.hero {
-        padding: 0 24px;        /* breathing room */
+        padding: 0 24px;
       }
-      .hero h1 {
-        font-size: 40px;        /* THIS fixes everything */
-        letter-spacing: 1px;   /* prevents clipping */
+
+      h1.brand {
+        font-size: 42px;
+        letter-spacing: 1px;
+        white-space: normal;
+        line-height: 1.15;
       }
-      .red-org {
+
+      h1.brand span {
+        display: block;
+      }
+
+      h1.brand .org {
         font-size: 20px;
-        top: -2px;
+        margin-top: 6px;
+        top: 0;
       }
     }
   </style>
@@ -126,19 +110,21 @@
 
 <body>
 
-<!-- TOP NAV -->
 <header>
   <div class="nav">
     <a href="tutors/index.html">Tutors</a>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <h1>englishtutorsonline<span class="red-org">.org</span></h1>
+  <h1 class="brand">
+    <span><strong>E</strong>nglish</span>
+    <span><strong>T</strong>utors</span>
+    <span><strong>O</strong>nline</span>
+    <span class="org"><strong>.org</strong></span>
+  </h1>
 </section>
 
-<!-- BOTTOM -->
 <section class="bottom">
   <a href="about/index.html">About Us</a>
 </section>
