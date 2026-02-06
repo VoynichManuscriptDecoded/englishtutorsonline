@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Tutors Online</title>
 
-   <!-- Favicon -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Google Font -->
@@ -57,24 +57,28 @@
       color: white;
       height: 50vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 0 20px;
+      box-sizing: border-box;
     }
 
     .hero h1 {
-      font-size: 96px;
       margin: 0;
       font-weight: 700;
       letter-spacing: 2px;
+      font-size: clamp(36px, 9vw, 96px);
+      line-height: 1.1;
     }
 
-    .red-org {
-      color: white;
-      margin-left: 8px;
+    .hero .main {
+      display: block;
+    }
+
+    .hero .org {
+      display: inline;
       font-size: 40px;
-      font-weight: 700;
+      margin-left: 8px;
       position: relative;
       top: -4px;
     }
@@ -102,50 +106,41 @@
       opacity: 0.7;
     }
 
-    /* --- RESPONSIVE --- */
-    @media(max-width: 900px) {
-      .nav a {
-        font-size: 24px;
-      }
-      .hero h1 {
-        font-size: 58px;
-      }
-      .red-org {
+    /* --- MOBILE TWEAK --- */
+    @media (max-width: 600px) {
+      .hero .org {
+        display: block;
+        margin-left: 0;
+        margin-top: 6px;
         font-size: 26px;
-      }
-    }
-
-    @media(max-width: 550px) {
-      .nav a {
-        font-size: 22px;
-      }
-      .hero h1 {
-        font-size: 46px;
-      }
-      .red-org {
-        font-size: 22px;
+        top: 0;
       }
     }
   </style>
 </head>
+
 <body>
 
-<!-- TOP NAV (WHITE) -->
+<!-- TOP NAV -->
 <header>
   <div class="nav">
     <a href="tutors/index.html">Tutors</a>
   </div>
 </header>
 
-<!-- HERO (BLACK) -->
+<!-- HERO -->
 <section class="hero">
-  <h1>englishtutorsonline<span class="red-org">.org</span></h1>
+  <h1>
+    <span class="main">englishtutorsonline</span>
+    <span class="org">.org</span>
+  </h1>
 </section>
 
-<!-- BOTTOM (WHITE) -->
+<!-- BOTTOM -->
 <section class="bottom">
   <a href="about/index.html">About Us</a>
 </section>
 
 </body>
 </html>
+
