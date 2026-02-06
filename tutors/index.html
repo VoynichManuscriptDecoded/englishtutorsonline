@@ -103,7 +103,7 @@
     /* GRID */
     .tutor-grid{
       display:grid;
-      grid-template-columns:repeat(7, minmax(0, 1fr));
+      grid-template-columns:repeat(7, minmax(0, 1fr)); /* keep 7 on laptops */
       gap:16px;
       align-items:start;
     }
@@ -174,29 +174,20 @@
       border-color:black;
     }
 
-    /* RESPONSIVE BREAKPOINTS */
-    @media (max-width:1750px){
+    /* RESPONSIVE BREAKPOINTS
+       (adjusted so 7 columns stays on normal laptops) */
+    @media (max-width:1200px){
       .tutor-grid{ grid-template-columns:repeat(6, minmax(0, 1fr)); }
     }
 
-    @media (max-width:1500px){
+    @media (max-width:1050px){
       .tutor-grid{ grid-template-columns:repeat(5, minmax(0, 1fr)); }
     }
 
-    @media (max-width:1250px){
-      .tutor-grid{ grid-template-columns:repeat(4, minmax(0, 1fr)); }
-    }
-
-    @media (max-width:980px){
-      .tutor-grid{ grid-template-columns:repeat(3, minmax(0, 1fr)); }
-    }
-
-    @media (max-width:760px){
-      .tutor-grid{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
-    }
-
-    /* MOBILE HEADER FIX */
     @media (max-width:900px){
+      .tutor-grid{ grid-template-columns:repeat(4, minmax(0, 1fr)); }
+
+      /* MOBILE HEADER FIX */
       .header-bar{
         padding:16px 18px;
         flex-direction:column;
@@ -225,6 +216,15 @@
       .filters select{ font-size:18px; min-width:170px; }
     }
 
+    @media (max-width:980px){
+      /* (kept for backwards compatibility if you want it, but it would never hit
+         because 980 > 900; remove if you want. Intentionally omitted now.) */
+    }
+
+    @media (max-width:760px){
+      .tutor-grid{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+    }
+
     @media (max-width:520px){
       .tutor-grid{ grid-template-columns:1fr; }
       .tutor-card img{ width:160px; height:160px; }
@@ -239,11 +239,11 @@
       englishtutorsonline<span class="small-org">.org</span>
     </div>
 
-<div class="header-nav">
-  <a href="../index.html">Home</a>
-  <a href="./pricing/">Pricing</a>
-  <a href="./terms/">Terms & Conditions</a>
-</div>
+    <div class="header-nav">
+      <a href="../index.html">Home</a>
+      <a href="./pricing/">Pricing</a>
+      <a href="./terms/">Terms & Conditions</a>
+    </div>
   </div>
 
   <div class="wrap">
@@ -342,7 +342,7 @@
         <a class="btn" href="007Peter/">Profile/Book</a>
       </div>
 
-            <!-- 8) LIZ J -->
+      <!-- 8) LIZ J -->
       <div class="tutor-card" data-packages="yes">
         <img src="008Liz.jpg" alt="Liz">
         <h2>Liz J</h2>
@@ -351,11 +351,11 @@
           <li>Business English</li>
           <li>Interview Prep</li>
           <li>Conversation & Fluency</li>
-      </ul>
+        </ul>
         <a class="btn" href="008Liz/">Profile/Book</a>
       </div>
 
-                  <!-- 9) PETER S -->
+      <!-- 9) PETER S -->
       <div class="tutor-card" data-packages="yes">
         <img src="009Peter.jpg" alt="Peter">
         <h2>Peter S</h2>
@@ -364,11 +364,11 @@
           <li>Business English</li>
           <li>General Fluency</li>
           <li>Beginner to Advanced</li>
-      </ul>
+        </ul>
         <a class="btn" href="009Peter/">Profile/Book</a>
       </div>
 
-                        <!-- 10) THERESA S -->
+      <!-- 10) THERESA S -->
       <div class="tutor-card" data-packages="yes">
         <img src="010Theresa.jpg" alt="Theresa">
         <h2>Theresa</h2>
@@ -377,11 +377,11 @@
           <li>Grammar/Vocabulary</li>
           <li>Conversation/Fluency</li>
           <li>Pronunciation</li>
-      </ul>
+        </ul>
         <a class="btn" href="010Theresa/">Profile/Book</a>
       </div>
 
-                              <!-- 11) LYNETTE -->
+      <!-- 11) LYNETTE -->
       <div class="tutor-card" data-packages="yes">
         <img src="011Lynette.jpg" alt="Lynette">
         <h2>Lynette</h2>
@@ -394,7 +394,7 @@
         <a class="btn" href="011Lynette/">Profile/Book</a>
       </div>
 
-                                    <!-- 12) FRAN -->
+      <!-- 12) FRAN -->
       <div class="tutor-card" data-packages="yes">
         <img src="012Fran.jpg" alt="Fran">
         <h2>Fran</h2>
@@ -407,7 +407,7 @@
         <a class="btn" href="012Fran/">Profile/Book</a>
       </div>
 
-                                          <!-- 13) GERDA -->
+      <!-- 13) GERDA -->
       <div class="tutor-card" data-packages="yes">
         <img src="013Gerda.jpg" alt="Gerda">
         <h2>Gerda</h2>
@@ -420,7 +420,7 @@
         <a class="btn" href="013Gerda/">Profile/Book</a>
       </div>
 
-                                                <!-- 14) ALEX -->
+      <!-- 14) ALEX -->
       <div class="tutor-card" data-packages="yes">
         <img src="014Alex.jpg" alt="Alex">
         <h2>Alex</h2>
@@ -433,7 +433,7 @@
         <a class="btn" href="014Alex/">Profile/Book</a>
       </div>
 
-                                          <!-- 15) JENNIFER-->
+      <!-- 15) JENNIFER -->
       <div class="tutor-card" data-packages="yes">
         <img src="015Jennifer.jpg" alt="Jennifer">
         <h2>Jennifer</h2>
@@ -446,7 +446,7 @@
         <a class="btn" href="015Jennifer/">Profile/Book</a>
       </div>
 
-                                        <!-- 16) NATALIE -->
+      <!-- 16) NATALIE -->
       <div class="tutor-card" data-packages="yes">
         <img src="016Natalie.jpg" alt="Natalie">
         <h2>Natalie</h2>
@@ -459,7 +459,7 @@
         <a class="btn" href="016Natalie/">Profile/Book</a>
       </div>
 
-                                             <!-- 17) SUE -->
+      <!-- 17) SUE -->
       <div class="tutor-card" data-packages="yes">
         <img src="017Sue.jpg" alt="Sue">
         <h2>Sue</h2>
@@ -472,9 +472,9 @@
         <a class="btn" href="017Sue/">Profile/Book</a>
       </div>
 
-                                                   <!-- 18) KEZIA -->
+      <!-- 18) KEZIA -->
       <div class="tutor-card" data-packages="yes">
-        <img src="018Kezia.jpg" alt="Sue">
+        <img src="018Kezia.jpg" alt="Kezia">
         <h2>Kezia</h2>
         <ul class="tutor-bullets">
           <li>Exam Prep</li>
@@ -484,8 +484,8 @@
         </ul>
         <a class="btn" href="018Kezia/">Profile/Book</a>
       </div>
-      
-                                                     <!-- 19) CHRISTINE -->
+
+      <!-- 19) CHRISTINE -->
       <div class="tutor-card" data-packages="yes">
         <img src="019Christine.jpg" alt="Christine">
         <h2>Christine</h2>
@@ -498,7 +498,7 @@
         <a class="btn" href="019Christine/">Profile/Book</a>
       </div>
 
-                                                            <!-- 21) JOANNE -->
+      <!-- 21) JOANNE -->
       <div class="tutor-card" data-packages="yes">
         <img src="021Joanne.jpg" alt="Joanne">
         <h2>Joanne</h2>
@@ -511,7 +511,7 @@
         <a class="btn" href="021Joanne/">Profile/Book</a>
       </div>
 
-                                                             <!-- 22) SHANNON -->
+      <!-- 22) SHANNON -->
       <div class="tutor-card" data-packages="yes">
         <img src="022Shannon.jpg" alt="Shannon">
         <h2>Shannon</h2>
@@ -524,8 +524,7 @@
         <a class="btn" href="022Shannon/">Profile/Book</a>
       </div>
 
-
-                                                                   <!-- 23) CLARE -->
+      <!-- 23) CLARE -->
       <div class="tutor-card" data-packages="yes">
         <img src="023Clare.jpg" alt="Clare">
         <h2>Clare</h2>
@@ -538,7 +537,7 @@
         <a class="btn" href="023Clare/">Profile/Book</a>
       </div>
 
-                                                                         <!-- 24) STEPHANIE -->
+      <!-- 24) STEPHANIE -->
       <div class="tutor-card" data-packages="yes">
         <img src="024Stephanie.jpg" alt="Stephanie">
         <h2>Stephanie</h2>
@@ -551,7 +550,7 @@
         <a class="btn" href="024Stephanie/">Profile/Book</a>
       </div>
 
-                                                                        <!-- 25) ROB -->
+      <!-- 25) ROB -->
       <div class="tutor-card" data-packages="yes">
         <img src="025Rob.jpg" alt="Rob">
         <h2>Rob</h2>
@@ -564,7 +563,7 @@
         <a class="btn" href="025Rob/">Profile/Book</a>
       </div>
 
-                                                                      <!-- 26) LORI -->
+      <!-- 26) LORI -->
       <div class="tutor-card" data-packages="yes">
         <img src="026Lori.jpg" alt="Lori">
         <h2>Lori N</h2>
@@ -577,7 +576,7 @@
         <a class="btn" href="026Lori/">Profile/Book</a>
       </div>
 
-                                                                            <!-- 27) ALISON A -->
+      <!-- 27) ALISON A -->
       <div class="tutor-card" data-packages="yes">
         <img src="027Alison.jpg" alt="Alison A">
         <h2>Alison A</h2>
@@ -590,7 +589,7 @@
         <a class="btn" href="027Alison/">Profile/Book</a>
       </div>
 
-                                                        <!-- 28) JACQUELINE -->
+      <!-- 28) JACQUELINE -->
       <div class="tutor-card" data-packages="yes">
         <img src="028Jacqueline.jpg" alt="Jacqueline">
         <h2>Jacqueline</h2>
@@ -603,7 +602,7 @@
         <a class="btn" href="028Jacqueline/">Profile/Book</a>
       </div>
 
-                                                              <!-- 29) RIANA -->
+      <!-- 29) RIANA -->
       <div class="tutor-card" data-packages="yes">
         <img src="029Riana.jpg" alt="Riana">
         <h2>Riana</h2>
@@ -615,8 +614,8 @@
         </ul>
         <a class="btn" href="029Riana/">Profile/Book</a>
       </div>
-      
-                                                                          <!-- 31) JAN -->
+
+      <!-- 31) JAN -->
       <div class="tutor-card" data-packages="yes">
         <img src="031Jan.jpg" alt="Jan">
         <h2>Jan</h2>
@@ -629,7 +628,7 @@
         <a class="btn" href="031Jan/">Profile/Book</a>
       </div>
 
-                                                                                <!-- 32) SARAH -->
+      <!-- 32) SARAH -->
       <div class="tutor-card" data-packages="yes">
         <img src="032Sarah.jpg" alt="Sarah">
         <h2>Sarah</h2>
@@ -642,7 +641,7 @@
         <a class="btn" href="032Sarah/">Profile/Book</a>
       </div>
 
-                                                                                      <!-- 33) LIZ M -->
+      <!-- 33) LIZ M -->
       <div class="tutor-card" data-packages="yes">
         <img src="033Liz.jpg" alt="Liz M">
         <h2>Liz M</h2>
@@ -655,7 +654,7 @@
         <a class="btn" href="033Liz/">Profile/Book</a>
       </div>
 
-                                                                                            <!-- 34) MILENA -->
+      <!-- 34) MILENA -->
       <div class="tutor-card" data-packages="yes">
         <img src="034Milena.jpg" alt="Milena">
         <h2>Milena</h2>
@@ -668,7 +667,7 @@
         <a class="btn" href="034Milena/">Profile/Book</a>
       </div>
 
-                                                          <!-- 35) ANDREA-->
+      <!-- 35) ANDREA W -->
       <div class="tutor-card" data-packages="yes">
         <img src="035Andrea.jpg" alt="Andrea">
         <h2>Andrea W</h2>
@@ -680,7 +679,8 @@
         </ul>
         <a class="btn" href="035Andrea/">Profile/Book</a>
       </div>
-                                                                                                        <!-- 36) CHRISTINA-->
+
+      <!-- 36) CHRISTINA -->
       <div class="tutor-card" data-packages="yes">
         <img src="036Christina.jpg" alt="Christina">
         <h2>Christina</h2>
@@ -693,7 +693,7 @@
         <a class="btn" href="036Christina/">Profile/Book</a>
       </div>
 
-                                                                                                              <!-- 37) JHANN-->
+      <!-- 37) J WASHINGTON -->
       <div class="tutor-card" data-packages="yes">
         <img src="037Jhann.jpg" alt="Jhann">
         <h2>J Washington</h2>
@@ -706,7 +706,7 @@
         <a class="btn" href="037Jhann/">Profile/Book</a>
       </div>
 
-                                                                                                              <!-- 38) NICOLE-->
+      <!-- 38) NICOLE -->
       <div class="tutor-card" data-packages="yes">
         <img src="038Nicole.jpg" alt="Nicole">
         <h2>Nicole</h2>
@@ -719,8 +719,6 @@
         <a class="btn" href="038Nicole/">Profile/Book</a>
       </div>
 
-
-      
     </div>
   </div>
 
