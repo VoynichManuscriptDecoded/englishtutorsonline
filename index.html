@@ -47,9 +47,7 @@
       text-transform: uppercase;
     }
 
-    .nav a:hover {
-      opacity: 0.7;
-    }
+    .nav a:hover { opacity: 0.7; }
 
     /* --- HERO SECTION (BLACK) --- */
     section.hero {
@@ -63,24 +61,17 @@
       box-sizing: border-box;
     }
 
+    /* base = NOT all bold */
     h1.brand {
       margin: 0;
-      font-weight: 700;
+      font-weight: 400;
       letter-spacing: 2px;
       font-size: 96px;
       white-space: nowrap; /* desktop stays one line */
     }
 
-    h1.brand span {
-      display: inline;
-    }
-
-    h1.brand .org {
-      font-size: 40px;
-      margin-left: 8px;
-      position: relative;
-      top: -4px;
-    }
+    h1.brand .init { font-weight: 700; } /* E T O */
+    h1.brand .org  { font-weight: 700; font-size: 40px; margin-left: 8px; position: relative; top: -4px; }
 
     /* --- BOTTOM SECTION (WHITE) --- */
     section.bottom {
@@ -101,9 +92,7 @@
       letter-spacing: 1px;
     }
 
-    section.bottom a:hover {
-      opacity: 0.7;
-    }
+    section.bottom a:hover { opacity: 0.7; }
 
     /* --- RESPONSIVE --- */
     @media (max-width: 900px) {
@@ -112,29 +101,30 @@
       h1.brand .org { font-size: 26px; top: -3px; }
     }
 
+    /* MOBILE: center the block, LEFT-ALIGN the lines so E/T/O are directly above each other */
     @media (max-width: 550px) {
       section.hero { padding: 0 24px; }
 
       h1.brand {
         font-size: 42px;
         letter-spacing: 1px;
-        white-space: normal; /* allow stacking */
+        white-space: normal;   /* allow multiple lines */
         line-height: 1.15;
-        text-align: center;
+
+        /* this is the key: make it a left-aligned vertical stack,
+           while the whole block stays centered */
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
       }
 
-      h1.brand span {
-        display: block; /* stack */
-        width: 100%;    /* keep E/T/O aligned */
-      }
-
+      /* make .org its own line on mobile */
       h1.brand .org {
-        display: block;
-        width: 100%;
-        font-size: 20px;
         margin-left: 0;
         margin-top: 6px;
         top: 0;
+        font-size: 20px;
       }
     }
   </style>
@@ -152,9 +142,9 @@
   <!-- HERO (BLACK) -->
   <section class="hero">
     <h1 class="brand">
-      <span>English</span>
-      <span>Tutors</span>
-      <span>Online</span>
+      <span><span class="init">E</span>nglish</span>
+      <span><span class="init">T</span>utors</span>
+      <span><span class="init">O</span>nline</span>
       <span class="org">.org</span>
     </h1>
   </section>
