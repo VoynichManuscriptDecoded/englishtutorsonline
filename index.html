@@ -59,7 +59,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 20px;
+      padding: 0 80px; /* desktop breathing room */
       box-sizing: border-box;
     }
 
@@ -68,19 +68,8 @@
       font-weight: 700;
       letter-spacing: 2px;
       font-size: clamp(36px, 9vw, 96px);
-      line-height: 1.1;
-    }
-
-    .hero .main {
-      display: block;
-    }
-
-    .hero .org {
-      display: inline;
-      font-size: 40px;
-      margin-left: 8px;
-      position: relative;
-      top: -4px;
+      line-height: 1.15;
+      max-width: 100%;
     }
 
     /* --- BOTTOM SECTION (WHITE) --- */
@@ -106,14 +95,10 @@
       opacity: 0.7;
     }
 
-    /* --- MOBILE TWEAK --- */
+    /* --- MOBILE FIX --- */
     @media (max-width: 600px) {
-      .hero .org {
-        display: block;
-        margin-left: 0;
-        margin-top: 6px;
-        font-size: 26px;
-        top: 0;
+      section.hero {
+        padding: 0 28px; /* THIS is what fixes the cramped feel */
       }
     }
   </style>
@@ -130,10 +115,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <h1>
-    <span class="main">englishtutorsonline</span>
-    <span class="org">.org</span>
-  </h1>
+  <h1>englishtutorsonline</h1>
 </section>
 
 <!-- BOTTOM -->
@@ -143,4 +125,3 @@
 
 </body>
 </html>
-
