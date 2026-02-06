@@ -5,38 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Tutors Online</title>
 
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       font-family: 'Lora', serif;
-      background: white;
       color: black;
+      background-color: white;
       text-align: center;
     }
 
+    /* --- TOP NAV (WHITE) --- */
     header {
+      background-color: white;
       height: 25vh;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      padding: 0 60px;
+      box-sizing: border-box;
       border-bottom: 1px solid #ccc;
     }
 
-    .nav a {
-      font-size: 32px;
-      font-weight: 700;
-      text-decoration: none;
-      color: black;
-      letter-spacing: 1px;
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
     }
 
+    .nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* --- HERO SECTION (BLACK) --- */
     section.hero {
-      height: 50vh;
-      background: black;
+      background-color: black;
       color: white;
+      height: 50vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -46,18 +65,14 @@
 
     h1.brand {
       margin: 0;
-      font-size: 96px;
+      font-weight: 700;
       letter-spacing: 2px;
-      white-space: nowrap;
-      font-weight: 400;
+      font-size: 96px;
+      white-space: nowrap; /* desktop stays one line */
     }
 
     h1.brand span {
       display: inline;
-    }
-
-    h1.brand strong {
-      font-weight: 700;
     }
 
     h1.brand .org {
@@ -67,7 +82,9 @@
       top: -4px;
     }
 
+    /* --- BOTTOM SECTION (WHITE) --- */
     section.bottom {
+      background-color: white;
       height: 25vh;
       display: flex;
       justify-content: center;
@@ -76,31 +93,46 @@
     }
 
     section.bottom a {
-      font-size: 28px;
-      font-weight: 700;
       text-decoration: none;
       color: black;
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
       letter-spacing: 1px;
     }
 
+    section.bottom a:hover {
+      opacity: 0.7;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 900px) {
+      .nav a { font-size: 24px; }
+      h1.brand { font-size: 58px; }
+      h1.brand .org { font-size: 26px; top: -3px; }
+    }
+
     @media (max-width: 550px) {
-      section.hero {
-        padding: 0 24px;
-      }
+      section.hero { padding: 0 24px; }
 
       h1.brand {
         font-size: 42px;
         letter-spacing: 1px;
-        white-space: normal;
+        white-space: normal; /* allow stacking */
         line-height: 1.15;
+        text-align: center;
       }
 
       h1.brand span {
-        display: block;
+        display: block; /* stack */
+        width: 100%;    /* keep E/T/O aligned */
       }
 
       h1.brand .org {
+        display: block;
+        width: 100%;
         font-size: 20px;
+        margin-left: 0;
         margin-top: 6px;
         top: 0;
       }
@@ -110,24 +142,27 @@
 
 <body>
 
-<header>
-  <div class="nav">
-    <a href="tutors/index.html">Tutors</a>
-  </div>
-</header>
+  <!-- TOP NAV (WHITE) -->
+  <header>
+    <div class="nav">
+      <a href="tutors/index.html">Tutors</a>
+    </div>
+  </header>
 
-<section class="hero">
-  <h1 class="brand">
-    <span><strong>E</strong>nglish</span>
-    <span><strong>T</strong>utors</span>
-    <span><strong>O</strong>nline</span>
-    <span class="org"><strong>.org</strong></span>
-  </h1>
-</section>
+  <!-- HERO (BLACK) -->
+  <section class="hero">
+    <h1 class="brand">
+      <span>English</span>
+      <span>Tutors</span>
+      <span>Online</span>
+      <span class="org">.org</span>
+    </h1>
+  </section>
 
-<section class="bottom">
-  <a href="about/index.html">About Us</a>
-</section>
+  <!-- BOTTOM (WHITE) -->
+  <section class="bottom">
+    <a href="about/index.html">About Us</a>
+  </section>
 
 </body>
 </html>
