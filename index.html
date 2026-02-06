@@ -61,7 +61,7 @@
       box-sizing: border-box;
     }
 
-    /* BASE / DESKTOP */
+    /* DESKTOP BASE */
     h1.brand {
       margin: 0;
       font-weight: 400;
@@ -107,7 +107,7 @@
       .org { font-size: 26px; top: -3px; }
     }
 
-    /* MOBILE: stack ETO, keep .org to the right of English */
+    /* MOBILE: true ETO stack, .org underneath */
     @media (max-width: 550px) {
       section.hero { padding: 0 24px; }
 
@@ -119,19 +119,14 @@
 
         display: inline-flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-start; /* KEY: left edge alignment */
         text-align: left;
       }
 
-      .line-one {
-        display: flex;
-        align-items: baseline;
-        gap: 8px;
-      }
-
       .org {
+        display: block;
         font-size: 20px;
-        margin-left: 0;
+        margin: 6px 0 0 0;
         top: 0;
       }
     }
@@ -150,12 +145,10 @@
 <!-- HERO -->
 <section class="hero">
   <h1 class="brand">
-    <span class="line-one">
-      <span><span class="init">E</span>nglish</span>
-      <span class="org">.org</span>
-    </span>
+    <span><span class="init">E</span>nglish</span>
     <span><span class="init">T</span>utors</span>
     <span><span class="init">O</span>nline</span>
+    <span class="org">.org</span>
   </h1>
 </section>
 
