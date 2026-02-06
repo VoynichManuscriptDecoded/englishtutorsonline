@@ -5,55 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Tutors Online</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
-
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       font-family: 'Lora', serif;
+      background: white;
       color: black;
-      background-color: white;
       text-align: center;
     }
 
-    /* --- TOP NAV (WHITE) --- */
     header {
-      background-color: white;
       height: 25vh;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 0 60px;
-      box-sizing: border-box;
+      align-items: center;
       border-bottom: 1px solid #ccc;
     }
 
-    .nav {
-      display: flex;
-      justify-content: center;
-      gap: 80px;
-    }
-
     .nav a {
-      text-decoration: none;
-      color: black;
       font-size: 32px;
       font-weight: 700;
+      text-decoration: none;
+      color: black;
       letter-spacing: 1px;
-      text-transform: uppercase;
     }
 
-    .nav a:hover { opacity: 0.7; }
-
-    /* --- HERO SECTION (BLACK) --- */
+    /* HERO */
     section.hero {
-      background-color: black;
-      color: white;
       height: 50vh;
+      background: black;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -61,17 +45,17 @@
       box-sizing: border-box;
     }
 
-    /* DESKTOP BASE */
+    /* DESKTOP — original look */
     h1.brand {
       margin: 0;
-      font-weight: 400;
-      letter-spacing: 2px;
       font-size: 96px;
+      letter-spacing: 2px;
+      font-weight: 400;
       white-space: nowrap;
     }
 
-    .init { font-weight: 700; }   /* E T O */
-    .org  {
+    .init { font-weight: 700; }
+    .org {
       font-weight: 700;
       font-size: 40px;
       margin-left: 8px;
@@ -79,9 +63,7 @@
       top: -4px;
     }
 
-    /* --- BOTTOM SECTION (WHITE) --- */
     section.bottom {
-      background-color: white;
       height: 25vh;
       display: flex;
       justify-content: center;
@@ -90,26 +72,18 @@
     }
 
     section.bottom a {
-      text-decoration: none;
-      color: black;
       font-size: 28px;
       font-weight: 700;
-      text-transform: uppercase;
+      text-decoration: none;
+      color: black;
       letter-spacing: 1px;
     }
 
-    section.bottom a:hover { opacity: 0.7; }
-
-    /* --- RESPONSIVE --- */
-    @media (max-width: 900px) {
-      .nav a { font-size: 24px; }
-      h1.brand { font-size: 58px; }
-      .org { font-size: 26px; top: -3px; }
-    }
-
-    /* MOBILE: true ETO stack, .org underneath */
+    /* MOBILE — grid aligned ETO + .org */
     @media (max-width: 550px) {
-      section.hero { padding: 0 24px; }
+      section.hero {
+        padding: 0 24px;
+      }
 
       h1.brand {
         font-size: 42px;
@@ -117,16 +91,15 @@
         white-space: normal;
         line-height: 1.15;
 
-        display: inline-flex;
-        flex-direction: column;
-        align-items: flex-start; /* KEY: left edge alignment */
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: start; /* HARD alignment anchor */
         text-align: left;
       }
 
       .org {
-        display: block;
-        font-size: 20px;
         margin: 6px 0 0 0;
+        font-size: 20px;
         top: 0;
       }
     }
@@ -135,14 +108,12 @@
 
 <body>
 
-<!-- TOP NAV -->
 <header>
   <div class="nav">
     <a href="tutors/index.html">Tutors</a>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <h1 class="brand">
     <span><span class="init">E</span>nglish</span>
@@ -152,7 +123,6 @@
   </h1>
 </section>
 
-<!-- BOTTOM -->
 <section class="bottom">
   <a href="about/index.html">About Us</a>
 </section>
