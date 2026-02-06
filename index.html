@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Tutors Online</title>
 
-  <!-- Favicon -->
+   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Google Font -->
@@ -41,7 +41,7 @@
     .nav a {
       text-decoration: none;
       color: black;
-      font-size: 42px;
+      font-size: 32px;
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -57,10 +57,10 @@
       color: white;
       height: 50vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 0 20px;
-      box-sizing: border-box;
     }
 
     .hero h1 {
@@ -68,7 +68,10 @@
       margin: 0;
       font-weight: 700;
       letter-spacing: 2px;
-      white-space: nowrap; /* desktop untouched */
+
+      /* ADDED: keeps desktop from breaking into spaced lines */
+      white-space: nowrap;
+      line-height: 1;
     }
 
     .red-org {
@@ -104,39 +107,27 @@
     }
 
     /* --- RESPONSIVE --- */
-    @media (max-width: 900px) {
+    @media(max-width: 900px) {
       .nav a { font-size: 24px; }
       .hero h1 { font-size: 58px; }
       .red-org { font-size: 26px; }
     }
 
-    /* --- MOBILE: STACK + .org UNDER END OF ONLINE --- */
-    @media (max-width: 550px) {
-      .nav a { font-size: 36px; }
-
-      section.hero {
-        padding: 0 24px;
-      }
+    @media(max-width: 550px) {
+      .nav a { font-size: 22px; }
 
       .hero h1 {
-        font-size: 44px;
-        letter-spacing: 1px;
-        white-space: normal;
+        font-size: 46px;
+        white-space: normal;  /* allow wrap on mobile */
         line-height: 1.15;
-        display: inline-block; /* CRITICAL: shrink to text width */
-        text-align: left;
       }
 
-      .hero h1 span.word {
-        display: block;
-      }
-
+      /* ADDED: this forces .org onto a new line ONLY on mobile */
       .red-org {
+        font-size: 22px;
         display: block;
         margin: 6px 0 0 0;
-        font-size: 22px;
         top: 0;
-        text-align: right; /* aligns to end of "Online" */
       }
     }
   </style>
@@ -152,12 +143,7 @@
 
 <!-- HERO (BLACK) -->
 <section class="hero">
-  <h1>
-    <span class="word">English</span>
-    <span class="word">Tutors</span>
-    <span class="word">Online</span>
-    <span class="red-org">.org</span>
-  </h1>
+  <h1>englishtutorsonline<span class="red-org">.org</span></h1>
 </section>
 
 <!-- BOTTOM (WHITE) -->
