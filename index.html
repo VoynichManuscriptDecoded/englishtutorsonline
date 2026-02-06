@@ -61,17 +61,23 @@
       box-sizing: border-box;
     }
 
-    /* base = NOT all bold */
+    /* BASE / DESKTOP */
     h1.brand {
       margin: 0;
       font-weight: 400;
       letter-spacing: 2px;
       font-size: 96px;
-      white-space: nowrap; /* desktop stays one line */
+      white-space: nowrap;
     }
 
-    h1.brand .init { font-weight: 700; } /* E T O */
-    h1.brand .org  { font-weight: 700; font-size: 40px; margin-left: 8px; position: relative; top: -4px; }
+    .init { font-weight: 700; }   /* E T O */
+    .org  {
+      font-weight: 700;
+      font-size: 40px;
+      margin-left: 8px;
+      position: relative;
+      top: -4px;
+    }
 
     /* --- BOTTOM SECTION (WHITE) --- */
     section.bottom {
@@ -98,33 +104,35 @@
     @media (max-width: 900px) {
       .nav a { font-size: 24px; }
       h1.brand { font-size: 58px; }
-      h1.brand .org { font-size: 26px; top: -3px; }
+      .org { font-size: 26px; top: -3px; }
     }
 
-    /* MOBILE: center the block, LEFT-ALIGN the lines so E/T/O are directly above each other */
+    /* MOBILE: stack ETO, keep .org to the right of English */
     @media (max-width: 550px) {
       section.hero { padding: 0 24px; }
 
       h1.brand {
         font-size: 42px;
         letter-spacing: 1px;
-        white-space: normal;   /* allow multiple lines */
+        white-space: normal;
         line-height: 1.15;
 
-        /* this is the key: make it a left-aligned vertical stack,
-           while the whole block stays centered */
         display: inline-flex;
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
       }
 
-      /* make .org its own line on mobile */
-      h1.brand .org {
-        margin-left: 0;
-        margin-top: 6px;
-        top: 0;
+      .line-one {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+      }
+
+      .org {
         font-size: 20px;
+        margin-left: 0;
+        top: 0;
       }
     }
   </style>
@@ -132,27 +140,29 @@
 
 <body>
 
-  <!-- TOP NAV (WHITE) -->
-  <header>
-    <div class="nav">
-      <a href="tutors/index.html">Tutors</a>
-    </div>
-  </header>
+<!-- TOP NAV -->
+<header>
+  <div class="nav">
+    <a href="tutors/index.html">Tutors</a>
+  </div>
+</header>
 
-  <!-- HERO (BLACK) -->
-  <section class="hero">
-    <h1 class="brand">
+<!-- HERO -->
+<section class="hero">
+  <h1 class="brand">
+    <span class="line-one">
       <span><span class="init">E</span>nglish</span>
-      <span><span class="init">T</span>utors</span>
-      <span><span class="init">O</span>nline</span>
       <span class="org">.org</span>
-    </h1>
-  </section>
+    </span>
+    <span><span class="init">T</span>utors</span>
+    <span><span class="init">O</span>nline</span>
+  </h1>
+</section>
 
-  <!-- BOTTOM (WHITE) -->
-  <section class="bottom">
-    <a href="about/index.html">About Us</a>
-  </section>
+<!-- BOTTOM -->
+<section class="bottom">
+  <a href="about/index.html">About Us</a>
+</section>
 
 </body>
 </html>
