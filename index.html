@@ -59,19 +59,23 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 80px; /* desktop breathing room */
+      padding: 0 40px; /* safe default */
       box-sizing: border-box;
     }
 
     .hero h1 {
+      font-size: 96px;
       margin: 0;
       font-weight: 700;
-      letter-spacing: 2px;               /* keep desktop look */
-      font-size: clamp(36px, 9vw, 96px);
-      line-height: 1.15;
-      max-width: 100%;
-      box-sizing: border-box;
-      overflow-wrap: anywhere;           /* safety: prevents edge clipping/overflow */
+      letter-spacing: 2px;
+      white-space: nowrap; /* NEVER wrap */
+    }
+
+    .red-org {
+      font-size: 40px;
+      margin-left: 6px;
+      position: relative;
+      top: -4px;
     }
 
     /* --- BOTTOM SECTION (WHITE) --- */
@@ -97,13 +101,24 @@
       opacity: 0.7;
     }
 
-    /* --- MOBILE FIX --- */
-    @media (max-width: 600px) {
+    /* --- RESPONSIVE --- */
+    @media (max-width: 900px) {
+      .nav a { font-size: 24px; }
+      .hero h1 { font-size: 60px; }
+      .red-org { font-size: 26px; }
+    }
+
+    @media (max-width: 550px) {
       section.hero {
-        padding: 0 28px;                 /* breathing room on phones */
+        padding: 0 24px;        /* breathing room */
       }
       .hero h1 {
-        letter-spacing: 0.5px;           /* stops last-letter clipping */
+        font-size: 40px;        /* THIS fixes everything */
+        letter-spacing: 1px;   /* prevents clipping */
+      }
+      .red-org {
+        font-size: 20px;
+        top: -2px;
       }
     }
   </style>
@@ -120,7 +135,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <h1>englishtutorsonline</h1>
+  <h1>englishtutorsonline<span class="red-org">.org</span></h1>
 </section>
 
 <!-- BOTTOM -->
