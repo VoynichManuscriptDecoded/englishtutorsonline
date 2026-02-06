@@ -5,148 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Tutors Online</title>
 
-   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
-
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Lora', serif;
-      color: black;
-      background-color: white;
-      text-align: center;
+    body{
+      margin:0;
+      font-family:'Lora',serif;
+      color:black;
+      background:white;
+      text-align:center;
     }
 
-    /* --- TOP NAV (WHITE) --- */
-    header {
-      background-color: white;
-      height: 25vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 60px;
-      box-sizing: border-box;
-      border-bottom: 1px solid #ccc;
+    header{
+      background:white;
+      min-height:25vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 60px;
+      box-sizing:border-box;
+      border-bottom:1px solid #ccc;
     }
 
-    .nav {
-      display: flex;
-      justify-content: center;
-      gap: 80px;
+    .nav{
+      display:flex;
+      justify-content:center;
+      gap:80px;
     }
 
-    .nav a {
-      text-decoration: none;
-      color: black;
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+    .nav a{
+      text-decoration:none;
+      color:black;
+      font-size:32px;
+      font-weight:700;
+      letter-spacing:1px;
+      text-transform:uppercase;
     }
 
-    .nav a:hover {
-      opacity: 0.7;
+    section.hero{
+      background:black;
+      color:white;
+      min-height:50vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:0 20px;
+      box-sizing:border-box;
     }
 
-    /* --- HERO SECTION (BLACK) --- */
-    section.hero {
-      background-color: black;
-      color: white;
-      height: 50vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 0 20px;
+    /* DESKTOP TITLE */
+    .title-desktop{
+      font-size:96px;
+      margin:0;
+      font-weight:700;
+      letter-spacing:2px;
+      white-space:nowrap;
     }
 
-    .hero h1 {
-      font-size: 96px;
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: 2px;
-
-      /* ADDED: keeps desktop from breaking into spaced lines */
-      white-space: nowrap;
-      line-height: 1;
+    /* MOBILE TITLE */
+    .title-mobile{
+      display:none;
+      text-align:left;
+      font-weight:700;
+      line-height:1.1;
     }
 
-    .red-org {
-      color: white;
-      margin-left: 8px;
-      font-size: 40px;
-      font-weight: 700;
-      position: relative;
-      top: -4px;
+    .title-mobile span{
+      display:block;
+      font-size:46px;
     }
 
-    /* --- BOTTOM SECTION (WHITE) --- */
-    section.bottom {
-      background-color: white;
-      height: 25vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-top: 1px solid #ccc;
+    .title-mobile .org{
+      font-size:22px;
+      margin-top:6px;
+      text-align:right;
     }
 
-    section.bottom a {
-      text-decoration: none;
-      color: black;
-      font-size: 28px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    section.bottom{
+      background:white;
+      min-height:25vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      border-top:1px solid #ccc;
     }
 
-    section.bottom a:hover {
-      opacity: 0.7;
+    section.bottom a{
+      text-decoration:none;
+      color:black;
+      font-size:28px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1px;
     }
 
-    /* --- RESPONSIVE --- */
-    @media(max-width: 900px) {
-      .nav a { font-size: 24px; }
-      .hero h1 { font-size: 58px; }
-      .red-org { font-size: 26px; }
+    @media(max-width:900px){
+      .nav a{font-size:24px;}
+      .title-desktop{font-size:58px;}
     }
 
-    @media(max-width: 550px) {
-      .nav a { font-size: 22px; }
-
-      .hero h1 {
-        font-size: 46px;
-        white-space: normal;  /* allow wrap on mobile */
-        line-height: 1.15;
-      }
-
-      /* ADDED: this forces .org onto a new line ONLY on mobile */
-      .red-org {
-        font-size: 22px;
-        display: block;
-        margin: 6px 0 0 0;
-        top: 0;
-      }
+    @media(max-width:550px){
+      .nav a{font-size:22px;}
+      .title-desktop{display:none;}
+      .title-mobile{display:inline-block;}
     }
   </style>
 </head>
+
 <body>
 
-<!-- TOP NAV (WHITE) -->
 <header>
   <div class="nav">
     <a href="tutors/index.html">Tutors</a>
   </div>
 </header>
 
-<!-- HERO (BLACK) -->
 <section class="hero">
-  <h1>englishtutorsonline<span class="red-org">.org</span></h1>
+
+  <!-- DESKTOP -->
+  <h1 class="title-desktop">englishtutorsonline.org</h1>
+
+  <!-- MOBILE -->
+  <h1 class="title-mobile">
+    <span>english</span>
+    <span>tutors</span>
+    <span>online</span>
+    <span class="org">.org</span>
+  </h1>
+
 </section>
 
-<!-- BOTTOM (WHITE) -->
 <section class="bottom">
   <a href="about/index.html">About Us</a>
 </section>
