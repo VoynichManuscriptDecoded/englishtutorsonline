@@ -75,7 +75,6 @@ body{
   margin: 0 auto;
 }
 
-
 .left{
   width: 28%;
   text-align: center;
@@ -122,7 +121,7 @@ body{
   justify-content: space-between;
   align-items: flex-start;
   gap: calc(40px * var(--s));
-  margin-left: calc(50px * var(--s));
+  margin-left: 0;                /* ALIGN NAME WITH DROPDOWNS */
   box-sizing: border-box;
 }
 
@@ -133,6 +132,7 @@ body{
 
 .top-right{
   width: 60%;
+  padding-left: 24px;            /* MOVE RIGHT INFO BLOCK SLIGHTLY RIGHT */
 }
 
 .top-left .name{
@@ -231,19 +231,18 @@ details .drop-content{
   .header-title{ font-size: 28px; }
   .header-title .small-org{ font-size: 18px; }
 
-.header-nav{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 18px;
-}
+  .header-nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
 
-.header-nav a{
-  font-size: 16px;
-  margin: 0;
-  white-space: nowrap;
-}
-
+  .header-nav a{
+    font-size: 16px;
+    margin: 0;
+    white-space: nowrap;
+  }
 
   .main-container{
     flex-direction: column;
@@ -262,6 +261,7 @@ details .drop-content{
   .top-left, .top-right{
     width: 100%;
     min-width: 0;
+    padding-left: 0;   /* IMPORTANT: don’t push right info on mobile */
   }
 
   .top-left .name{ font-size: 54px; }
@@ -279,4 +279,3 @@ details .drop-content{
     gap: 14px;
   }
 }
-
