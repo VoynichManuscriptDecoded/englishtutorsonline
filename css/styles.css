@@ -8,7 +8,7 @@
 
 /* ---------- GLOBAL SCALE ---------- */
 :root{
-  --s: 0.80;              /* 20% smaller */
+  --s: 0.75;              /* 25% smaller */
   --page-max: 1180px;
 }
 
