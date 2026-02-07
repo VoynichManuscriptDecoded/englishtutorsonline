@@ -133,6 +133,7 @@ body{
 .top-right{
   width: 60%;
   padding-left: 24px;            /* MOVE RIGHT INFO BLOCK SLIGHTLY RIGHT */
+ margin-left: 24px;      /* MOVE THE BLOCK RIGHT */
 }
 
 .top-left .name{
