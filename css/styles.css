@@ -217,6 +217,11 @@ details .drop-content{
   flex-wrap: wrap;
   white-space: normal;
 }
+/* ---------- CONTACT LEFT (photo column contacts) ---------- */
+.contact-left{
+  font-size: calc(22px * var(--s));
+  font-weight: 700;
+}
 
 /* ---------- MOBILE (unchanged behaviour, smaller text already handled) ---------- */
 @media (max-width: 900px){
