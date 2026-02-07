@@ -8,295 +8,8 @@
 <link rel="icon" type="image/png" href="../../favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Lora', serif;
-      background: white;
-      color: black;
-      line-height: 1.7;
-    }
+  <link rel="stylesheet" href="../../css/styles.css?v=5">
 
-    .header-bar {
-      background: black;
-      color: white;
-      padding: 22px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-sizing: border-box;
-      gap: 20px;
-    }
-
-    .header-title {
-      font-size: 46px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .header-title .small-org {
-      font-size: 32px;
-      margin-left: 6px;
-      opacity: 0.9;
-    }
-
-    .header-nav {
-      white-space: nowrap;
-    }
-
-    .header-nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 22px;
-      font-weight: 700;
-      margin-left: 40px;
-    }
-
-    .main-container {
-      display: flex;
-      gap: 50px;
-      padding: 40px 80px;
-      align-items: flex-start;
-      box-sizing: border-box;
-    }
-
-    .left {
-      width: 28%;
-      text-align: center;
-    }
-
-    .left img {
-      width: 100%;
-      max-width: 380px;
-      border-radius: 14px;
-      display: block;
-      margin: 0 auto;
-    }
-
-.contact-left{
-  margin-top: 18px;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-
-    .btn {
-      display: block;
-      margin: 18px auto;
-      padding: 14px 20px;
-      font-size: 22px;
-      font-weight: 700;
-      background: white;
-      color: black;
-      border: 2px solid black;
-      border-radius: 10px;
-      text-decoration: none;
-      width: 100%;
-      max-width: 380px;
-      box-sizing: border-box;
-    }
-
-    .btn:hover {
-      background: black;
-      color: white;
-    }
-
-    .right {
-      width: 72%;
-      box-sizing: border-box;
-    }
-
-/* TOP HEADER (clean stacked layout) */
-.top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  margin-left: 50px;   /* shifts content to the right */
-  box-sizing: border-box;
-}
-
-    .top-left {
-      width: 40%;
-      min-width: 320px;
-    }
-
-    .top-right {
-      width: 60%;
-    }
-
-    .top-left .name {
-      font-size: 64px;
-      font-weight: 700;
-      margin: 0 0 18px;
-      line-height: 1.05;
-    }
-
-    .kv {
-      font-size: 22px;
-      margin: 0 0 10px;
-      line-height: 1.4;
-    }
-
-    .kv .k {
-      font-weight: 700;
-    }
-
-    .kv .v {
-      font-weight: 400;
-    }
-
-    .top-right .kv {
-      margin-bottom: 12px;
-    }
-
-    .center-title {
-      text-align: center;
-      font-weight: 600;
-      margin: 40px 0 24px;
-      font-size: 32px;
-    }
-
-    .center-packages {
-      text-align: center;
-      font-size: 24px;
-      font-weight: 600;
-      margin: 26px 0;
-    }
-
-    details {
-      margin: 26px 0;
-      font-size: 26px;
-    }
-
-    details summary {
-      cursor: pointer;
-      font-weight: 700;
-      padding: 14px 0;
-      border-bottom: 2px solid black;
-      list-style: none;
-    }
-
-    details summary::marker,
-    details summary::-webkit-details-marker {
-      display: none;
-    }
-
-    details summary::after {
-      content: "▼";
-      float: right;
-      font-size: 18px;
-    }
-
-    details[open] summary::after {
-      content: "▲";
-    }
-
-    details .drop-content {
-      margin-top: 16px;
-      font-size: 22px;
-    }
-
-    .contact-row {
-      margin-top: 30px;
-      font-size: 22px;
-      font-weight: 700;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      white-space: nowrap;
-      box-sizing: border-box;
-    }
-
-    /* MOBILE */
-    @media (max-width: 900px) {
-
-      .header-bar{
-        padding: 16px 18px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      .header-title{
-        font-size: 28px;
-      }
-
-      .header-title .small-org{
-        font-size: 18px;
-      }
-
-      .header-nav{
-        width: 100%;
-      }
-
-      .header-nav a{
-        font-size: 18px;
-        margin-left: 0;
-        margin-right: 18px;
-      }
-
-      .main-container {
-        flex-direction: column;
-        padding: 30px 24px;
-        gap: 22px;
-      }
-
-      .left, .right {
-        width: 100%;
-      }
-
-      .left img,
-      .btn {
-        max-width: 100%;
-      }
-
-      .top-header {
-        flex-direction: column;
-        gap: 18px;
-      }
-
-      .top-left, .top-right {
-        width: 100%;
-        min-width: 0;
-      }
-
-      .top-left .name{
-        font-size: 54px;
-        margin-bottom: 10px;
-      }
-
-      .kv{
-        font-size: 20px;
-      }
-
-      .center-title{
-        font-size: 26px;
-        margin: 26px 0 18px;
-      }
-
-      .center-packages{
-        font-size: 22px;
-        margin: 18px 0;
-      }
-
-      details{
-        font-size: 22px;
-      }
-
-      details .drop-content{
-        font-size: 20px;
-      }
-
-      .contact-row {
-        flex-direction: column;
-        gap: 14px;
-        white-space: normal;
-        align-items: flex-start;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -305,12 +18,14 @@
     <div class="header-title">
       englishtutorsonline<span class="small-org">.org</span>
     </div>
-    <div class="header-nav">
-      <a href="../../index.html">Home</a>
-      <a href="../pricing/">Pricing</a>
-      <a href="../terms/">Terms & Conditions</a>
-      <a href="../index.html">Tutors</a>
-    </div>
+    
+<div class="header-nav">
+  <a href="/">Home</a>
+  <a href="../pricing/">Pricing</a>
+  <a href="../terms/">Terms & Conditions</a>
+  <a href="/tutors/">Tutors</a>
+</div>
+
   </div>
 
 
@@ -350,12 +65,13 @@ BUSINESS/GENERAL - IELTS/CAMBRIDGE - GRAMMAR/VOCABULARY - AVIATION LANGUAGE
       </div>
 
       <div class="center-packages">
-        ACCEPTS PACKAGES&nbsp;&nbsp;YES
+        ACCEPTS PACKAGES:&nbsp;&nbsp; YES
       </div>
 
       <details>
         <summary>ABOUT ME</summary>
-        <div class="drop-content">I am from The UK originally, but now live in the south of Spain. I’ve been working as an English teacher and examiner for 20 years. I have many years of experience preparing students of all ages  for Cambridge and IELTS exams. I also specialise in helping students to improve their skills for using English in a business context. Previously I worked as a flight attendant for five years, therefore I can also specialise in English related to the travel industry.</div>
+        <div class="drop-content">I am from The UK originally, but now live in the south of Spain. I’ve been working as an English teacher and examiner for 20 years. I have many years of experience preparing students of all ages  for Cambridge and IELTS exams.<br>
+          I also specialise in helping students to improve their skills for using English in a business context. Previously I worked as a flight attendant for five years, therefore I can also specialise in English related to the travel industry.</div>
       </details>
 
       <details>
