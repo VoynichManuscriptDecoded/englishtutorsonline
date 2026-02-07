@@ -130,17 +130,16 @@ body{
   min-width: calc(320px * var(--s));
 }
 
-.top-right{
-  width: 60%;
-  padding-left: 24px;            /* MOVE RIGHT INFO BLOCK SLIGHTLY RIGHT */
+.top-left{
+  width: 34%;
+  min-width: calc(320px * var(--s));
 }
 
-.top-left .name{
-  font-size: calc(64px * var(--s));
-  font-weight: 700;
-  margin: 0 0 calc(18px * var(--s));
-  line-height: 1.05;
+.top-right{
+  width: 66%;
+  padding-left: 0;
 }
+
 
 .kv{
   font-size: calc(22px * var(--s));
