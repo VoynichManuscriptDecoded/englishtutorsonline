@@ -132,7 +132,7 @@ body{
 
 .top-right{
   width: 60%;
-padding-left: calc(60px * var(--s));
+padding-left: calc(140px * var(--s));  /* = 105px */
 }
 
 .top-left .name{
