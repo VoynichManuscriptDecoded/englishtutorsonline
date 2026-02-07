@@ -67,11 +67,11 @@ body{
 .main-container{
   display: flex;
   gap: calc(50px * var(--s));
-  padding: calc(40px * var(--s)) 32px;  /* was much wider */
+  padding: calc(40px * var(--s)) calc(80px * var(--s));
   align-items: flex-start;
   box-sizing: border-box;
 
-  max-width: 1320px;   /* use screen better */
+  max-width: var(--page-max);
   margin: 0 auto;
 }
 
