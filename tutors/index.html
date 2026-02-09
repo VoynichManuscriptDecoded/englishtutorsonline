@@ -112,33 +112,35 @@
       min-width:180px;
     }
 
-    /* GRID */
-    .tutor-grid{
-      display:grid;
-      grid-template-columns:repeat(7, minmax(0, 1fr)); /* keep 7 on laptops */
-      gap:16px;
-      align-items:start;
-    }
+  /* GRID - robust on zoom, keeps ~6-7 columns on most laptops */
+.tutor-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(225px, 1fr));
+  gap:20px;
+  align-items:start;
+}
 
-    /* CARD */
-    .tutor-card{
-      text-align:center;
-      border:1px solid black;
-      border-radius:16px;
-      padding:20px 16px 18px;
-      box-sizing:border-box;
-    }
+/* CARD */
+.tutor-card{
+  text-align:center;
+  border:1px solid black;
+  border-radius:16px;
+  padding:20px 16px 18px;
+  box-sizing:border-box;
+  overflow:hidden;
+}
 
-    .tutor-card img{
-      width:170px;
-      height:170px;
-      border-radius:0;
-      display:block;
-      margin:0 auto 16px;
-      object-fit:cover;
-      border:1px solid black;
-      box-sizing:border-box;
-    }
+/* IMAGE - keeps small photo size but locks shape */
+.tutor-card img{
+  width:min(170px, 100%);
+  height:auto;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+  display:block;
+  margin:0 auto 16px;
+  border:1px solid black;
+  box-sizing:border-box;
+}
 
     .tutor-card h2{
       font-size:24px;
