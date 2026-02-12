@@ -205,16 +205,15 @@ details .drop-content{
 }
 
 /* ---------- EMBED VIDEO IN DROPDOWN ---------- */
-.video-wrap{
+details .drop-content .video-wrap{
   width: 100%;
-  margin-top: calc(10px * var(--s));
   aspect-ratio: 16 / 9;
-  position: relative;
+  margin-top: calc(10px * var(--s));
 }
 
-.video-wrap iframe{
-  width: 100%;
-  height: 100%;
+details .drop-content .video-wrap iframe{
+  width: 100% !important;
+  height: 100% !important;
   border: 0;
   display: block;
 }
@@ -232,6 +231,7 @@ details .drop-content{
   flex-wrap: wrap;
   white-space: normal;
 }
+
 /* ---------- CONTACT LEFT (photo column contacts) ---------- */
 .contact-left{
   font-size: calc(22px * var(--s));
@@ -299,4 +299,3 @@ details .drop-content{
     gap: 14px;
   }
 }
-
