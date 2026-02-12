@@ -53,23 +53,6 @@
       text-transform:uppercase;
     }
 
-    /* Gentle continuous pulse for Tutors only */
-    .pulse-tutors{
-      display:inline-block; /* lets transform work predictably */
-      animation:pulseTutors 2.2s ease-in-out infinite;
-      transform-origin:center;
-    }
-
-    @keyframes pulseTutors{
-      0%, 100% { opacity:1; transform:scale(1); }
-      50%      { opacity:0.78; transform:scale(1.03); }
-    }
-
-    /* Accessibility: respect reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      .pulse-tutors{ animation:none; }
-    }
-
     section.hero{
       background:black;
       color:white;
@@ -177,7 +160,7 @@
 
 <header>
   <div class="nav">
-    <a class="pulse-tutors" href="tutors/index.html">Tutors</a>
+    <a href="tutors/index.html">Tutors</a>
   </div>
 </header>
 
@@ -207,7 +190,7 @@
 
     <a href="https://www.instagram.com/englishtutors_global/" target="_blank" rel="noopener" aria-label="Instagram">
       <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM18 6.3a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM18 6.3a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
       </svg>
     </a>
 
